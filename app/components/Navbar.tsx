@@ -13,6 +13,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
+import { SearchIcon } from 'lucide-react'
+import { ShoppingBag } from 'lucide-react'
+import { useShoppingCart } from 'use-shopping-cart'
 
 const products: { title: string; href: string; description: string }[] = [
   {
@@ -98,41 +101,37 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  // const { handleCartClick } = useShoppingCart();
 
   return (
-    <>
-    <header className='my-4'>
-      <div className='flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl'>
-        <Link href='/'>
-          <h1 className='text-4xl font-bold'>
-            Gut<span className='text-primary'>olution</span>
+    <>    
+    <header className="my-4">
+      <div className="flex justify-start items-center mx-auto max-w-7xl sm:px-6 lg:max-w-full">
+        <Link href="/">
+          <h1 className="text-3xl font-bold mr-12">
+            Gut<span className="text-primary">olution</span>
           </h1>
         </Link>
         <NavigationMenu>
-          <NavigationMenuList className='hidden gap-12 lg:flex 2xl:ml-16'>
+          <NavigationMenuList className="hidden lg:flex gap-1">
             {/* ----- HOME ----- */}
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className="nav-item pr-6">
+                <NavigationMenuLink className="nav-item mr-6">
                   Home
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             {/* ----- PRODUCTS ----- */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item">
-                Products
-              </NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item">Products</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
+                <ul className="nav-ul">
+                  <li className="row-span-1">
                     <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
+                      <a href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                         <span>An icon</span>   
-                        <div className="mb-2 mt-4 text-lg font-medium">Something</div>
+                        <div className="text-base font-medium mt-2">Something</div>
                         <p className="text-sm leading-tight text-muted-foreground">
                           Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
                         </p>
@@ -155,11 +154,9 @@ export default function Navbar() {
             </NavigationMenuItem>
             {/* ----- OUR STORY ----- */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item">
-                Our Story
-              </NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item">Our Story</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <ul className="nav-ul">
                   {stories.map(story => (
                     <ListItem
                       key={story.title}
@@ -174,11 +171,11 @@ export default function Navbar() {
             </NavigationMenuItem>
             {/* ----- EXPLORE ----- */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item">
+              <NavigationMenuTrigger className="nav-item mr-64">
                 Explore
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                <ul className="grid gap-3 p-4 w-[400px] md:w-[500px] md:grid-cols-2">
                   {explore.map(ex => (
                     <ListItem
                       key={ex.title}
@@ -193,6 +190,15 @@ export default function Navbar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+
+        <button className="nav-icon ml-80 mr-9">
+          <SearchIcon />
+        </button>
+        <button className="nav-icon mr-10"
+          // onClick={() => handleCartClick()}
+        >
+          <ShoppingBag />
+        </button>
       </div>
     </header>
     </>

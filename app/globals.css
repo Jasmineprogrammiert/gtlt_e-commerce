@@ -1,3 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,13 +49,20 @@
     --ring: 224.3 76.3% 48%;
   }
 }
-
+/* ---------- NAV ---------- */
 .nav-item {
   @apply
-    text-lg
-    font-semibold
-    text-gray-600
-    transition
-    duration-100
-    hover:text-primary;
+    text-base font-medium
+    text-gray-600 hover:text-primary;
+}
+.nav-ul {
+  @apply
+    grid gap-3 p-6
+    md:w-[400px]
+    lg:w-[500px]
+    lg:grid-cols-[.75fr_1fr];
+}
+.nav-icon {
+  @apply
+    flex divide-x;
 }
