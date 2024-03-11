@@ -1,8 +1,11 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
+
+/* ---------- CHADCN/UI ---------- */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -52,8 +55,11 @@
 /* ---------- NAV ---------- */
 .nav-item {
   @apply
-    text-base font-medium
-    text-gray-600 hover:text-primary;
+    text-base
+    font-medium
+    text-gray-600
+    bg-transparent
+    hover:text-primary !important;
 }
 .nav-ul {
   @apply
@@ -65,4 +71,17 @@
 .nav-icon {
   @apply
     flex divide-x;
+}
+/* ---------- HOME ---------- */
+.hero-img {
+  @apply
+    flex items-center justify-center
+    grow-0 shrink-0 basis-0;
+  flex: 0 0 100%;
+}
+.nav-sticky {
+  position: sticky;
+  top: 1.5rem;
+  z-index: 1000;
+  /* background-color: gray; */
 }

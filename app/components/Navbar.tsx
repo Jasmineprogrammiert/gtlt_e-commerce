@@ -12,6 +12,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import { SearchIcon } from 'lucide-react'
 import { ShoppingBag } from 'lucide-react'
@@ -19,20 +20,26 @@ import { useShoppingCart } from 'use-shopping-cart'
 
 const products: { title: string; href: string; description: string }[] = [
   {
-    title: "GUTolution™ Adults | Precision Probiotics Program",
-    href: "/products/adults-precision-probiotics-program",
+    title: "Adults | Precision Probiotics Program",
+    href: "/products/precision-probiotics-program",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
   {
-    title: "GUTolution™ Microbiome Test Pro",
-    href: "/products/gut-health-test",
+    title: "Microbiome Test Pro",
+    href: "/products/microbiome-test-pro",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
   {
-    title: "[Pre-Order] GUTolution™ Microbiome Disease Risk Test",
+    title: "[Pre-Order] | Microbiome Disease Risk Test",
     href: "/products/microbiome-disease-risk-test",
+    description:
+      "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
+  },
+  {
+    title: "Dummy | Pro Precision Probiotics Program",
+    href: "/products/dummy-pro-precision-probiotics-program",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
@@ -105,7 +112,7 @@ export default function Navbar() {
 
   return (
     <>    
-    <header className="my-4">
+    <header className="mb-20 nav-sticky">
       <div className="flex justify-start items-center mx-auto max-w-7xl sm:px-6 lg:max-w-full">
         <Link href="/">
           <h1 className="text-3xl font-bold mr-12">
@@ -117,19 +124,19 @@ export default function Navbar() {
             {/* ----- HOME ----- */}
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className="nav-item mr-6">
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} nav-item mr-2`}>
                   Home
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             {/* ----- PRODUCTS ----- */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item">Products</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item bg-transparent">Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="nav-ul">
                   <li className="row-span-1">
                     <NavigationMenuLink asChild>
-                      <a href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                      <a href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md bg-transparent">
                         <span>An icon</span>   
                         <div className="text-base font-medium mt-2">Something</div>
                         <p className="text-sm leading-tight text-muted-foreground">
@@ -154,7 +161,7 @@ export default function Navbar() {
             </NavigationMenuItem>
             {/* ----- OUR STORY ----- */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item">Our Story</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item bg-transparent">Our Story</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="nav-ul">
                   {stories.map(story => (
@@ -171,7 +178,7 @@ export default function Navbar() {
             </NavigationMenuItem>
             {/* ----- EXPLORE ----- */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item mr-64">
+              <NavigationMenuTrigger className="nav-item mr-64 bg-transparent">
                 Explore
               </NavigationMenuTrigger>
               <NavigationMenuContent>
