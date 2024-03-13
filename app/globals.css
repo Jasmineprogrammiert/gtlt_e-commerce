@@ -73,7 +73,7 @@
     flex divide-x;
 }
 /* ---------- HOME ---------- */
-.hero-img {
+.hero-slide {
   @apply
     flex items-center justify-center
     grow-0 shrink-0 basis-0;
@@ -84,4 +84,54 @@
   top: 1.5rem;
   z-index: 1000;
   /* background-color: gray; */
+}
+.hero-btn {
+  margin-top: -5vh;
+  left: 40%;
+  position: relative;
+  /* color: green; */
+}
+.hero-btn button svg {
+  @apply
+    text-2xl; 
+}
+/* ---------- TESTING ---------- */
+.embla_dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 200px;
+}
+.embla_dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 3.5rem;
+  height: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  background-color: lightpink !important;
+  margin: 0 13px;
+}
+.embla_dot:after {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+.embla_dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
