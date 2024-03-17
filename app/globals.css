@@ -4,7 +4,6 @@
 
 @import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 @import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
-
 /* ---------- CHADCN/UI ---------- */
 @layer base {
   :root {
@@ -52,14 +51,26 @@
     --ring: 224.3 76.3% 48%;
   }
 }
+/* ---------- Customization ---------- */
+:root {
+  --logo-color: hsl(192, 100%, 35%);
+}
 /* ---------- NAV ---------- */
+.logo-color {
+  color: var(--logo-color);
+}
+.logo-p {
+  font-size: .59em;
+}
 .nav-item {
   @apply
     text-base
     font-medium
     text-gray-600
-    bg-transparent
-    hover:text-primary !important;
+    bg-transparent;
+}
+.nav-item:hover {
+  color: var(--logo-color) !important;
 }
 .nav-ul {
   @apply
@@ -68,11 +79,8 @@
     lg:w-[500px]
     lg:grid-cols-[.75fr_1fr];
 }
-.nav-icon {
-  @apply
-    flex divide-x;
-}
-/* ---------- HOME ---------- */
+/* --------------- Home (2) --------------- */
+/* ---------- 1. Hero ---------- */
 .hero-slide {
   @apply
     flex items-center justify-center
@@ -83,19 +91,25 @@
   position: sticky;
   top: 1.5rem;
   z-index: 1000;
-  /* background-color: gray; */
 }
 .hero-btn {
-  margin-top: -5vh;
-  left: 40%;
-  position: relative;
-  /* color: green; */
+  background-color: var(--logo-color);
 }
-.hero-btn button svg {
+.hero-btn:hover {
+  background-color: hsl(192, 100%, 40%);
+}
+.carousel-btn {
+  margin-top: -5vh;
+  /* position: relative; */
+}
+.carousel-btn button svg {
   @apply
     text-2xl; 
 }
-/* ---------- TESTING ---------- */
+/* ---------- 2. Carousel ---------- */
+.carousel-progress {
+  z-index: 1000 !important;
+}
 .embla_dots {
   display: flex;
   flex-wrap: wrap;
@@ -134,4 +148,8 @@
 }
 .embla_dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+/* ---------- TESTING ---------- */
+.testing {
+  margin-top: -40vh;
 }
