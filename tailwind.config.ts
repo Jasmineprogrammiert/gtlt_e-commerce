@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       colors: {
-        // "logo-color": "hsl(192, 100%, 35%)",
+        // "theme-color": "hsl(192, 100%, 35%)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

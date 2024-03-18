@@ -64,13 +64,13 @@ export default function Testimonial() {
         selectedSnap={selectedSnap}
         snapCount={snapCount}
       />
-      <div className="embla_dots">
+      <div className="carousel-dots">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
             onClick={() => onDotButtonClick(index)}
-            className={"embla_dot".concat(
-              index === selectedIndex ? " embla_dot--selected" : ""
+            className={"carousel-dot".concat(
+              index === selectedIndex ? " carousel-dot--selected" : ""
             )}
           />
         ))}

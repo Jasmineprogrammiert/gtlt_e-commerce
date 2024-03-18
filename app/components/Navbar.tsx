@@ -27,7 +27,7 @@ export default function Navbar() {
   // const { handleCartClick } = useShoppingCart();
 
   return (
-    <header className="nav-sticky flex justify-start items-center">
+    <header className="px-20 my-3 flex justify-start items-center sticky top-3 z-50">
       <Link href="/" className="mr-8">
         <Image
           src={Logo}
@@ -37,7 +37,7 @@ export default function Navbar() {
           height={45}
         />
         <h1 className="text-base font-bold">
-          Gut<span className="logo-color">olution</span>
+          Gut<span className="theme-color">olution</span>
         </h1>
       </Link>
       <NavigationMenu>

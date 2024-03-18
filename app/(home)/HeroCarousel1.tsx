@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 // assets
-import heroImg1 from '../../public/assets/heroImg-1.jpg'
-import heroImg2 from '../../public/assets/heroImg-2.jpg'
 import product1 from '../../public/assets/product-1.jpg'
 import product2 from '../../public/assets/product-2.jpg'
 
@@ -13,10 +11,10 @@ export default function HeroCarousel1() {
       <div className="flex flex-wrap justify-between">
         <div className="flex flex-col lg:w-2/5">
           <h1 className="text-6xl font-bold mb-12">
-            Gut is <span className="logo-color">The Solution</span> to your <span className="logo-color">Health</span>
+            Gut is <span className="theme-color">The Solution</span> to your <span className="theme-color">Health</span>
           </h1>
           <p className="text-2xl leading-relaxed font-medium">
-            Unlock your body{`'`}s potential: <span className="logo-color">explore</span> your unique gut microbiota and <span className="logo-color">personalize</span> your probiotics.
+            Unlock your body{`'`}s potential: <span className="theme-color">explore</span> your unique gut microbiota and <span className="theme-color">personalize</span> your probiotics.
           </p>
         </div>
 
@@ -31,7 +29,6 @@ export default function HeroCarousel1() {
               height={500}
             />
           </div>
-
           <div className="overflow-hidden rounded-lg drop-shadow-xl">
             <Image
               src={product2}
@@ -44,9 +41,11 @@ export default function HeroCarousel1() {
           </div>
         </div>
 
-        <button className="px-4 py-2 text-white font-semibold rounded-full hero-btn">
-          Explore More
-        </button>        
+        <button className="hero-btn">
+          <Link href="/products">
+            Shop Now
+          </Link>
+        </button> 
       </div>
     </section>
     </>
