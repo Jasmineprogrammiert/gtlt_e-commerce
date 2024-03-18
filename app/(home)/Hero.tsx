@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <>
-    <div className="overflow-hidden h-screen w-full bg-gray-100 hero" ref={emblaRef}>
+    <section className="overflow-hidden h-screen w-full bg-gray-100 hero" ref={emblaRef}>
       <div className="flex h-full">
         <div className="hero-slide">
           <HeroCarousel1 />
@@ -32,7 +32,7 @@ export default function Hero() {
           <HeroCarousel4 />
         </div>
       </div>
-    </div>
+    </section>
 
     <div className="px-20 flex justify-start -translate-y-28 lg:-translate-y-14">
       <SelectedSnapDisplay

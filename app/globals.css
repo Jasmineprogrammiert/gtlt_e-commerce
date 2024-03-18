@@ -147,6 +147,14 @@
 .carousel-dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
+/* ---------- 3. Carousel ---------- */
+.testimonial {
+  height: 33vh;
+}
+/* ---------- 4. Products ---------- */
+.products {
+  height: 67vh;
+}
 /* ---------- TESTING ---------- */
 .testing{
 
