@@ -1,6 +1,8 @@
 import Hero from './Hero'
 import Testimonial from './Testimonial'
 import Products from './Products'
+import ProductAdv from './ProductAdv'
+import HowItWorks from './HowItWorks'
 import Hero2 from './Hero2'
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
       <Hero />
       <Testimonial />
       <Products />
+      <ProductAdv />
+      <HowItWorks />
       {/* <Hero2 /> */}
     </div>
     </>

@@ -80,6 +80,18 @@
     lg:grid-cols-[.75fr_1fr];
 }
 /* --------------- Home (2) --------------- */
+.home-btn {
+  @apply
+    w-28
+    text-white font-semibold 
+    rounded-full transform hover:scale-105 
+    xl:absolute;
+  padding: 8px 4px;
+  background-color: var(--theme-color);
+}
+.home-btn:hover {
+  background-color: hsl(192, 100%, 40%);
+}
 /* ---------- 1. Hero ---------- */
 .hero {
   height: 90vh;
@@ -91,22 +103,12 @@
     px-20;
   flex: 0 0 100%;
 }
-.hero-btn {
-  @apply
-    px-4 py-2
-    w-28
-    text-white font-semibold 
-    rounded-full transform hover:scale-105 
-    xl:absolute;
-  background-color: var(--theme-color);
-  top: 70%;
-}
-.hero-btn:hover {
-  background-color: hsl(192, 100%, 40%);
-}
 .carousel-btn button svg {
   @apply
     text-2xl; 
+}
+.hero-btn {
+  top: 70%;
 }
 /* ---------- 2. Carousel ---------- */
 .carousel-dots {
@@ -155,7 +157,15 @@
 .products {
   height: 67vh;
 }
+/* ---------- 5. ProductAdv ---------- */
+.productAdv {
+  height: 55vh;
+}
+/* ---------- 6. HowItWorks ---------- */
+.howItWorks {
+  height: 45vh;
+}
 /* ---------- TESTING ---------- */
-.testing{
+.testing {
 
 }

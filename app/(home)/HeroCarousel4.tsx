@@ -40,7 +40,7 @@ export default function HeroCarousel4() {
         </div>
       </div>
 
-      <button className="hero-btn">
+      <button className="home-btn hero-btn">
         <Link href="/products">
           Shop Now
         </Link>

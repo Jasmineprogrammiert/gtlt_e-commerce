@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <>
-    <section className="overflow-hidden h-screen w-full bg-gray-100 hero" ref={emblaRef}>
+    <section className="overflow-hidden h-screen w-full bg-gray-50 hero" ref={emblaRef}>
       <div className="flex h-full">
         <div className="hero-slide">
           <HeroCarousel1 />
