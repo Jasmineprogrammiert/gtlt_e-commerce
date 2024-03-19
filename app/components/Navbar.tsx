@@ -27,7 +27,7 @@ export default function Navbar() {
   // const { handleCartClick } = useShoppingCart();
 
   return (
-    <header className="px-20 my-3 flex justify-start items-center sticky top-3 z-50">
+    <header className="px-20 py-2 flex justify-start items-center sticky top-0 z-50 w-full shadow bg-gray-50">
       <Link href="/" className="mr-8">
         <Image
           src={Logo}
