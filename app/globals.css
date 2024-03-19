@@ -82,7 +82,7 @@
 /* --------------- Home (2) --------------- */
 /* ---------- 1. Hero ---------- */
 .hero {
-  height: 90vh;;
+  height: 90vh;
 }
 .hero-slide {
   @apply

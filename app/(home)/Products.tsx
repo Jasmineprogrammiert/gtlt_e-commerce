@@ -13,9 +13,8 @@ async function getData() {
       'imgUrl': images[0].asset->url,
       'slug': slug.current
   }`
-
   const data = await client.fetch(query);
-
+  
   return data;
 }
 
@@ -23,51 +22,42 @@ export default async function Products() {
   const data: simplifiedProduct[] = await getData();
   return (
     <>
-    <div className="bg-white products">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Signature Products
-          </h2>
-          <Link className="text-primary flex items-center gap-x-1" href="/all">
-            See All{" "}
-            <span>
-              <ArrowRight />
-            </span>
-          </Link>
-        </div>
+    <div className="bg-sky-50 px-20 mt-6 products">
+      {/* <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"> */}
+      <div className="flex justify-between items-center">
+        <h2 className="text-2xl font-bold">
+          Our Signature Products
+        </h2>
+        <Link className="flex items-center gap-x-1 transition-transform transform hover:-translate-x-1 font-medium" href="/products">
+          See All <ArrowRight />
+        </Link>
+      </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {data.map(product => (
-            <div key={product._id} className="relative">
-              <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
-                <Image
-                  src={product.imgUrl}
-                  alt="Product image"
-                  className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                  width={300}
-                  height={300}
-                />
-              </div>
-
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <Link href={`/product/${product.slug}`}>
-                      {product.name}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    {product.category}
-                  </p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">
-                  {'$'}{product.price.toString()}
+      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        {data.map(product => (
+          <Link href={`/products/${product.slug}`} key={product._id} className="relative">
+            <div className="aspect-square w-full overflow-hidden rounded-md lg:h-80">
+              <Image
+                src={product.imgUrl}
+                alt="Product image"
+                className="w-full h-full object-cover object-center"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div className="text-sm max-w-44 xl:max-w-none">
+                <h3 className="font-medium">{product.name}</h3>
+                <p className="mt-1 text-gray-800">
+                  {product.category}
                 </p>
               </div>
+              <p className="text-sm font-medium">
+                {'$'}{product.price.toString()}
+              </p>
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
     </div>
     </>
