@@ -79,7 +79,7 @@
     lg:w-[500px]
     lg:grid-cols-[.75fr_1fr];
 }
-/* --------------- Home (2) --------------- */
+/* --------------- Home (7) --------------- */
 .home-h2 {
   @apply 
     text-2xl font-bold mb-6;
@@ -168,6 +168,12 @@
 /* ---------- 6. HowItWorks ---------- */
 .howItWorks {
   height: 45vh;
+}
+/* ---------- 7. Problems ---------- */
+.problems-icon {
+  @apply
+    inline-block
+    mb-2;
 }
 /* ---------- TESTING ---------- */
 .testing {
