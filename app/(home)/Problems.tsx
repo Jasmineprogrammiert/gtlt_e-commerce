@@ -17,7 +17,7 @@ export default function Problems() {
           <Image
             src={problem1}
             alt="1st Image"
-            className="w-full h-4/5 object-cover rounded-xl"
+            className="w-full h-4/5 object-cover rounded-xl xl:h-4/6"
             priority
             width={500}
             height={500}
