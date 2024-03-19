@@ -11,8 +11,8 @@ const statements = {
 export default function HowItWorks() {
   return (
     <>
-    <div className="px-20 bg-gray-50 relative howItWorks">
-      <h2 className="text-2xl font-bold mb-6">How It Works</h2>
+    <section className="px-20 py-5 bg-gray-50 relative howItWorks">
+      <h2 className="home-h2">How It Works</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="flex flex-col items-center">
           <Image
@@ -45,14 +45,14 @@ export default function HowItWorks() {
             width={500}
             height={500}
           />
-          <p className="mt-2 text-center">{statements.s3}</p>
+          <p className="mt-2 text-center text-gray-800">{statements.s3}</p>
         </div>
       </div>
       
       <button className="absolute left-1/2 transform -translate-x-1/2 home-btn mt-8">
         <Link href="/products">Order Now</Link>
       </button> 
-    </div>
+    </section>
     </>
   );
 }

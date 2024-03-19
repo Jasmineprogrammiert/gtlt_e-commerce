@@ -22,8 +22,7 @@ export default async function Products() {
   const data: simplifiedProduct[] = await getData();
   return (
     <>
-    <div className="px-20 bg-sky-50 products">
-      {/* <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"> */}
+    <section className="px-20 py-3 bg-sky-50 products">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">
           Our Signature Products
@@ -32,7 +31,7 @@ export default async function Products() {
           See All <ArrowRight />
         </Link>
       </div>
-
+      
       <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {data.map(product => (
           <Link href={`/products/${product.slug}`} key={product._id} className="relative">
@@ -48,7 +47,7 @@ export default async function Products() {
             <div className="mt-4 flex justify-between">
               <div className="text-sm max-w-44 xl:max-w-none">
                 <h3 className="font-medium">{product.name}</h3>
-                <p className="mt-1 text-gray-600">
+                <p className="mt-1 text-gray-800">
                   {product.category}
                 </p>
               </div>
@@ -59,7 +58,7 @@ export default async function Products() {
           </Link>
         ))}
       </div>
-    </div>
+    </section>
     </>
   )
 }

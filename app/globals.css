@@ -80,6 +80,10 @@
     lg:grid-cols-[.75fr_1fr];
 }
 /* --------------- Home (2) --------------- */
+.home-h2 {
+  @apply 
+    text-2xl font-bold mb-6;
+}
 .home-btn {
   @apply
     w-28
@@ -151,11 +155,11 @@
 }
 /* ---------- 3. Carousel ---------- */
 .testimonial {
-  height: 33vh;
+  height: 32vh;
 }
 /* ---------- 4. Products ---------- */
 .products {
-  height: 67vh;
+  height: 68vh;
 }
 /* ---------- 5. ProductAdv ---------- */
 .productAdv {

@@ -17,7 +17,7 @@ export default function TestimonialCarousel() {
   }, []);
 
   return (
-    <section className="flex items-center">
+    <div className="flex items-center">
       <IconButton
         onClick={() =>
           setcurrIndex(prevIndex => (prevIndex - 1 + testimonials.length) % testimonials.length)
@@ -56,6 +56,6 @@ export default function TestimonialCarousel() {
       >
         <KeyboardArrowRightIcon />
       </IconButton>
-    </section>
+    </div>
   );
 }

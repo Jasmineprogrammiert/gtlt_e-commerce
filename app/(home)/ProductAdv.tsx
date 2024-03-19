@@ -32,8 +32,8 @@ const data: ProductAdv[] = [
 
 export default function ProductAdv() {
   return (
-    <div className="px-20 bg-green-50 productAdv">
-      <h2 className="text-2xl font-bold mb-6">Product Advantages</h2>
+    <section className="px-20 py-3 bg-green-50 productAdv">
+      <h2 className="home-h2">Product Advantages</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {data.map(adv => (
           <div key={adv.id} className="bg-white p-4 rounded-lg flex flex-col items-center">
@@ -46,12 +46,10 @@ export default function ProductAdv() {
               height={500}
             />
             <h3 className="text-lg font-bold mt-4">{adv.title}</h3>
-            <p className="text-sm text-gray-600 mt-1">{adv.description}</p>
+            <p className="text-sm text-gray-800 mt-1">{adv.description}</p>
           </div>
         ))}
       </div>
-
-
-    </div>
-  );
+    </section>
+  )
 }
