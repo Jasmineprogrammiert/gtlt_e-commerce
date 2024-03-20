@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react'
+import { testimonials } from './TestimonialData'
+// styles
+import { Neuton } from 'next/font/google'
+import { La_Belle_Aurore } from 'next/font/google'
 import { motion } from 'framer-motion'
-import { testimonials } from './Testimonials'
 import IconButton from '@mui/material/IconButton'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+
+const neuton = Neuton({ subsets: ['latin'], display: 'swap', variable: '--font-neuton', weight: '300' });
+const laBelleAurore = La_Belle_Aurore({ subsets: ['latin'], display: 'swap', weight: '400' });
 
 export default function TestimonialCarousel() {
   const [currIndex, setcurrIndex] = useState(0);
@@ -11,7 +17,7 @@ export default function TestimonialCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setcurrIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -33,7 +39,7 @@ export default function TestimonialCarousel() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .5 }}
-          className="text-2xl font-medium mb-12"
+          className={`text-2xl mb-8 text-center tracking-wide leading-relaxed ${neuton.className}`}
         >
           {`"${testimonials[currIndex].testimonial}"`}
         </motion.p>
@@ -42,7 +48,7 @@ export default function TestimonialCarousel() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .5 }}
-          className="text-xl font-normal"
+          className={`text-2xl text-center tracking-widest ${laBelleAurore.className}`}
         >
           {testimonials[currIndex].name}
         </motion.p>

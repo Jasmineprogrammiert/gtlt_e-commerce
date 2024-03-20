@@ -79,7 +79,7 @@
     lg:w-[500px]
     lg:grid-cols-[.75fr_1fr];
 }
-/* --------------- Home (7) --------------- */
+/* --------------- Home - General --------------- */
 .home-h2 {
   @apply 
     text-2xl font-bold mb-6;
@@ -96,7 +96,7 @@
 .home-btn:hover {
   background-color: hsl(192, 100%, 40%);
 }
-/* ---------- 1. Hero ---------- */
+/* ---------- Home - Hero ---------- */
 .hero {
   height: 90vh;
 }
@@ -107,14 +107,13 @@
     px-20;
   flex: 0 0 100%;
 }
+.hero-btn {
+  top: 70%;
+}
 .carousel-btn button svg {
   @apply
     text-2xl; 
 }
-.hero-btn {
-  top: 70%;
-}
-/* ---------- 2. Carousel ---------- */
 .carousel-dots {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +138,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10%;
-  background-color: var(--theme-color);
+  background-color: hsl(0, 0%, 93%);
 }
 .carousel-dot:after {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
@@ -150,26 +149,32 @@
   align-items: center;
   content: '';
 }
-.carousel-dot--selected:after {
+.carousel-dot-selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
-/* ---------- 3. Carousel ---------- */
+.carousel-dot-selected {
+  background-color: var(--theme-color);
+}
+/* ---------- Home - Testimonial ---------- */
 .testimonial {
   height: 32vh;
 }
-/* ---------- 4. Products ---------- */
+/* ---------- Home - Products ---------- */
 .products {
-  height: 68vh;
+  /* height: 68vh; */
 }
-/* ---------- 5. ProductAdv ---------- */
+.products-card {
+  height: 78vh;
+}
+/* ---------- Home - ProductAdv ---------- */
 .productAdv {
   height: 55vh;
 }
-/* ---------- 6. HowItWorks ---------- */
+/* ---------- Home - HowItWorks ---------- */
 .howItWorks {
   height: 45vh;
 }
-/* ---------- 7. Problems ---------- */
+/* ---------- Home - Problems ---------- */
 .problems-icon {
   @apply
     inline-block
@@ -177,5 +182,5 @@
 }
 /* ---------- TESTING ---------- */
 .testing {
-
+  /* transition-duration: 2000ms; */
 }

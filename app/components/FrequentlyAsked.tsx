@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { cardData } from './FrequentlyAskedInfo'
+import { cardData } from './FrequentlyAskedData'
 import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
 
 export default function FrequentlyAsked() {

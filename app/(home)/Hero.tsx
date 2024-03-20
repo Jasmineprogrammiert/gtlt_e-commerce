@@ -11,7 +11,7 @@ import HeroCarousel3 from './HeroCarousel3'
 import HeroCarousel4 from './HeroCarousel4'
 
 export default function Hero() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 8000 })]);
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
 
@@ -45,7 +45,7 @@ export default function Hero() {
             key={index}
             onClick={() => onDotButtonClick(index)}
             className={"carousel-dot".concat(
-              index === selectedIndex ? " carousel-dot--selected" : ""
+              index === selectedIndex ? " carousel-dot-selected" : ""
             )}
           />
         ))}

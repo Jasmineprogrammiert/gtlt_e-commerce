@@ -1,34 +1,6 @@
 import Image from 'next/image'
-import productAdv from '../../public/assets/productAdv-1.png'
-
-interface ProductAdv {
-  id: number;
-  title: string;
-  description: string;
-}
-
-const data: ProductAdv[] = [
-  {
-    id: 1,
-    title: 'Simple and Convient Home Testing',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta hic expedita inventore excepturi. Inventore maiores ducimus eveniet.',
-  },
-  {
-    id: 2,
-    title: 'Next-Generation Sequencing Testing',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta hic expedita inventore excepturi. Inventore maiores ducimus eveniet.',
-  },
-  {
-    id: 3,
-    title: 'Scientific Research & AI Recommendations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta hic expedita inventore excepturi. Inventore maiores ducimus eveniet.',
-  },
-  {
-    id: 4,
-    title: 'Personalizaed Health & Wellness Plan',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta hic expedita inventore excepturi. Inventore maiores ducimus eveniet.',
-  },
-];
+import { data } from './ProductAdvData'
+import productAdvImg from '../../public/assets/productAdv-1.png'
 
 export default function ProductAdv() {
   return (
@@ -38,7 +10,7 @@ export default function ProductAdv() {
         {data.map(adv => (
           <div key={adv.id} className="bg-white p-4 rounded-lg flex flex-col items-center">
             <Image
-              src={productAdv}
+              src={productAdvImg}
               alt={adv.title}
               className="w-24 h-24 object-cover rounded-full"
               priority
