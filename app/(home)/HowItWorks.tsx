@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import productAdv from '../../public/assets/productAdv-1.png'
+import productAdv from '../../public/assets/productAdv-1.jpg'
 
 const statements = {
   s1: "Collect the sample at home and mail it to us",
@@ -11,7 +11,7 @@ const statements = {
 export default function HowItWorks() {
   return (
     <>
-    <section className="px-20 py-5 bg-gray-50 relative howItWorks">
+    <section className="px-20 py-5 bg-lime-50 relative howItWorks">
       <h2 className="home-h2">How It Works</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="flex flex-col items-center">

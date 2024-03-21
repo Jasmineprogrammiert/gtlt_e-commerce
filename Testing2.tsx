@@ -24,7 +24,7 @@ export default async function Products() {
   const data: simplifiedProduct[] = await getData();
   return (
     <>
-    <section className="px-20 py-3 bg-sky-50 products">
+    <section className="px-20 py-3 bg-sky-50">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">
           Our Signature Products

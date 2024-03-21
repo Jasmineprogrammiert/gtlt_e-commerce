@@ -7,7 +7,7 @@ export default function Products() {
     <div className="px-20 pt-20 bg-gray-50 flex flex-col items-stretch">
       <div className="flex mb-20">
         <div className="w-1/2 flex items-center">
-          <h2 className="text-5xl font-medium">Health Solutions</h2>
+          <h2 className="home-h2 mb-0">Health Solutions</h2>
         </div>
         <div className="w-1/2">
           <p className="text-2xl">

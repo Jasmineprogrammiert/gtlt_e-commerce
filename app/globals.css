@@ -82,7 +82,7 @@
 /* --------------- Home - General --------------- */
 .home-h2 {
   @apply 
-    text-2xl font-bold mb-6;
+    text-5xl font-medium mb-10;
 }
 .home-btn {
   @apply
@@ -160,15 +160,8 @@
   height: 32vh;
 }
 /* ---------- Home - Products ---------- */
-.products {
-  /* height: 68vh; */
-}
 .products-card {
   height: 78vh;
-}
-/* ---------- Home - ProductAdv ---------- */
-.productAdv {
-  height: 55vh;
 }
 /* ---------- Home - HowItWorks ---------- */
 .howItWorks {
