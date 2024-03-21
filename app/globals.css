@@ -86,7 +86,7 @@
 }
 .home-btn {
   @apply
-    w-28
+    w-32
     text-white font-semibold 
     rounded-full transform hover:scale-105 
     xl:absolute;
@@ -165,7 +165,8 @@
 }
 /* ---------- Home - HowItWorks ---------- */
 .howItWorks {
-  height: 45vh;
+  background-color: rgb(242, 242, 238);
+  /* height: 45vh; */
 }
 /* ---------- Home - Problems ---------- */
 .problems-icon {

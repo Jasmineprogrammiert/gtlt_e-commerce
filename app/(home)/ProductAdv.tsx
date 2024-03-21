@@ -9,9 +9,9 @@ export default function ProductAdv() {
       <h2 className="home-h2">Product Advantages</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {data.map(adv => (
-          <div key={adv.id} className="bg-gray-100 mt-10 pb-5 xl:pb-8 rounded-lg flex flex-col items-center text-center">
+        <div key={adv.id} className="bg-gray-100 mt-10 pb-5 xl:pb-8 rounded-lg flex flex-col items-center text-center">
             <Image
-              src={adv.link}
+              src={adv.imgLink}
               alt={adv.title}
               className="w-full h-44 xl:h-52 object-cover rounded"
               width={500}

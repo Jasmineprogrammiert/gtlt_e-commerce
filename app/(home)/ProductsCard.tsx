@@ -20,18 +20,16 @@ export default function ProductsCard({ p }: { p: any }) {
         src={isHovered ? p.imgAft : p.imgOrg}
         alt="Background Image"
         fill
-        objectFit="cover"
-        objectPosition="center"
-        className="rounded transition-opacity duration-300"
+        priority
+        className="object-cover object-center rounded transition-opacity duration-300"
         style={{ opacity: isHovered ? 0 : 1 }}
       />
       <Image
         src={isHovered ? p.imgAft : p.imgOrg}
         alt="Background Image"
         fill
-        objectFit="cover"
-        objectPosition="center"
-        className="rounded transition-opacity duration-300"
+        priority
+        className="object-cover object-center rounded transition-opacity duration-300"
         style={{ opacity: isHovered ? 1 : 0 }}
       />
 
