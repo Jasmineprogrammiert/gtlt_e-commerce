@@ -168,6 +168,18 @@
   background-color: rgb(242, 242, 238);
   /* height: 45vh; */
 }
+/* ---------- Home - TestIncludes ---------- */
+.testIncludes {
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+.testIncludes p, ol {
+  @apply 
+    text-lg leading-relaxed;
+}
+.testIncludes li {
+  @apply 
+    mb-3;
+}
 /* ---------- Home - Problems ---------- */
 .problems-icon {
   @apply
