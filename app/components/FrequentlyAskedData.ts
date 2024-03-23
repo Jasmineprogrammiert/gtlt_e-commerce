@@ -1,4 +1,4 @@
-export const cardData: { title: string; link: string }[] = [
+export const cardData: { title: string; link: string; }[] = [
   {
     title: 'Question 1',
     link: '/questions',

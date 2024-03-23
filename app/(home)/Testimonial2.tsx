@@ -13,7 +13,7 @@ export default function Testimonial2() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrIndex((prevIndex) => (prevIndex + 3) % testimonials.length);
-    }, 100000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 

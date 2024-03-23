@@ -79,6 +79,11 @@
     lg:w-[500px]
     lg:grid-cols-[.75fr_1fr];
 }
+/* --------------- FrequentlyAsked --------------- */
+.fA-icon {
+  @apply
+    w-6 h-6 mb-2;
+}
 /* --------------- Home - General --------------- */
 .home-h2 {
   @apply 
@@ -179,13 +184,12 @@
   @apply 
     mb-3;
 }
-/* ---------- Home - Problems ---------- */
-.problems-icon {
+/* ---------- TESTING ---------- */
+.testing {
+
+}
+.problems-icon { /* Home - Problems */
   @apply
     inline-block
     mb-2;
-}
-/* ---------- TESTING ---------- */
-.testing {
-  max-height: 80vh;
 }
