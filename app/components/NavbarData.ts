@@ -79,4 +79,4 @@ const explore: { title: string; href: string; description: string }[] = [
   },
 ]
 
-export { products, stories, explore };
+export { products, stories, explore }

@@ -1,4 +1,4 @@
-const data: { 
+export const data: { 
     id: number; 
     title: string; 
     description: string;
@@ -29,5 +29,3 @@ const data: {
     imgLink: "https://images.unsplash.com/photo-1576669801945-7a346954da5a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlcnNvbmFsJTIwY29uc3VsdGF0aW9ufGVufDB8MHwwfHx8Mg%3D%3D"
   },
 ]
-
-export { data };

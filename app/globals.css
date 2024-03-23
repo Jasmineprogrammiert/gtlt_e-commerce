@@ -187,5 +187,5 @@
 }
 /* ---------- TESTING ---------- */
 .testing {
-  /* transition-duration: 2000ms; */
+  max-height: 80vh;
 }
