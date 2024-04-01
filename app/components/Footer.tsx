@@ -44,7 +44,7 @@ export default function Footer() {
             >
               <InstagramIcon className="w-10 h-10" />
             </Link>
-            <p className="text-gray-700 mt-5">Sign up to get our special offers and news</p>
+            <p className="text-gray-700 mt-5 xl:mt-4">Sign up to get our special offers and news</p>
             <div className="flex">
               <input
                 type="email"
