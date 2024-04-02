@@ -7,6 +7,8 @@ import TestIncludes from './TestIncludes'
 import TechShowcase from './TechShowcase'
 import Testimonial2 from './Testimonial2'
 
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
   return (
     <>
