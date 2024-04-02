@@ -24,7 +24,7 @@ import { ShoppingBag } from 'lucide-react'
 
 export default function Navbar() {
   const pathname = usePathname();
-  // const { handleCartClick } = useShoppingCart();
+  const { handleCartClick } = useShoppingCart();
 
   return (
     <header className="px-20 py-2 flex justify-start items-center sticky top-0 z-50 w-full shadow bg-gray-50">
@@ -126,7 +126,7 @@ export default function Navbar() {
           <SearchIcon />
         </button>
         <button
-          // onClick={() => handleCartClick()}
+          onClick={() => handleCartClick()}
         >
           <ShoppingBag />
         </button>

@@ -12,6 +12,7 @@ export interface fullProduct {
   name: string;
   description: string;
   price: number;
+  price_id: string;
   category: string;
   slug: string;
   images: any;

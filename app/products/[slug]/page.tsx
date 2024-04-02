@@ -5,6 +5,8 @@ import ImgGallery from '../ImgGallery'
 import { Button } from '@mui/material'
 import { Star, AddShoppingCart, ShoppingCartCheckout } from '@mui/icons-material'
 import { Truck } from 'lucide-react'
+import AddToBag from '../../components/AddToBag'
+import Checkout from '../../components/Checkout'
 
 async function getData(slug: string) {
   const query = `*[_type == 'product' && slug.current == '${slug}'][0] {
@@ -12,6 +14,7 @@ async function getData(slug: string) {
       name,
       description,
       price,
+      price_id,
       images,
       "category": category->name,
       "slug": slug.current,
@@ -77,30 +80,24 @@ export default async function ProductPage({
             </div>
 
             <div className="flex gap-2.5">
-              <Button>Add to Bag</Button>
-              <Button>Checkout Now</Button>
-              {/* <span
-                currency="USD"
+              <AddToBag
+                currency="HKD"
                 description={data.description}
                 image={data.images[0]}
                 name={data.name}
                 price={data.price}
-                key={data._id}
                 price_id={data.price_id}
-              >
-                <AddShoppingCart />
-              </span>
-              <span
-                currency="USD"
+                key={data._id}
+              />
+              <Checkout
+                currency="HKD"
                 description={data.description}
                 image={data.images[0]}
                 name={data.name}
                 price={data.price}
-                key={data._id}
                 price_id={data.price_id}
-              >
-                <ShoppingCartCheckout />
-              </span> */}
+                key={data._id}
+              />
             </div>
             <p className="mt-12 text-base text-gray-500 tracking-wide">
               {data.description}

@@ -42,4 +42,4 @@ const renderIconByTheme = (index: number) => {
     default:
       return <Medication className="fA-icon" />;
   }
-};
+}
