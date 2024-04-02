@@ -8,7 +8,7 @@ interface imgGallery {
   images: any;
 }
 
-export default function ImageGallery({ images }: imgGallery) {
+export default function ImgGallery({ images }: imgGallery) {
   const [bigImage, setBigImage] = useState(images[0]);
 
   const handleSmallImageClick = (image: any) => {

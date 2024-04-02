@@ -4,7 +4,7 @@ export default function Products() {
   return (
     <>
     <div>
-      <ImgGallery />
+      <ImgGallery images={Image} />
     </div>
     </>
   )
