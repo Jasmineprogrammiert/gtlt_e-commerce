@@ -43,13 +43,13 @@ export default function Navbar() {
       <NavigationMenu>
         <NavigationMenuList className="gap-1 hidden lg:flex">
           {/* ----- HOME ----- */}
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()} nav-item mr-2`}>
                 Home
               </NavigationMenuLink>
             </Link>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
           {/* ----- PRODUCTS ----- */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className="nav-item bg-transparent">Products</NavigationMenuTrigger>

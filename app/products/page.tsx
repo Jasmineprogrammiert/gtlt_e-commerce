@@ -1,10 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-// import { fullProduct } from '@/app/interface'
 import { simplifiedProduct } from '@/app/interface'
 import { client } from '@/app/lib/sanity'
 
-// async function getData(slug: string) {
 async function getData() {
   const query = `*[_type == 'product'] {
     _id,
@@ -20,54 +18,45 @@ async function getData() {
   return data;
 }
 
-export default async function Products(
-// { params }: { params: {category: string}}
-) {
-  // const data: simplifiedProduct[] = await getData(params.category);
+export default async function Products() {
   const data: simplifiedProduct[] = await getData()
 
   return (
-    <div className="bg-white my-10">
-      <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
-        <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Newest Products
-          </h2>
-        </div>
+    <div className="px-20 py-20 bg-gray-50">
+      <h2 className="text-5xl mb-10">All Products</h2>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {data.map(product => (
-            <div key={product._id} className="group relative">
-              <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+        {data.map(product => (
+          <div key={product._id} className="group relative">
+            <div className="w-full aspect-square overflow-hidden rounded-md bg-gray-200 group-hover:opacity-80">
               {product.imgUrl ? 
-                <Image
-                  src={product.imgUrl}
-                  alt="Product image"
-                  className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                  width={300}
-                  height={300}
-                />
+                <Link href={`/products/${product.slug}`}>
+                  <Image
+                    src={product.imgUrl}
+                    alt="Product image"
+                    className="w-full h-full object-cover object-center"
+                    width={300}
+                    height={300}
+                  />
+                </Link>
                 : null}
-              </div>
-
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <Link href={`/products/${product.slug}`}>
-                      {product.name}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    {product.category}
-                  </p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">
-                  ${product.price}
-                </p>
-              </div>
             </div>
-          ))}
-        </div>
+            <div className="mx-0.5 my-3">
+              <h3 className="text-xl">
+                <Link href={`/products/${product.slug}`}>
+                  {product.name}
+                </Link>
+              </h3>
+              <p className="text-lg font-medium text-gray-800">
+                ${product.price}
+              </p>
+
+              <p className="text-lg mt-1 text-gray-600">
+                {product.category}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
