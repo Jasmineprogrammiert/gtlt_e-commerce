@@ -1,38 +1,29 @@
-export const cardData: { title: string; link: string; }[] = [
+export const cardData: { title: string; }[] = [
   {
-    title: 'Question 1',
-    link: '/questions',
+    title: 'General Questions',
   },
   {
-    title: 'Question 2',
-    link: '/questions',
+    title: 'Shipping Questions',
   },
   {
-    title: 'Question 3',
-    link: '/questions',
+    title: 'Subscription Management',
   },
   {
-    title: 'Question 4',
-    link: '/questions',
+    title: 'Product 1',
   },
   {
-    title: 'Question 5',
-    link: '/questions',
+    title: 'Product 2',
   },
   {
-    title: 'Question 6',
-    link: '/questions',
+    title: 'Product 3',
   },
   {
-    title: 'Question 7',
-    link: '/questions',
+    title: 'Product 4',
   },
   {
-    title: 'Question 8',
-    link: '/questions',
+    title: 'Product 5',
   },
   {
-    title: 'Question 9',
-    link: '/questions',
+    title: 'Product 6',
   },
 ]
