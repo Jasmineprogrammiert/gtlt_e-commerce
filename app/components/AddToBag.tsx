@@ -6,7 +6,7 @@ import { urlFor } from '../lib/sanity'
 
 export interface ProductCart {
   name: string;
-  description: string;
+  description_1: string;
   price: number;
   price_id: string;
   currency: string;
@@ -15,7 +15,7 @@ export interface ProductCart {
 
 export default function AddToBag({
   currency,
-  description,
+  description_1,
   image,
   name,
   price,
@@ -25,7 +25,7 @@ export default function AddToBag({
 
   const product = {
     name: name,
-    description: description,
+    description_1: description_1,
     price: price,
     price_id: price_id,
     currency: currency,

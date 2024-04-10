@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { urlFor } from '@/app/lib/sanity'
 
@@ -9,41 +9,36 @@ interface imgGallery {
 }
 
 export default function ImgGallery({ images }: imgGallery) {
-  const [bigImage, setBigImage] = useState(images[0]);
+  const [bigImg, setBigImg] = useState(images[0]);
 
-  const handleSmallImageClick = (image: any) => {
-    setBigImage(image)
+  const handleSmallImgClick = (image: any) => {
+    setBigImg(image)
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-5">
-      <div className="flex gap-4 lg:order-none lg:flex-col">
+    <>
+    <div> 
+      <Image
+        src={urlFor(bigImg).url()}
+        alt="Product Image"
+        width={200}
+        height={200}
+        className="w-full object-cover object-center"
+      />
+      <div className="flex flex-row space-x-2 mt-4 xl:mt-5 overflow-x-auto w-full">
         {images.map((image: any, i: any) => (
-          <div key={i} className="overflow-hidden rounded-lg bg-gray-100">
-            <Image
-              src={urlFor(image).url()}
-              alt="Product images"
-              width={200}
-              height={200}
-              className="h-20 w-20 object-cover object-center cursor-pointer"
-              onClick={() => handleSmallImageClick(image)}
-            />
-          </div>
+          <Image
+            key={i}
+            src={urlFor(image).url()}
+            alt="Product Images"
+            width={200}
+            height={200}
+            className="w-20 xl:w-24 object-cover object-center cursor-pointer"
+            onClick={() => handleSmallImgClick(image)}
+          />
         ))}
       </div>
-
-      <div className="relative overflow-hidden rounded-lg h-2/5 aspect-square">
-        <Image
-          src={urlFor(bigImage).url()}
-          alt="Product images"
-          width={200}
-          height={200}
-          className="h-full w-full object-cover object-center"
-        />
-        <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">
-          Sale
-        </span>
-      </div>
     </div>
+    </>
   )
 }
