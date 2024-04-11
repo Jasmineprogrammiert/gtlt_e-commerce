@@ -184,6 +184,16 @@
   @apply 
     mb-3;
 }
+/* --------------- Products - ProductDetail --------------- */
+.productDetail-tab {
+  @apply 
+    inline-block 
+    p-4 
+    border-b-2 
+    rounded-t-lg 
+    uppercase 
+    mr-6;
+}
 /* ---------- TESTING ---------- */
 .testing {
 

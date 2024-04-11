@@ -7,7 +7,7 @@ import { ProductCart } from './AddToBag'
 
 export default function Checkout({
   currency,
-  description,
+  description_1,
   image,
   name,
   price,
@@ -21,7 +21,7 @@ export default function Checkout({
 
   const product = {
     name: name,
-    description: description,
+    description_1: description_1,
     price: price,
     price_id: price_id,
     currency: currency,
