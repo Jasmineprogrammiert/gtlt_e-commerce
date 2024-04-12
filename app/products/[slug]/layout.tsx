@@ -1,4 +1,5 @@
 import ProductDetail from './ProductDetail'
+import HealthScores from './HealthScores'
 
 export default async function ProductsLayout({ 
   children,
@@ -9,6 +10,7 @@ export default async function ProductsLayout({
     <>
     {children}
     <ProductDetail />
+    <HealthScores />
     </>
   )
 }

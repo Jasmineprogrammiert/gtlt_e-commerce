@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { client } from '@/app/lib/sanity'
 import { fullProduct } from '@/app/interface'
-import ImgGallery from '../ImgGallery'
+import ImgGallery from './ImgGallery'
 // styles
 import { Button } from '@mui/material'
 import { Star, AddShoppingCart, ShoppingCartCheckout } from '@mui/icons-material'

@@ -191,8 +191,8 @@
     p-4 
     border-b-2 
     rounded-t-lg 
-    uppercase 
-    mr-6;
+    uppercase
+    mr-10;
 }
 .tab1-container-1 {
   @apply
@@ -294,6 +294,10 @@
 .tab3-container p:last-child {
   @apply
     mb-0;
+}
+/* --------------- Products - HealthScores --------------- */
+.hs-bgImg {
+  height: 30rem; 
 }
 /* ---------- TESTING ---------- */
 .testing {

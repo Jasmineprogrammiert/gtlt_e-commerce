@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Tab1 from './Tab1'
 import Tab2 from './Tab2'
 import Tab3 from './Tab3'
-import Tab4 from './Tab4'
 
 export default function ProductDetail() {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -51,21 +50,8 @@ export default function ProductDetail() {
               What is included
             </button>
           </li>
-          <li role="presentation">
-            <button
-              className={`productDetail-tab ${
-                activeTab === 'tab4' ? 'border-cyan-600' : ''
-              }`}
-              id="tab4"
-              onClick={() => toggleTab('tab4')}
-            >
-              More 
-            </button>
-          </li>
         </ul>
       </div>
-
-
       
       <div id="content1" className={activeTab === 'tab1' ? '' : 'hidden'}>
         <Tab1 />
@@ -75,9 +61,6 @@ export default function ProductDetail() {
       </div>
       <div id="content3" className={activeTab === 'tab3' ? '' : 'hidden'}>
         <Tab3 />
-      </div>
-      <div id="content4" className={activeTab === 'tab4' ? '' : 'hidden'}>
-        <Tab4 />
       </div>
     </div>
     </>
