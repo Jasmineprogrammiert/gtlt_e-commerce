@@ -3,10 +3,10 @@ import Image from 'next/image'
 export default function Tab1() {
   return (
     <>
-    <div className="mt-14">
+    <div className="mt-16">
       <div className="mb-4">
         <h2 className="text-3xl font-semibold tracking-wide mb-4">GUTolution™ Adult</h2>
-        <h2 className="text-2xl font-semibold tracking-wide mb-7">Precision Probiotics Program</h2>
+        <h2 className="text-2xl font-semibold trackingx-wide mb-7">Precision Probiotics Program</h2>
         <p className="text-lg text-gray-700 mb-10">
           With <b>4 steps</b> customized probiotics, the GUTolution Precision Probiotics Program is an affordable personalized microbiome health solution for reversing chronic illness at home.
         </p>
@@ -14,7 +14,7 @@ export default function Tab1() {
 
 
       <div className="flex space-x-6">
-        <div className="tab-container-1">
+        <div className="tab1-container-1">
           <h3>Step 1</h3>
           <p className="text-gray-900 uppercase mb-4">Sample Collection</p>
           <p className="mt-2 text-gray-700">
@@ -30,7 +30,7 @@ export default function Tab1() {
         </div>
 
 
-        <div className="tab-container-2">
+        <div className="tab1-container-2">
           <Image 
             src={"https://images.unsplash.com/photo-1604782206219-3b9576575203?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1lZGljYWwlMjBwcm9kdWN0fGVufDB8MXwwfHx8Mg%3D%3D"}
             alt="Card 2" 
@@ -48,7 +48,7 @@ export default function Tab1() {
 
 
         
-        <div className="tab-container-1">
+        <div className="tab1-container-1">
           <h3>Step 3</h3>
           <p className="text-gray-900 uppercase mb-4">Product Formulation</p>
           <p className="mt-2 text-gray-700">
@@ -62,7 +62,7 @@ export default function Tab1() {
             className="h-20 w-20 rounded-full absolute bottom-5 right-5" 
           />
         </div>
-        <div className="tab-container-2">
+        <div className="tab1-container-2">
           <Image 
             src={"https://images.unsplash.com/photo-1604782206219-3b9576575203?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1lZGljYWwlMjBwcm9kdWN0fGVufDB8MXwwfHx8Mg%3D%3D"}
             alt="Card 2" 

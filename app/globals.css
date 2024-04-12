@@ -194,7 +194,7 @@
     uppercase 
     mr-6;
 }
-.tab-container-1 {
+.tab1-container-1 {
   @apply
     w-1/4 
     p-4 
@@ -206,16 +206,14 @@
   border-bottom-right-radius: 50px;
   min-height: 27.5rem;
 }
-
-.tab-container-1 h3 {
+.tab1-container-1 h3 {
   @apply
   text-2xl 
   font-bold 
   tracking-wide 
   mb-8;
 }
-
-.tab-container-2 {
+.tab1-container-2 {
   @apply
     w-1/4 
     p-4 
@@ -225,6 +223,77 @@
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
   border-top-left-radius: 50px;
+}
+.tab2-container {
+  @apply
+  bg-white 
+    rounded-lg 
+    text-center
+    h-full;
+}
+.tab2-container-hl {
+  @apply
+  bg-cyan-100;
+}
+.tab2-container p {
+  @apply
+    p-4 
+    border-b-4 
+    text-cyan-800
+    border-cyan-50;
+}
+.tab2-container > p:last-child {
+  @apply
+    border-b-0 
+    border-transparent
+    items-center;
+}
+.tab2-subheading {
+  @apply
+    text-xl
+    font-semibold
+    tracking-wide;
+}
+.tab3-container {
+  @apply
+    grid 
+    grid-cols-3
+    bg-white 
+    rounded-lg 
+    shadow-md 
+    mb-14;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 50px;
+}
+.tab3-container:last-child {
+  @apply
+    mb-0;
+}
+.tab3-image {
+  border-bottom-left-radius: 200px;
+}
+.tab3-container h2 {
+  @apply
+    text-lg 
+    font-medium 
+    tracking-wide 
+    mb-1;
+}
+.tab3-container h2:first-child {
+  @apply
+    text-2xl 
+    font-semibold 
+    tracking-wider 
+    mb-5;
+}
+.tab3-container p {
+  @apply
+    mb-5;
+}
+.tab3-container p:last-child {
+  @apply
+    mb-0;
 }
 /* ---------- TESTING ---------- */
 .testing {

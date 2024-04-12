@@ -2,6 +2,9 @@
 
 import { useState } from 'react'
 import Tab1 from './Tab1'
+import Tab2 from './Tab2'
+import Tab3 from './Tab3'
+import Tab4 from './Tab4'
 
 export default function ProductDetail() {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -12,7 +15,7 @@ export default function ProductDetail() {
 
   return (
     <>
-    <div className="px-20 py-20 container mx-auto bg-cyan-50">
+    <div className="px-20 py-20 bg-cyan-50">
       <div className="flex justify-center">
         <ul className="flex">
           <li role="presentation">
@@ -68,13 +71,13 @@ export default function ProductDetail() {
         <Tab1 />
       </div>
       <div id="content2" className={activeTab === 'tab2' ? '' : 'hidden'}>
-        Content for Tab 2
+        <Tab2 />
       </div>
       <div id="content3" className={activeTab === 'tab3' ? '' : 'hidden'}>
-        Content for Tab 3
+        <Tab3 />
       </div>
       <div id="content4" className={activeTab === 'tab4' ? '' : 'hidden'}>
-        Content for Tab 4
+        <Tab4 />
       </div>
     </div>
     </>
