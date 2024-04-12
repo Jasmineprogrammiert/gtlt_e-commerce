@@ -194,6 +194,38 @@
     uppercase 
     mr-6;
 }
+.tab-container-1 {
+  @apply
+    w-1/4 
+    p-4 
+    rounded-xl 
+    relative 
+    bg-cyan-100;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 50px;
+  min-height: 27.5rem;
+}
+
+.tab-container-1 h3 {
+  @apply
+  text-2xl 
+  font-bold 
+  tracking-wide 
+  mb-8;
+}
+
+.tab-container-2 {
+  @apply
+    w-1/4 
+    p-4 
+    rounded-xl 
+    relative 
+    bg-cyan-100;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 50px;
+}
 /* ---------- TESTING ---------- */
 .testing {
 

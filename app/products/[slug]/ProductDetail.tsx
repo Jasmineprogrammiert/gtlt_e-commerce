@@ -12,7 +12,7 @@ export default function ProductDetail() {
 
   return (
     <>
-    <div className="container mx-auto bg-gray-50">
+    <div className="px-20 py-20 container mx-auto bg-cyan-50">
       <div className="flex justify-center">
         <ul className="flex">
           <li role="presentation">
