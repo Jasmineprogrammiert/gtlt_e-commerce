@@ -12,7 +12,7 @@ export default function ProductsCard({ p }: { p: any }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-full p-10 group rounded products-card mb-20"
+    <div className="relative w-full h-[78vh] p-10 group rounded mb-20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

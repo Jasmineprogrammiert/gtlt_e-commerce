@@ -102,9 +102,6 @@
   background-color: hsl(192, 100%, 40%);
 }
 /* ---------- Home - Hero ---------- */
-.hero {
-  height: 90vh;
-}
 .hero-slide {
   @apply
     flex items-center justify-center
@@ -159,18 +156,6 @@
 }
 .carousel-dot-selected {
   background-color: var(--theme-color);
-}
-/* ---------- Home - Testimonial ---------- */
-.testimonial {
-  height: 32vh;
-}
-/* ---------- Home - Products ---------- */
-.products-card {
-  height: 78vh;
-}
-/* ---------- Home - HowItWorks ---------- */
-.howItWorks {
-  background-color: rgb(242, 242, 238);
 }
 /* ---------- Home - TestIncludes ---------- */
 .testIncludes {
@@ -296,9 +281,6 @@
     mb-0;
 }
 /* --------------- Products - HealthScores --------------- */
-.hs-bgImg {
-  height: 30rem; 
-}
 .hs-collapsible {
   @apply
     p-2;
@@ -322,6 +304,20 @@
     leading-6 
     mt-5;
 }
+/* --------------- ShoppingCartModal --------------- */
+.sc-btn {
+  @apply
+    w-3/4
+    text-white 
+    font-medium
+    rounded-full;
+  padding: 8px 4px;
+  background-color: var(--theme-color);
+}
+.sc-btn:hover {
+  background-color: hsl(192, 100%, 40%);
+}
+
 /* ---------- TESTING ---------- */
 .testing {
 

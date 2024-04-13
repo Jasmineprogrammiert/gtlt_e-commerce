@@ -4,7 +4,7 @@ import { data } from './HowItWorksData'
 export default function HowItWorks() {
   return (
     <>
-    <section className="p-20 relative items-stretch howItWorks">
+    <section className="p-20 relative items-stretch bg-[#f2f2ee]">
       <h2 className="text-5xl mb-10">Simple, Discreet and Professional</h2>
       <h3 className="text-3xl mb-16">Here{`'`}s
         <span className="italic tracking-wide font-medium"> how it works</span>

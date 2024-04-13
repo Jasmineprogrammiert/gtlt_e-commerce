@@ -36,6 +36,7 @@ export default function ShoppingCartModal() {
   return (
     <>
     <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
+    {/* <Sheet open onOpenChange={() => handleCartClick()}> */}
       <SheetContent className="sm:max-w-md px-8 py-14">
         <div className="h-full overflow-y-auto flex flex-col justify-between">
           <div className="divide-y divide-gray-200">

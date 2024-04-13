@@ -47,7 +47,7 @@ export default function HealthScores() {
             alt="Background Image"
             width={200}
             height={200}
-            className="object-cover object-center w-full rounded-t-lg hs-bgImg"
+            className="object-cover object-center w-full h-[30rem] rounded-t-lg"
         />
         <div className="absolute top-4 left-4 p-20 w-3/5">
             <h2 className="text-3xl font-medium tracking-wide text-white mb-5">

@@ -5,7 +5,7 @@ import TestimonialCarousel from './TestimonialCarousel'
 export default function Testimonial() {
   return (
     <>
-    <section className="overflow-hidden w-full testimonial">
+    <section className="overflow-hidden w-full h-[32vh]">
       <div className="flex h-full">
         <div className="hero-slide">
           <TestimonialCarousel />
