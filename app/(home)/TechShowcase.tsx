@@ -5,7 +5,7 @@ import img2 from '../../public/assets/techShowCase-2.jpg'
 export default function TechShowcase() {
   return (
     <>
-    <section className="px-20 py-20 flex flex-wrap bg-gray-50">
+    <section className="p-20 flex flex-wrap bg-gray-50">
       <div className="w-full p-4 text-center">
         <h3 className="text-4xl font-semibold my-8 text-cyan-600">
           Methods of Microbiome Analysis

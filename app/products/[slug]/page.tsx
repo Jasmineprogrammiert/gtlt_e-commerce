@@ -39,7 +39,7 @@ export default async function ProductPage({
   const data: fullProduct = await getData(params.slug);
 
   return (
-    <div className="px-20 py-20">
+    <div className="p-20">
       <div className="grid grid-cols-2 gap-10 xl:gap-14">
         <ImgGallery images={data.images} />
 

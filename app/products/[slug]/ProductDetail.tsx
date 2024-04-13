@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
   return (
     <>
-    <div className="px-20 py-20 bg-cyan-50">
+    <div className="p-20 bg-cyan-50">
       <div className="flex justify-center">
         <ul className="flex">
           <li role="presentation">

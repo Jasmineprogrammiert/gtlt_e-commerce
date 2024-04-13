@@ -36,7 +36,7 @@ export default function Testimonial2() {
   };
   
   return (
-    <section className="px-20 py-20 relative">
+    <section className="p-20 relative">
       <h2 className="home-h2">What our customers say</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {testimonials.slice(currIndex, currIndex + 3).map((t, i) => (

@@ -8,7 +8,7 @@ export default function FrequentlyAskedTemplate({
   return (
     <>
     {[cardData[Number(params.index)]].map((card, i) => (
-      <section key={i} className="px-20 py-20 flex flex-wrap bg-gray-50">
+      <section key={i} className="p-20 flex flex-wrap bg-gray-50">
         <div className="w-full p-4 text-center">
           <h3 className="text-4xl font-semibold mb-16 text-cyan-600">
             {card.title}

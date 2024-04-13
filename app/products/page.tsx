@@ -22,7 +22,7 @@ export default async function Products() {
   const data: simplifiedProduct[] = await getData()
 
   return (
-    <div className="px-20 py-20 bg-gray-50">
+    <div className="p-20 bg-gray-50">
       <h2 className="text-5xl mb-10">All Products</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">

@@ -5,7 +5,7 @@ import lab1 from '../../public/assets/lab-1.jpg'
 export default function TestIncludes() {
   return (
     <>
-    <section className="px-20 py-20 text-white testIncludes">
+    <section className="p-20 text-white testIncludes">
       <div className="grid grid-cols-2 gap-8">
         <div className="col-span-1">
           <h2 className="text-5xl mb-10 tracking-wider xl:tracking-widest">Gut Microbiome<br /> Testing Package</h2>

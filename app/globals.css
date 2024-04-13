@@ -299,6 +299,29 @@
 .hs-bgImg {
   height: 30rem; 
 }
+.hs-collapsible {
+  @apply
+    p-2;
+}
+.hs-collapsible button {
+  @apply 
+    text-lg 
+    tracking-wide 
+    w-full 
+    text-left;
+}
+.hs-collapsible > div:nth-child(1) {
+  @apply
+    flex 
+    justify-between 
+    items-center;
+}
+.hs-collapsible > div:nth-child(2) {
+  @apply
+    text-lg 
+    leading-6 
+    mt-5;
+}
 /* ---------- TESTING ---------- */
 .testing {
 
