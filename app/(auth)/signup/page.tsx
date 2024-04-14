@@ -3,7 +3,6 @@ import { signup } from '../actions'
 import Logo from '../../../public/assets/logo.png'
 
 export default function SignUp() {
-
   return (
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
       <div className="w-1/2">

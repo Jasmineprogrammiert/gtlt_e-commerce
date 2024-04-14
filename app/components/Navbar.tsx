@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
 import Image from 'next/image'
 import * as React from 'react'
 // links
@@ -20,7 +19,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { User, ShoppingBag } from 'lucide-react'
 
-export default function Navbar() {
+export default function Navbar({ user }: { user: any }) {
   const { handleCartClick } = useShoppingCart();
 
   return (
@@ -119,9 +118,15 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex flex-grow justify-end space-x-8">
-        <Link href="/login">
-          <User />
-        </Link>
+        {user ? (
+          <>
+          <span className="text-gray-800">Hello, {user.email}</span>
+          </>
+        ) : (
+          <>
+          <Link href="/login"><User /></Link>
+          </>
+         )}
         <button onClick={() => handleCartClick()}>
           <ShoppingBag />
         </button>

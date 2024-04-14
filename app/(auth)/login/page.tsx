@@ -1,16 +1,9 @@
-'use client'
-
-import { useState } from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { login } from '../actions'
 import Logo from '../../../public/assets/logo.png'
 
 export default function LogIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
   return (
     <>
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
@@ -41,20 +34,17 @@ export default function LogIn() {
         <form className="mt-8 w-4/5 relative">
           <h2 className="text-xl mb-8">Log in to your account</h2>
           <input 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
+            name="email"
             type="email" 
             placeholder="Email Address" 
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
             required 
           />
           <input 
-            type="password" 
-            placeholder="Password" 
-            onChange={e => setPassword(e.target.value)}
-            value={password}
-            autoComplete="off" 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-8" 
+            type="password" 
+            name="password"
+            placeholder="Password" 
             required 
           /> 
           <div className="block absolute right-0 text-sm">
@@ -63,9 +53,9 @@ export default function LogIn() {
             </Link>
           </div>
           <button 
+            className="w-1/3 bg-cyan-600 text-white rounded-md py-2 mt-10 mb-4"
             formAction={login} 
             type="submit" 
-            className="w-1/3 bg-cyan-600 text-white rounded-md py-2 mt-10 mb-4"
           >
             Log In
           </button>
