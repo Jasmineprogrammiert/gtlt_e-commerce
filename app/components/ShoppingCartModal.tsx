@@ -77,12 +77,12 @@ export default function ShoppingCartModal() {
                       <div className="flex space-x-2.5">
                         <p className="text-gray-500 uppercase">Qty: </p>
                         <select
-                          value={entry.quantity}
+                          defaultValue={entry.quantity}
                           onChange={e => {
-                            setItemQuantity(entry.id, parseInt(e.target.value, 10))
+                            setItemQuantity(entry.id, parseInt(e.target.value, 20))
                           }}
                         >
-                          {Array.from({ length: 10 }, (_, i) => (
+                          {Array.from({ length: 20 }, (_, i) => (
                             <option key={i + 1} value={i + 1}>{i + 1}</option>
                           ))}
                         </select> 

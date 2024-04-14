@@ -12,12 +12,13 @@ async function getData(slug: string) {
   const query = `*[_type == 'product' && slug.current == '${slug}'][0] {
     _id,
       name,
+      price,
+      stock,
       "category": category->name,
       subtitle_1,
       description_1,
       subtitle_2,
       description_2,
-      price,
       price_id,
       images,
       "slug": slug.current,
@@ -98,17 +99,27 @@ export default async function ProductPage({
             <span className="text-sm">2-4 Day Shipping</span>
           </div> */}
 
-          <div className="flex gap-3">
-            <AddToBag
-              currency="HKD"
-              description_1={data.description_1}
-              image={data.images[0]}
-              name={data.name}
-              price={data.price}
-              price_id={data.price_id}
-              key={data._id}
-            />
-          </div>
+          {data.stock > 0 ? (
+            <>
+            <div className="flex gap-3">
+              <AddToBag
+                currency="HKD"
+                description_1={data.description_1}
+                image={data.images[0]}
+                name={data.name}
+                price={data.price}
+                price_id={data.price_id}
+                key={data._id}
+              />
+            </div>
+            </>
+            ) : 
+            <>
+            <p className="text-cyan-800 font-medium tracking-wide ml-0.5">
+              Out of Stock
+            </p>
+            </>
+          }
         </div>
       </div>
     </div>

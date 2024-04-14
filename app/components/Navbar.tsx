@@ -19,8 +19,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-import { SearchIcon } from 'lucide-react'
-import { ShoppingBag } from 'lucide-react'
+import { User, ShoppingBag } from 'lucide-react'
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -123,11 +122,9 @@ export default function Navbar() {
       </NavigationMenu>
       <div className="flex flex-grow justify-end space-x-8">
         <button>
-          <SearchIcon />
+          <User />
         </button>
-        <button
-          onClick={() => handleCartClick()}
-        >
+        <button onClick={() => handleCartClick()}>
           <ShoppingBag />
         </button>
       </div>
