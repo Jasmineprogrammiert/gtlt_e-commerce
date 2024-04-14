@@ -1,6 +1,5 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import * as React from 'react'
@@ -17,12 +16,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import { User, ShoppingBag } from 'lucide-react'
 
 export default function Navbar() {
-  const pathname = usePathname();
   const { handleCartClick } = useShoppingCart();
 
   return (
@@ -121,9 +118,9 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex flex-grow justify-end space-x-8">
-        <button>
+        <Link href="/login">
           <User />
-        </button>
+        </Link>
         <button onClick={() => handleCartClick()}>
           <ShoppingBag />
         </button>
