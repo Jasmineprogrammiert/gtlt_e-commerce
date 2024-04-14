@@ -17,7 +17,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
-import { User, ShoppingBag } from 'lucide-react'
+import { User, LogOut, ShoppingBag } from 'lucide-react'
+import { logout } from '../(auth)/actions'
 
 export default function Navbar({ user }: { user: any }) {
   const { handleCartClick } = useShoppingCart();
@@ -117,19 +118,19 @@ export default function Navbar({ user }: { user: any }) {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="flex flex-grow justify-end space-x-8">
+      <div className="flex flex-grow items-center justify-end space-x-8">
         {user ? (
           <>
           <span className="text-gray-800">Hello, {user.email}</span>
+          <button onClick={() => handleCartClick()}><ShoppingBag /></button>
+          <form action={logout}><button className="mt-1.5"><LogOut /></button></form>
           </>
         ) : (
           <>
           <Link href="/login"><User /></Link>
+          <button onClick={() => handleCartClick()}><ShoppingBag /></button>
           </>
-         )}
-        <button onClick={() => handleCartClick()}>
-          <ShoppingBag />
-        </button>
+         )}        
       </div>
     </header>
   )
