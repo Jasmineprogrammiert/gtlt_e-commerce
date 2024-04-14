@@ -1,13 +1,12 @@
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { client } from '@/app/lib/sanity'
 import { fullProduct } from '@/app/interface'
 import ImgGallery from './ImgGallery'
 // styles
-import { Button } from '@mui/material'
-import { Star, AddShoppingCart, ShoppingCartCheckout } from '@mui/icons-material'
+import { Star } from '@mui/icons-material'
 import { Truck } from 'lucide-react'
 import AddToBag from '../../components/AddToBag'
-import Checkout from '../../components/Checkout'
 
 async function getData(slug: string) {
   const query = `*[_type == 'product' && slug.current == '${slug}'][0] {
@@ -72,10 +71,13 @@ export default async function ProductPage({
           <p className="text-base text-gray-700 mb-5">
             {data.description_2}
           </p>
-          <span className="text-sm text-gray-700">
+          {/* <span className="text-sm text-gray-700">
             <Link href="/shipping" className="underline">
               Shipping
             </Link> calculated at Checkout
+          </span> */}
+          <span className="text-sm text-gray-700">
+            Shipping calculated at Checkout
           </span>
 
           <hr className="border-dashed bg-gray-950 my-5" />
@@ -98,15 +100,6 @@ export default async function ProductPage({
 
           <div className="flex gap-3">
             <AddToBag
-              currency="HKD"
-              description_1={data.description_1}
-              image={data.images[0]}
-              name={data.name}
-              price={data.price}
-              price_id={data.price_id}
-              key={data._id}
-            />
-            <Checkout
               currency="HKD"
               description_1={data.description_1}
               image={data.images[0]}

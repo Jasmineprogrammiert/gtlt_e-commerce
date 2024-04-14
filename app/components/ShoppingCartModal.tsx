@@ -12,13 +12,14 @@ import { useShoppingCart } from 'use-shopping-cart'
 
 export default function ShoppingCartModal() {
   const {
-    cartCount,
     shouldDisplayCart,
     handleCartClick,
+    cartCount,
     cartDetails,
     removeItem,
     totalPrice,
     redirectToCheckout,
+    setItemQuantity
   } = useShoppingCart();
 
   async function handleCheckoutClick(event: any) {
@@ -45,14 +46,14 @@ export default function ShoppingCartModal() {
               <SheetTitle className="text-2xl font-medium tracking-wide">
                 Your Bag is empty
               </SheetTitle>
-              <SheetDescription className="text-base text-gray-700">
+              {/* <SheetDescription className="text-base text-gray-700">
                 Sign in to see if you have any saved items. Or continue shopping.
-              </SheetDescription>
+              </SheetDescription> */}
             </SheetHeader>
             </>
             ) : (
               <>
-              {Object.values(cartDetails ?? {}).map((entry) => (
+              {Object.values(cartDetails ?? {}).map(entry => (
                 <li key={entry.id} className="flex py-6">
                   <Image
                     src={entry.image as string}
@@ -72,8 +73,20 @@ export default function ShoppingCartModal() {
                       </p>
                     </div>
 
-                    <div className="flex items-end justify-between text-sm">
-                      <p className="text-gray-500">QTY: {entry.quantity}</p>
+                    <div className="flex items-start justify-between text-sm">
+                      <div className="flex space-x-2.5">
+                        <p className="text-gray-500 uppercase">Qty: </p>
+                        <select
+                          value={entry.quantity}
+                          onChange={e => {
+                            setItemQuantity(entry.id, parseInt(e.target.value, 10))
+                          }}
+                        >
+                          {Array.from({ length: 10 }, (_, i) => (
+                            <option key={i + 1} value={i + 1}>{i + 1}</option>
+                          ))}
+                        </select> 
+                      </div>
                       <button
                         type="button"
                         onClick={() => removeItem(entry.id)}

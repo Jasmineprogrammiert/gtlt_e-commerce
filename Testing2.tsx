@@ -9,16 +9,18 @@ import {
   SheetTitle,
 } from '@/components/ui/sheet'
 import { useShoppingCart } from 'use-shopping-cart'
+import QtySelector from './QtySelector'
 
 export default function ShoppingCartModal() {
   const {
-    cartCount,
     shouldDisplayCart,
     handleCartClick,
+    cartCount,
     cartDetails,
     removeItem,
     totalPrice,
     redirectToCheckout,
+    setItemQuantity
   } = useShoppingCart();
 
   async function handleCheckoutClick(event: any) {
@@ -36,7 +38,6 @@ export default function ShoppingCartModal() {
   return (
     <>
     <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
-    {/* <Sheet open onOpenChange={() => handleCartClick()}> */}
       <SheetContent className="sm:max-w-md px-8 py-14">
         <div className="h-full overflow-y-auto flex flex-col justify-between">
           <div className="divide-y divide-gray-200">
@@ -46,14 +47,14 @@ export default function ShoppingCartModal() {
               <SheetTitle className="text-2xl font-medium tracking-wide">
                 Your Bag is empty
               </SheetTitle>
-              <SheetDescription className="text-base text-gray-700">
+              {/* <SheetDescription className="text-base text-gray-700">
                 Sign in to see if you have any saved items. Or continue shopping.
-              </SheetDescription>
+              </SheetDescription> */}
             </SheetHeader>
             </>
             ) : (
               <>
-              {Object.values(cartDetails ?? {}).map((entry) => (
+              {Object.values(cartDetails ?? {}).map(entry => (
                 <li key={entry.id} className="flex py-6">
                   <Image
                     src={entry.image as string}
@@ -74,7 +75,9 @@ export default function ShoppingCartModal() {
                     </div>
 
                     <div className="flex items-end justify-between text-sm">
-                      <p className="text-gray-500">QTY: {entry.quantity}</p>
+                      <p className="text-gray-500 uppercase">Qty: {entry.quantity}</p>
+                      <QtySelector />
+
                       <button
                         type="button"
                         onClick={() => removeItem(entry.id)}
