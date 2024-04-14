@@ -42,15 +42,20 @@ export async function login(formData: FormData) {
   redirect('/');
 }
 
-// export async function logout() {
-//   const supabase = createClient();
-//   await supabase.auth.signOut();
-
-//   return redirect('/');
-// }
-
 export async function logout() {
   const supabase = createClient();
   await supabase.auth.signOut();
+
   return redirect("/login");
 }
+
+// export async function resetPassword() {
+//   const supabase = createClient();
+//   await supabase.auth.signOut();
+  
+//   return redirect("/login");
+
+//   const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+//     redirectTo: 'https://localhost/update-password',
+//   })
+// }
