@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { data } from './ProductAdvData'
+import { data } from './Data/ProductAdvData'
 
 export default function ProductAdv() {
   return (

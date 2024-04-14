@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { testimonials } from './TestimonialData'
+import { testimonials } from '../Data/TestimonialData'
 // styles
 import { Neuton } from 'next/font/google'
 import { La_Belle_Aurore } from 'next/font/google'

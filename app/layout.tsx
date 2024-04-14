@@ -5,7 +5,6 @@ import './medias.css'
 // components
 import Provider from './components/Provider'
 import Navbar from './components/Navbar'
-import FrequentlyAsked from './components/FrequentlyAsked'
 import Footer from './components/Footer'
 import ShoppingCartModal from './components/ShoppingCartModal'
 
@@ -29,7 +28,6 @@ export default function RootLayout({
           <Navbar />
           <ShoppingCartModal />
           {children}
-          <FrequentlyAsked />
           <Footer />
         </Provider>
       </body>

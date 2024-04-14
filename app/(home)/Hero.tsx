@@ -3,12 +3,12 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 // components
-import { SelectedSnapDisplay, useSelectedSnapDisplay } from '../components/Count'
-import { DotButton, useDotButton } from '../components/Dot'
-import HeroCarousel1 from './HeroCarousel1'
-import HeroCarousel2 from './HeroCarousel2'
-import HeroCarousel3 from './HeroCarousel3'
-import HeroCarousel4 from './HeroCarousel4'
+import { SelectedSnapDisplay, useSelectedSnapDisplay } from './components/Count'
+import { DotButton, useDotButton } from './components/Dot'
+import HeroCarousel1 from './components/HeroCarousel1'
+import HeroCarousel2 from './components/HeroCarousel2'
+import HeroCarousel3 from './components/HeroCarousel3'
+import HeroCarousel4 from './components/HeroCarousel4'
 
 export default function Hero() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 8000 })]);

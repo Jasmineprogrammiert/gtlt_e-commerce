@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { cardData } from './FrequentlyAskedData'
+import { cardData } from './Data/FrequentlyAskedData'
 // import {ContactSupportOutlinedIcon} from '@mui/icons-material/ContactSupportOutlined'
 import { ContactSupportOutlined, LocalShipping, Loyalty, Science, HealthAndSafety, AutoAwesome, Medication } from '@mui/icons-material'
 

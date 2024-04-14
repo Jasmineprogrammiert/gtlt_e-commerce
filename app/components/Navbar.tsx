@@ -1,10 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import Image from 'next/image'
 import * as React from 'react'
 // links
-import { products, stories, explore } from './NavbarData'
+import { products, stories, explore } from './Data/NavbarData'
 // styles
 import Logo from '../../public/assets/logo.png'
 import { useShoppingCart } from 'use-shopping-cart'

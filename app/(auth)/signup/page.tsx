@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { signup } from '../actions'
 import Logo from '../../../public/assets/logo.png'
 
 export default function SignUp() {
+
   return (
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
       <div className="w-1/2">
@@ -31,10 +32,33 @@ export default function SignUp() {
 
         <form className="mt-8 w-4/5">
           <h2 className="text-xl mb-8">Sign up for an account</h2>
-          <input type="text" id="username" name="username" placeholder="Username" className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" />
-          <input type="email" id="email" name="email" placeholder="Email Address" className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" />
-          <input type="password" id="password" name="password" placeholder="Password" className="w-full border border-gray-300 rounded-md py-2 px-3 mb-16" />
-          <button type="submit" className="w-1/3 bg-cyan-600 text-white rounded-md py-2">Sign Up</button>
+          <input 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
+            type="text"  
+            placeholder="Username" 
+            required
+          />
+          <input 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
+            name="email"
+            type="email"   
+            placeholder="Email Address" 
+            required
+          />
+          <input 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-16" 
+            type="password"
+            name="password"
+            placeholder="Password" 
+            required
+          />
+          <button 
+            className="w-1/3 bg-cyan-600 text-white rounded-md py-2"
+            formAction={signup} 
+            type="submit" 
+          >
+            Sign Up
+          </button>
         </form>
       </div>
     </div>

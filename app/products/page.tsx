@@ -12,15 +12,14 @@ async function getData() {
       "category": category->name,
       "slug": slug.current,
   }`;
-
   const data = await client.fetch(query);
 
   return data;
 }
 
 export default async function Products() {
-  const data: simplifiedProduct[] = await getData()
-
+  const data: simplifiedProduct[] = await getData();
+  
   return (
     <div className="p-20 bg-gray-50">
       <h2 className="text-5xl mb-10">All Products</h2>

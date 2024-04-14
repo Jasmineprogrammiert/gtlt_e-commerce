@@ -1,4 +1,4 @@
-import { cardData } from '../../components/FrequentlyAskedData'
+import { cardData } from '../../components/Data/FrequentlyAskedData'
 
 export default function FrequentlyAskedTemplate({ 
   params 

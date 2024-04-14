@@ -1,12 +1,13 @@
-import { useEffect } from 'react'
 import Link from 'next/link'
 import { client } from '@/app/lib/sanity'
 import { fullProduct } from '@/app/interface'
-import ImgGallery from './ImgGallery'
+// components
+import ImgGallery from './components/ImgGallery'
+import ProductDetail from './components/ProductDetail'
+import HealthScores from './components/HealthScores'
 // styles
 import { Star } from '@mui/icons-material'
-import { Truck } from 'lucide-react'
-import AddToBag from '../../components/AddToBag'
+import AddToBag from './components/AddToBag'
 
 async function getData(slug: string) {
   const query = `*[_type == 'product' && slug.current == '${slug}'][0] {
@@ -23,9 +24,8 @@ async function getData(slug: string) {
       images,
       "slug": slug.current,
   }`;
-
   const data = await client.fetch(query);
-
+  
   return data;
 }
 
@@ -37,8 +37,8 @@ export default async function ProductPage({
   params: {slug: string};
 }) {
   const data: fullProduct = await getData(params.slug);
-
   return (
+    <>
     <div className="p-20">
       <div className="grid grid-cols-2 gap-10 xl:gap-14">
         <ImgGallery images={data.images} />
@@ -72,11 +72,6 @@ export default async function ProductPage({
           <p className="text-base text-gray-700 mb-5">
             {data.description_2}
           </p>
-          {/* <span className="text-sm text-gray-700">
-            <Link href="/shipping" className="underline">
-              Shipping
-            </Link> calculated at Checkout
-          </span> */}
           <span className="text-sm text-gray-700">
             Shipping calculated at Checkout
           </span>
@@ -93,11 +88,6 @@ export default async function ProductPage({
           </div>
 
           <hr className="border-dashed bg-gray-950 my-5" />
-
-          {/* <div className="mb-6 flex items-center gap-2 text-gray-500">
-            <Truck className="w-6 h-6" />
-            <span className="text-sm">2-4 Day Shipping</span>
-          </div> */}
 
           {data.stock > 0 ? (
             <>
@@ -123,5 +113,8 @@ export default async function ProductPage({
         </div>
       </div>
     </div>
+    <ProductDetail />
+    <HealthScores />
+    </>
   )
 }

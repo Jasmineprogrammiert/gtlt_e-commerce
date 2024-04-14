@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { data } from './HowItWorksData'
+import { data } from './Data/HowItWorksData'
 
 export default function HowItWorks() {
   return (

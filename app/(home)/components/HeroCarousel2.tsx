@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 // assets
-import product1 from '../../public/assets/product-1.jpg'
-import product2 from '../../public/assets/product-2.jpg'
+import product3 from '../../../public/assets/product-3.jpg'
+import product4 from '../../../public/assets/product-4.jpg'
 
-export default function HeroCarousel1() {
+export default function HeroCarousel2() {
   return (
     <>
     <div className="flex flex-wrap justify-between">
@@ -20,7 +20,7 @@ export default function HeroCarousel1() {
       <div className="flex lg:w-3/5 -mt-20">
         <div className="ml-0 relative left-12 top-12 z-10 overflow-hidden rounded-lg drop-shadow-xl">
           <Image
-            src={product1}
+            src={product3}
             alt="Great Photo"
             className="h-full w-full object-cover object-center"
             priority
@@ -30,7 +30,7 @@ export default function HeroCarousel1() {
         </div>
         <div className="overflow-hidden rounded-lg drop-shadow-xl">
           <Image
-            src={product2}
+            src={product4}
             alt="Great Photo"
             className="h-full w-full object-cover object-center"
             priority
@@ -39,7 +39,7 @@ export default function HeroCarousel1() {
           />
         </div>
       </div>
-
+      
       <button className="home-btn hero-btn">
         <Link href="/products">
           Shop Now
