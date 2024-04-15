@@ -1,46 +1,17 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { redirect } from 'next/navigation'
+import { createClient } from '@/utils/supabase/server'
 import { resetpassword } from '../actions'
 import Logo from '../../../public/assets/logo.png'
 
-import { headers } from 'next/headers'
-import { createClient } from '@/utils/supabase/server'
-import { redirect } from 'next/navigation'
-
-export default async function PasswordRecovery({
+export default async function ResetPassword({
   searchParams,
 }: {
   searchParams: { message: string };
 }) {
   const supabase = createClient();
-
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
-
-  if (session) {
-    return redirect('/');
-  }
-
-  const confirmReset = async (formData: FormData) => {
-    'use server';
-  
-    const origin = headers().get('origin');
-    const email = formData.get('email') as string;
-    const supabase = createClient();
-  
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${origin}/reset-password`,
-    });
-  
-    if (error) {
-      return redirect('/password-recovery?message=Could not authenticate user');
-    }
-  
-    return redirect(
-      '/password-recovery?message=Password Reset link has been sent to your email address'
-    )
-  }
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) return redirect('/');
 
   return (
     <>
@@ -70,21 +41,20 @@ export default async function PasswordRecovery({
         </div>
 
         <form className="mt-8 w-4/5 relative">
-          <h2 className="text-xl mb-8">Send password reset request</h2>
+          <h2 className="text-xl mb-8">Reset your password</h2>
           <input 
-            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
-            name="email"
-            type="email" 
-            placeholder="Email Address" 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-8" 
+            type="password" 
+            name="password"
+            placeholder="New Password" 
             required 
-          />
+          /> 
           <button 
             className="w-1/3 bg-cyan-600 text-white rounded-md py-2 mt-10 mb-4"
-            // formAction={confirmReset} 
             formAction={resetpassword} 
             type="submit" 
           >
-            Send
+            Reset
           </button>
 
           {searchParams?.message && (

@@ -48,7 +48,7 @@ export default function LogIn() {
             required 
           /> 
           <div className="block absolute right-0 text-sm">
-            <Link href="/signup" className="text-cyan-700">
+            <Link href="/password-recovery" className="text-cyan-700">
               Forgot your password?
             </Link>
           </div>
