@@ -57,7 +57,7 @@ export default function HealthScores() {
               Your comprehensive Gut Health analysis evaluates over 20 key factors to give you a comprehensive overview of your gut health. It covers various functions, including digestion, gut lining strength, and microbial diversity, and forms the basis for your personalized recommendations to help you support your gut{`'`}s needs.
             </p>
         </div>
-        <div className="absolute bottom-2 right-4 p-20 w-2/5">
+        <div className="absolute bottom-2 right-4 p-20 w-2/5 xl:w-[33%]">
           <Image
               src="https://images.unsplash.com/photo-1614587113639-67c78332bb39?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRhcmslMjBwcm9kdWN0fGVufDB8MXwwfHx8Mg%3D%3D"
               alt="Bottom Right Image"
