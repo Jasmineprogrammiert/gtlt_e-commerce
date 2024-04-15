@@ -3,6 +3,7 @@ import { client } from '@/app/lib/sanity'
 import { fullProduct } from '@/app/interface'
 // components
 import ImgGallery from './components/ImgGallery'
+import CountdownTimer from './components/CountdownTimer'
 import ProductDetail from './components/ProductDetail'
 import HealthScores from './components/HealthScores'
 // styles
@@ -14,6 +15,7 @@ async function getData(slug: string) {
     _id,
       name,
       price,
+      price_2,
       stock,
       "category": category->name,
       subtitle_1,
@@ -21,6 +23,7 @@ async function getData(slug: string) {
       subtitle_2,
       description_2,
       price_id,
+      price_2_id,
       images,
       "slug": slug.current,
   }`;
@@ -76,19 +79,42 @@ export default async function ProductPage({
             Shipping calculated at Checkout
           </span>
 
-          <hr className="border-dashed bg-gray-950 my-5" />
+          {/* <hr className="border-dashed bg-gray-950 my-5" />
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <input type="radio" name="plan" id="planA" value="a" className="rounded-full h-5 w-5 border-gray-800" />
+              <label htmlFor="planA" className="text-lg font-medium text-gray-800">
+                3-month regular plan ($2250/month)
+              </label>
+            </div>
+            <div className="flex gap-x-3 items-center">
+              <span className="text-xl font-medium text-cyan-700">
+                ${data.price} 
+              </span>
+            </div>
+          </div>  */}
 
-          <div className="flex items-end gap-3">
-            <span className="text-xl font-medium text-gray-800">
-              ${data.price}
-            </span>
-            <span className="text-base mb-0.5 text-red-500 line-through">
-              ${data.price + 30}
-            </span>
+          <hr className="border-dashed bg-gray-950 my-5" />
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              {/* <input type="radio" name="plan" id="planB" className="rounded-full h-5 w-5 border-gray-800" /> */}
+              <label htmlFor="planB" className="text-lg font-medium text-gray-800">
+                6-month regular plan ($1516/month)
+              </label>
+            </div>
+
+            <div className="flex items-center gap-x-2">
+              <span className="text-xl font-medium text-cyan-700">
+                ${data.price_2} 
+              </span>
+              <span className="text-base line-through text-red-500">
+                ${data.price_2 + 30}
+              </span>
+              <span className="ml-5"><CountdownTimer /></span>
+            </div>
           </div>
 
           <hr className="border-dashed bg-gray-950 my-5" />
-
           {data.stock > 0 ? (
             <>
             <div className="flex gap-3">
@@ -97,8 +123,8 @@ export default async function ProductPage({
                 description_1={data.description_1}
                 image={data.images[0]}
                 name={data.name}
-                price={data.price}
-                price_id={data.price_id}
+                price={data.price_2}
+                price_id={data.price_2_id}
                 key={data._id}
               />
             </div>

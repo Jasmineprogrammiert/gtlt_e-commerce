@@ -317,7 +317,25 @@
 .sc-btn:hover {
   background-color: hsl(192, 100%, 40%);
 }
-
+/* --------------- CountdownTimer --------------- */
+.dhms-dot{
+  @apply
+    mx-1.5 text-2xl text-cyan-600;
+}
+.dhms-container {
+  @apply
+    flex items-center justify-center 
+    w-9 h-9 
+    bg-cyan-600 text-white rounded-md;
+}
+.dhms > div:first-child {
+  @apply
+    text-lg leading-[1.25rem] font-medium;
+}
+.dhms > div:last-child {
+  @apply
+    text-xs leading-[0.8rem];
+}
 /* ---------- TESTING ---------- */
 .testing {
 
