@@ -23,5 +23,5 @@ export default function Home() {
       <Testimonial2 />
     </div>
     </>
-  );
+  )
 }

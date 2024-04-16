@@ -54,7 +54,10 @@ export default function Navbar({ user }: { user: any }) {
               <ul className="nav-ul">
                 <li className="row-span-1">
                   <NavigationMenuLink asChild>
-                    <a href="/products" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md bg-transparent">
+                    <Link 
+                      href="/products" 
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md bg-transparent"
+                    >
                       <Image
                         src={Logo}
                         alt="Gutolution Logo"
@@ -65,7 +68,7 @@ export default function Navbar({ user }: { user: any }) {
                       <p className="text-sm leading-tight text-muted-foreground">
                         Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <ul className="grid gap-1.5">

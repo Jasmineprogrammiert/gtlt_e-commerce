@@ -9,7 +9,7 @@ export const products: {
   imgAft: string; 
 }[] = [
   {
-    link: "/#",
+    link: "/products/precision-probiotics-program",
     label: "Most Popular",
     title: "Full Body Health Solutions",
     focus1: "Gut Microbiome",
@@ -19,7 +19,7 @@ export const products: {
     imgAft: "https://images.unsplash.com/photo-1515339760107-1952b7a08454?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2hpdGV8ZW58MHwwfDB8fHwy", 
   },
   {
-    link: "/#",
+    link: "/products/microbiome-test-pro",
     label: "",
     title: "Gut Health Solutions",
     focus1: "Gut Microbiome",
@@ -29,7 +29,7 @@ export const products: {
     imgAft: "https://images.unsplash.com/photo-1551001626-86e913f8baf7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdoaXRlfGVufDB8MHwwfHx8Mg%3D%3D", 
   },
   {
-    link: "/#",
+    link: "/products/microbiome-disease-risk-test",
     label: "New",
     title: "Oral Health Solutions",
     focus1: "",

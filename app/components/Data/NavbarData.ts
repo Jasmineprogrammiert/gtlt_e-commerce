@@ -55,19 +55,19 @@ const stories: { title: string; href: string; description: string }[] = [
 const explore: { title: string; href: string; description: string }[] = [
   {
     title: "Technology",
-    href: "/technology",
+    href: "/tech",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
   {
     title: "Health Blog",
-    href: "/health-blog",
+    href: "/blogs",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
   {
     title: "FAQ",
-    href: "/faq",
+    href: "/questions",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },

@@ -31,7 +31,7 @@ export default function TestIncludes() {
             Book your gut microbiome testing now to better understand your gut health and receive personalized health recommendations every day.<br /> Let your life be healthier and more energetic!
           </p>
           <button className="home-btn">
-            <Link href="/more-details">More Details</Link>
+            <Link href="/tech">More Details</Link>
           </button> 
         </div>
         <div className="col-span-1">
@@ -39,7 +39,6 @@ export default function TestIncludes() {
             src={lab1}
             alt="1st Image"
             className="w-full h-full object-cover rounded"
-            // layout="responsive"
             width={500}
             height={500}
           />
