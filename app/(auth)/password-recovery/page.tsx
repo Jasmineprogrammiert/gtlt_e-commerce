@@ -39,7 +39,7 @@ export default async function PasswordRecovery({
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-
+        
         <form className="mt-8 w-4/5 relative">
           <h2 className="text-xl mb-8">Send password reset request</h2>
           <input 
