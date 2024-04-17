@@ -69,24 +69,20 @@ export async function passwordrecovery(formData: FormData) {
 //   return redirect('/password-recovery?message=Cheers! Your password has been reset successfully.');
 // }
 
-export async function resetpassword(formData: FormData) {
+export const resetpassword = async (formData: FormData, searchParams: { message: string; code: string }) => {
   'use server';
 
   const password = formData.get('password') as string;
   const supabase = createClient();
 
-  // if (searchParams.code) {
-  //   const supabase = createClient();
-  //   const { error } = await supabase.auth.exchangeCodeForSession(
-  //     searchParams.code
-  //   );
+  if (searchParams.code) {
+    const supabase = createClient();
+    const { error } = await supabase.auth.exchangeCodeForSession(searchParams.code);
 
-  //   if (error) {
-  //     return redirect(
-  //       `/reset-password?message=Unable to reset Password. Link expired!`
-  //     );
-  //   }
-  // }
+    if (error) {
+      return redirect(`/reset-password?message=Unable to reset Password. Link expired!`);
+    }
+  }
 
   const { error } = await supabase.auth.updateUser({
     password,
@@ -94,12 +90,8 @@ export async function resetpassword(formData: FormData) {
 
   if (error) {
     console.log(error);
-    return redirect(
-      `/reset-password?message=Unable to reset Password. Try again!`
-    );
+    return redirect(`/reset-password?message=Unable to reset Password. Try again!`);
   }
 
-  redirect(
-    `/login?message=Your Password has been reset successfully. Sign in.`
-  );
+  redirect(`/login?message=Your Password has been reset successfully. Sign in.`);
 };

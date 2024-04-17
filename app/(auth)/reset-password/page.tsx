@@ -83,14 +83,6 @@ export default async function ResetPassword({
   const { data: { user } } = await supabase.auth.getUser();
   if (user) return redirect('/');
 
-  // const {
-  //   data: { session },
-  // } = await supabase.auth.getSession();
-
-  // if (session) {
-  //   return redirect('/');
-  // }
-
   const resetPassword = async (formData: FormData) => {
     'use server';
 
@@ -139,7 +131,7 @@ export default async function ResetPassword({
       <div className="w-full px-8 sm:max-w-md mx-auto mt-4">
         <form
           className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground mb-4"
-          action={resetPassword}
+          action={resetpassword}
         >
           <label className="text-md" htmlFor="password">
             New Password
@@ -173,5 +165,5 @@ export default async function ResetPassword({
         </form>
       </div>
     </div>
-  );
+  )
 }
