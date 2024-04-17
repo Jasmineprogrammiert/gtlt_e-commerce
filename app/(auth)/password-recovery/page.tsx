@@ -73,6 +73,7 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
+import { passwordrecovery } from '../actions';
 
 export default async function ForgotPassword({
   searchParams,
@@ -121,7 +122,8 @@ export default async function ForgotPassword({
       <div className="w-full px-8 sm:max-w-md mx-auto mt-4">
         <form
           className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground mb-4"
-          action={confirmReset}
+          // action={confirmReset}
+          action={passwordrecovery}
         >
           <label className="text-md" htmlFor="email">
             Enter Email Address

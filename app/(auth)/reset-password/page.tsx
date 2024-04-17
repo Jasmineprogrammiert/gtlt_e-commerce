@@ -72,6 +72,7 @@
 import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import { resetpassword } from '../actions';
 
 export default async function ResetPassword({
   searchParams,
@@ -88,40 +89,40 @@ export default async function ResetPassword({
     return redirect('/');
   }
 
-  const resetPassword = async (formData: FormData) => {
-    'use server';
+  // const resetPassword = async (formData: FormData) => {
+  //   'use server';
 
-    const password = formData.get('password') as string;
-    const supabase = createClient();
+  //   const password = formData.get('password') as string;
+  //   const supabase = createClient();
 
-    if (searchParams.code) {
-      const supabase = createClient();
-      const { error } = await supabase.auth.exchangeCodeForSession(
-        searchParams.code
-      );
+  //   if (searchParams.code) {
+  //     const supabase = createClient();
+  //     const { error } = await supabase.auth.exchangeCodeForSession(
+  //       searchParams.code
+  //     );
 
-      if (error) {
-        return redirect(
-          `/reset-password?message=Unable to reset Password. Link expired!`
-        );
-      }
-    }
+  //     if (error) {
+  //       return redirect(
+  //         `/reset-password?message=Unable to reset Password. Link expired!`
+  //       );
+  //     }
+  //   }
 
-    const { error } = await supabase.auth.updateUser({
-      password,
-    });
+  //   const { error } = await supabase.auth.updateUser({
+  //     password,
+  //   });
 
-    if (error) {
-      console.log(error);
-      return redirect(
-        `/reset-password?message=Unable to reset Password. Try again!`
-      );
-    }
+  //   if (error) {
+  //     console.log(error);
+  //     return redirect(
+  //       `/reset-password?message=Unable to reset Password. Try again!`
+  //     );
+  //   }
 
-    redirect(
-      `/login?message=Your Password has been reset successfully. Sign in.`
-    );
-  };
+  //   redirect(
+  //     `/login?message=Your Password has been reset successfully. Sign in.`
+  //   );
+  // };
 
   return (
     <div>
@@ -136,7 +137,7 @@ export default async function ResetPassword({
       <div className="w-full px-8 sm:max-w-md mx-auto mt-4">
         <form
           className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground mb-4"
-          action={resetPassword}
+          action={resetpassword}
         >
           <label className="text-md" htmlFor="password">
             New Password
