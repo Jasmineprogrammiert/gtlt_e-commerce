@@ -97,18 +97,18 @@ export default async function ResetPassword({
     const password = formData.get('password') as string;
     const supabase = createClient();
 
-    // if (searchParams.code) {
-    //   const supabase = createClient();
-    //   const { error } = await supabase.auth.exchangeCodeForSession(
-    //     searchParams.code
-    //   );
+    if (searchParams.code) {
+      const supabase = createClient();
+      const { error } = await supabase.auth.exchangeCodeForSession(
+        searchParams.code
+      );
 
-    //   if (error) {
-    //     return redirect(
-    //       `/reset-password?message=Unable to reset Password. Link expired!`
-    //     );
-    //   }
-    // }
+      if (error) {
+        return redirect(
+          `/reset-password?message=Unable to reset Password. Link expired!`
+        );
+      }
+    }
 
     const { error } = await supabase.auth.updateUser({
       password,
