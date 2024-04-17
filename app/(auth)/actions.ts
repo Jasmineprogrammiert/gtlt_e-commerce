@@ -44,39 +44,46 @@ export async function logout() {
   return redirect("/login");
 }
 
-// export async function passwordrecovery(formData: FormData) {
-//   const origin = headers().get('origin');
-//   const email = formData.get('email') as string;
-//   const supabase = createClient();
-
-//   const { error } = await supabase.auth.resetPasswordForEmail(email, {
-//     redirectTo: `${origin}/reset-password`,
-//   })
-
-//   if (error) return redirect('/password-recovery?message=An error occurred. Please try again.');
-
-//   return redirect('/password-recovery?message=Please check your inbox to reset your password.');
-// }
-
 export async function passwordrecovery(formData: FormData) {
-  'use server';
-
   const origin = headers().get('origin');
   const email = formData.get('email') as string;
   const supabase = createClient();
 
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
     redirectTo: `${origin}/reset-password`,
-  });
+  })
 
-  if (error) {
-    return redirect('/password-recovery?message=Could not authenticate user');
-  }
+  if (error) return redirect('/password-recovery?message=An error occurred. Please try again.');
 
-  return redirect(
-    '/password-recovery?message=Password Reset link has been sent to your email address'
-  );
-};
+  return redirect('/password-recovery?message=Please check your inbox to reset your password.');
+}
+
+// export async function passwordrecoveryorg(formData: FormData) {
+//   'use server';
+
+//   const origin = headers().get('origin');
+//   const email = formData.get('email') as string;
+//   const supabase = createClient();
+
+//   const { error } = await supabase.auth.resetPasswordForEmail(email, {
+//     redirectTo: `${origin}/reset-password`,
+//   });
+
+//   if (error) {
+//     return redirect('/password-recovery?message=Could not authenticate user');
+//   }
+
+//   return redirect(
+//     '/password-recovery?message=Password Reset link has been sent to your email address'
+//   );
+// };
+
+
+
+
+
+
+
 
 // export async function resetpassword(formData: FormData) {
 //   const password = formData.get('password') as string;
