@@ -80,14 +80,16 @@ export default async function ResetPassword({
   searchParams: { message: string; code: string };
 }) {
   const supabase = createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) return redirect('/');
 
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
+  // const {
+  //   data: { session },
+  // } = await supabase.auth.getSession();
 
-  if (session) {
-    return redirect('/');
-  }
+  // if (session) {
+  //   return redirect('/');
+  // }
 
   const resetPassword = async (formData: FormData) => {
     'use server';
@@ -95,18 +97,18 @@ export default async function ResetPassword({
     const password = formData.get('password') as string;
     const supabase = createClient();
 
-    if (searchParams.code) {
-      const supabase = createClient();
-      const { error } = await supabase.auth.exchangeCodeForSession(
-        searchParams.code
-      );
+    // if (searchParams.code) {
+    //   const supabase = createClient();
+    //   const { error } = await supabase.auth.exchangeCodeForSession(
+    //     searchParams.code
+    //   );
 
-      if (error) {
-        return redirect(
-          `/reset-password?message=Unable to reset Password. Link expired!`
-        );
-      }
-    }
+    //   if (error) {
+    //     return redirect(
+    //       `/reset-password?message=Unable to reset Password. Link expired!`
+    //     );
+    //   }
+    // }
 
     const { error } = await supabase.auth.updateUser({
       password,
