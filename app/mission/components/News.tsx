@@ -7,7 +7,7 @@ export default function News() {
     <div className="p-20 bg-gray-50">
       <h1 className="home-h2 mission-h2 tracking-wide">Local Media News Report</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Link href="/#" className="bg-white shadow-lg mb-4 group">
+        <Link href="/" className="bg-white shadow-lg mb-4 group">
           <Image 
             src="https://images.unsplash.com/photo-1553142282-bcc4d3ec4c40?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlciUyMGJhY2tncm91bmR8ZW58MHwxfDB8fHwy" 
             alt="Blog Image" 
@@ -21,7 +21,7 @@ export default function News() {
           </div>
         </Link>
 
-        <Link href="/#" className="bg-white shadow-lg mb-4 group">
+        <Link href="/" className="bg-white shadow-lg mb-4 group">
           <Image 
             src="https://images.unsplash.com/photo-1553142282-bcc4d3ec4c40?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlciUyMGJhY2tncm91bmR8ZW58MHwxfDB8fHwy" 
             alt="Blog Image" 
@@ -35,7 +35,7 @@ export default function News() {
           </div>
         </Link>
 
-        <Link href="/#" className="bg-white shadow-lg mb-4 group">
+        <Link href="/" className="bg-white shadow-lg mb-4 group">
           <Image 
             src="https://images.unsplash.com/photo-1553142282-bcc4d3ec4c40?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlciUyMGJhY2tncm91bmR8ZW58MHwxfDB8fHwy" 
             alt="Blog Image" 
