@@ -11,7 +11,7 @@ export default function BlogPage() {
         The latest ideas, insights, and inspiration, expertly curated to empower you on your health journey. Learn more about systems biology and the many ways the microbiome plays a critical role in your health & wellness.
       </p>
 
-      <Link href="#" className="flex mb-8 relative group">
+      <Link href="/#" className="flex mb-8 relative group">
         <Image 
           src="https://images.unsplash.com/photo-1566146991394-b09a95e80d17?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFpc3l8ZW58MHwwfDB8fHwy"
           alt="Blog Image" 
@@ -33,7 +33,7 @@ export default function BlogPage() {
 
       <div className="flex justify-between overflow-auto">
         {BlogContent.map((blog, index) => (
-          <Link href="#" className="min-w-[20rem] mr-5" key={index}>
+          <Link href="/#" className="min-w-[20rem] mr-5" key={index}>
             <div className="bg-white shadow-lg mb-4 relative group">
               <Image 
                 src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8MHwwfHx8Mg%3D%3D" 
@@ -61,7 +61,7 @@ export default function BlogPage() {
         </div>
         <div className="grid grid-cols-3 gap-5">
           {BlogContent.map((blog, index) => (
-            <Link href="#" className="bg-white shadow-lg mb-4 group" key={index}>
+            <Link href="/#" className="bg-white shadow-lg mb-4 group" key={index}>
               <Image 
                 src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8MHwwfHx8Mg%3D%3D" 
                 alt="Blog Image" 
