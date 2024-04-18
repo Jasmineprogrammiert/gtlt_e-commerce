@@ -304,7 +304,7 @@
     leading-6 
     mt-5;
 }
-/* --------------- ShoppingCartModal --------------- */
+/* --------------- Products - ShoppingCartModal --------------- */
 .sc-btn {
   @apply
     w-3/4
@@ -317,7 +317,7 @@
 .sc-btn:hover {
   background-color: hsl(192, 100%, 40%);
 }
-/* --------------- CountdownTimer --------------- */
+/* --------------- Products - CountdownTimer --------------- */
 .dhms-dot{
   @apply
     mx-1.5 text-2xl text-cyan-600;
@@ -335,6 +335,12 @@
 .dhms > div:last-child {
   @apply
     text-xs leading-[0.8rem];
+}
+/* --------------- Products - ProductDetail --------------- */
+.blogs-h2 {
+  @apply
+    font-[400]
+    mb-6;
 }
 /* ---------- TESTING ---------- */
 .testing {

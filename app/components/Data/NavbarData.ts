@@ -60,7 +60,7 @@ const explore: { title: string; href: string; description: string }[] = [
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
   {
-    title: "Health Blog",
+    title: "Blog",
     href: "/blogs",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
