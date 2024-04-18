@@ -33,8 +33,8 @@ export default function BlogPage() {
 
       <div className="flex justify-between overflow-auto">
         {BlogContent.map((blog, index) => (
-          <div className="min-w-[20rem] mr-5" key={index}>
-            <div className="bg-white shadow-lg rounded-lg mb-4 relative group">
+          <Link href="#" className="min-w-[20rem] mr-5" key={index}>
+            <div className="bg-white shadow-lg mb-4 relative group">
               <Image 
                 src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8MHwwfHx8Mg%3D%3D" 
                 alt="Blog Image" 
@@ -48,7 +48,7 @@ export default function BlogPage() {
                 <p className="text-gray-700 line-clamp-3 mb-10">{blog.description}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -59,9 +59,9 @@ export default function BlogPage() {
             <Dropdown />
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-5">
           {BlogContent.map((blog, index) => (
-            <div className="bg-white shadow-lg rounded-lg mb-4" key={index}>
+            <Link href="#" className="bg-white shadow-lg mb-4 group" key={index}>
               <Image 
                 src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8MHwwfHx8Mg%3D%3D" 
                 alt="Blog Image" 
@@ -74,7 +74,7 @@ export default function BlogPage() {
                 <h3 className="text-2xl mb-3">{blog.title}</h3>
                 <p className="text-gray-700 line-clamp-3 mb-10">{blog.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
