@@ -337,7 +337,7 @@
     text-xs leading-[0.8rem];
 }
 /* --------------- Products - ProductDetail --------------- */
-.blogs-h2 {
+.blog-h2 {
   @apply
     font-[400]
     mb-6;

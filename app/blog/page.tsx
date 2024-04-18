@@ -6,7 +6,7 @@ import Dropdown from './components/Dropdown'
 export default function BlogPage() {
   return (
     <div className="p-20 min-h-screen flex flex-col bg-gray-50">
-      <h2 className="home-h2 blogs-h2">The GUTolution Blog</h2>
+      <h2 className="home-h2 blog-h2">The GUTolution Blog</h2>
       <p className="text-xl text-gray-800 mb-14">
         The latest ideas, insights, and inspiration, expertly curated to empower you on your health journey. Learn more about systems biology and the many ways the microbiome plays a critical role in your health & wellness.
       </p>
@@ -54,7 +54,7 @@ export default function BlogPage() {
 
       <div className="pt-20 pb-10">
         <div className="flex mb-10">
-          <h2 className="w-1/2 home-h2 blogs-h2">Most Recent</h2>
+          <h2 className="w-1/2 home-h2 blog-h2">Most Recent</h2>
           <div className="w-1/2 flex justify-end">
             <Dropdown />
           </div>

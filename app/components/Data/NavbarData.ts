@@ -61,7 +61,7 @@ const explore: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Blog",
-    href: "/blogs",
+    href: "/blog",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
