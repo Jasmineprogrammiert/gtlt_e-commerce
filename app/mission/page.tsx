@@ -7,15 +7,15 @@ export default function MissionPage() {
     <div className="p-20 flex space-x-16 items-center justify-center bg-gray-100">
       <div className="w-3/5 h-full p-14 bg-violet-100 bg-opacity-35 rounded-lg shadow-lg z-10">
         <h1 className="text-5xl mb-10 tracking-wide">About GUTolution</h1>
-        <p className="text-xl mb-8">A biotech startup that focuses on gut microbiome,under the Ideation program of the Hong Kong Science Park</p>
+        <p className="text-xl mb-8">A biotech startup that focuses on gut microbiome, under the Ideation program of the Hong Kong Science Park</p>
         <p className="text-base mb-5">
-          The name GUTolution means "Gut is the solution to your health". We combine science and self-care to provide personalized microbiome health experience, together with "personal gut partner" service.
+          The name GUTolution means {`"`}Gut is the solution to your health{`"`}. We combine science and self-care to provide personalized microbiome health experience, together with {`"`}personal gut partner{`"`} service.
         </p>
         <p className="text-base mb-5">
-          Through "simple home testing" and "next-generation sequencing technology", we provide you with a unique quantitative view of your microbiome.
+          Through {`"`}simple home testing{`"`} and {`"`}next-generation sequencing technology{`"`}, we provide you with a unique quantitative view of your microbiome.
         </p>
         <p className="text-base">
-          We use our most advanced AI engine to analyze your microbiome DNA, turning "translational health science" into "comprehensive microbiome health score" and evidence-based lifestyle, food, and probiotic recommendations.
+          We use our most advanced AI engine to analyze your microbiome DNA, turning {`"`}translational health science{`"`} into {`"`}comprehensive microbiome health score{`"`} and evidence-based lifestyle, food, and probiotic recommendations.
         </p>
       </div>
       <div className="w-2/5">

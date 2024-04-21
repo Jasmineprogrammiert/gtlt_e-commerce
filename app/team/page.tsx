@@ -27,7 +27,7 @@ export default function page() {
 
             <p className="text-gray-800 mb-10">{team.description}</p>
             <Link href={team.link} className="block text-blue-500 font-medium">
-              Let's Connect <ArrowRightAltIcon />
+              Let{`'`}s Connect <ArrowRightAltIcon />
             </Link>
           </div>
         ))}
