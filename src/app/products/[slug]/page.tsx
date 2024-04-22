@@ -105,10 +105,12 @@ export default async function ProductPage({
 
             <div className="flex items-center gap-x-2">
               <span className="text-xl font-medium text-cyan-700">
-                ${data.price_2} 
+                {/* ${data.price_2}  */}
+                ${data.price} 
               </span>
               <span className="text-base line-through text-red-500">
-                ${data.price_2 + 30}
+                {/* ${data.price_2 + 30} */}
+                ${data.price + 30}
               </span>
               <span className="ml-5"><CountdownTimer /></span>
             </div>
@@ -123,8 +125,10 @@ export default async function ProductPage({
                 description_1={data.description_1}
                 image={data.images[0]}
                 name={data.name}
-                price={data.price_2}
-                price_id={data.price_2_id}
+                // price={data.price_2}
+                // price_id={data.price_2_id}
+                price={data.price}
+                price_id={data.price_id}
                 key={data._id}
               />
             </div>
