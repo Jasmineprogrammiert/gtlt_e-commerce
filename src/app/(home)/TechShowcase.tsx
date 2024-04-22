@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import img1 from '../../public/assets/techShowCase-1.jpg'
-import img2 from '../../public/assets/techShowCase-2.jpg'
+import img1 from '../../../public/assets/techShowCase-1.jpg'
+import img2 from '../../../public/assets/techShowCase-2.jpg'
 
 export default function TechShowcase() {
   return (

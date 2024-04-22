@@ -23,9 +23,7 @@ const nextConfig = {
     ],
   },
   i18n: {
-    // These are all the locales you want to support in
-    // your application
-    locales: ['en-US', 'fr', 'nl-NL'],
+    locales: ['en-US', 'zh-Hant'],
     // This is the default locale you want to be used when visiting
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en-US',
@@ -34,19 +32,15 @@ const nextConfig = {
     // Note: subdomains must be included in the domain value to be matched e.g. "fr.example.com".
     domains: [
       {
-        domain: 'example.com',
+        domain: 'gtlt.vercel.app',
         defaultLocale: 'en-US',
       },
       {
-        domain: 'example.nl',
-        defaultLocale: 'nl-NL',
-      },
-      {
-        domain: 'example.fr',
-        defaultLocale: 'fr',
+        domain: 'gtlt.vercel.app.zh-Hant',
+        defaultLocale: 'zh-Hant',
         // an optional http field can also be used to test
         // locale domains locally with http instead of https
-        http: true,
+        // http: true,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import lab1 from '../../public/assets/lab-1.jpg'
+import lab1 from '../../../public/assets/lab-1.jpg'
 
 export default function TestIncludes() {
   return (
