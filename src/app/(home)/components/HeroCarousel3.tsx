@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 // assets
-import product5 from '../../../public/assets/product-5.jpg'
-import product6 from '../../../public/assets/product-6.jpg'
+import product5 from '../../../../public/assets/product-5.jpg'
+import product6 from '../../../../public/assets/product-6.jpg'
 
 export default function HeroCarousel3() {
   return (
