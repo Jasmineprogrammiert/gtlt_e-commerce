@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { signup } from '../actions'
-import Logo from '../../../../../public/assets/logo.png'
+import Logo from '../../../../public/assets/logo.png'
 
 export default function SignUp() {
   return (
