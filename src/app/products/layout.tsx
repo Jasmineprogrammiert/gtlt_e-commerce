@@ -1,4 +1,4 @@
-import FrequentlyAsked from '@/app/components/FrequentlyAsked'
+import FrequentlyAsked from '@/src/app/components/FrequentlyAsked'
 
 export default async function ProductsLayout({ 
   children,

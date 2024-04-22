@@ -6,7 +6,7 @@ import * as React from 'react'
 // links
 import { products, stories, explore } from './Data/NavbarData'
 // styles
-import Logo from '../../public/assets/logo.png'
+import Logo from '../../../public/assets/logo.png'
 import { useShoppingCart } from 'use-shopping-cart'
 import { cn } from '@/lib/utils'
 import {
