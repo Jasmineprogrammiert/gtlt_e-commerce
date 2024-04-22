@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BlogContent } from './Data/BlogData'
+import { BlogData } from './Data/BlogData'
 import Dropdown from './components/Dropdown'
 
 export default function BlogPage() {
@@ -32,7 +32,7 @@ export default function BlogPage() {
       </Link>
 
       <div className="flex justify-between overflow-auto">
-        {BlogContent.map((blog, index) => (
+        {BlogData.map((blog, index) => (
           <Link href="/" className="min-w-[20rem] mr-5" key={index}>
             <div className="bg-white shadow-lg mb-4 relative group">
               <Image 
@@ -60,7 +60,7 @@ export default function BlogPage() {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-5">
-          {BlogContent.map((blog, index) => (
+          {BlogData.map((blog, index) => (
             <Link href="/" className="bg-white shadow-lg mb-4 group" key={index}>
               <Image 
                 src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8MHwwfHx8Mg%3D%3D" 

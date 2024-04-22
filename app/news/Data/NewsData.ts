@@ -1,26 +1,26 @@
-export const BlogData = [
+export const NewsData = [
   {
-    title: "Blog Title 1",
+    title: "News 1",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At."
   },
   {
-    title: "Blog Title 2",
+    title: "News 2",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At."
   },
   {
-    title: "Blog Title 3",
+    title: "News 3",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At."
   },
   {
-    title: "Blog Title 4",
+    title: "News 4",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At."
   },
   {
-    title: "Blog Title 5",
+    title: "News 5",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At."
   },
   {
-    title: "Blog Title 6",
+    title: "News 6",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At."
   }
 ]
