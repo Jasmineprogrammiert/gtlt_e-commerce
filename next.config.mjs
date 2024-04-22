@@ -1,3 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin'
+ 
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // images: {
@@ -23,7 +27,7 @@ const nextConfig = {
     ],
   },
   i18n: {
-    locales: ['en-US', 'zh-Hant'],
+    locales: ['en-US', 'zh-Hant', 'zh-CN'],
     // This is the default locale you want to be used when visiting
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en-US',
@@ -42,6 +46,10 @@ const nextConfig = {
         // locale domains locally with http instead of https
         // http: true,
       },
+      {
+        domain: 'gtlt.vercel.app.zh-CN',
+        defaultLocale: 'zh-CN',
+      },
     ],
   },
   // typescript: {
@@ -49,4 +57,5 @@ const nextConfig = {
   // },
 };
 
-export default nextConfig;
+// export default nextConfig;
+export default withNextIntl(nextConfig);
