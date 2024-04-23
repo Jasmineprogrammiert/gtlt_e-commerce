@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
 import { passwordrecovery } from '../actions'
-import Logo from '../../../../public/logo.png'
+import Logo from '../../../public/logo.png'
 
 export default async function PasswordRecovery({
   searchParams,
