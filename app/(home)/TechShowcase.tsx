@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import img1 from '../../public/assets/techShowCase-1.jpg'
-import img2 from '../../public/assets/techShowCase-2.jpg'
 
 export default function TechShowcase() {
   return (
@@ -13,7 +11,7 @@ export default function TechShowcase() {
       </div>
       <div className="w-1/2 p-4 pr-8">
         <Image
-          src={img1}
+          src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFifGVufDB8MHwwfHx8Mg%3D%3D"
           alt="Tech Showcase Image"
           width={800}
           height={400}
@@ -28,7 +26,7 @@ export default function TechShowcase() {
           Whole genome sequencing allows the detection of all genomic components within a biological sample, adding an additional level of clarity to taxonomic classification down to the species and strain levels and annotation of potential metabolic processes. This method effectively identifies and profiles bacteria, fungi, viruses and parasites simultaneously and enables microbial gene profiling that facilitates microbiome functional studies.level of clarity to sequencing -- down to the individual species level.
         </p>
         <Image
-          src={img2}
+          src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2VsbHxlbnwwfDB8MHx8fDI%3D"
           alt="Tech Showcase Image"
           width={800}
           height={400}

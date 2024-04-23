@@ -6,7 +6,7 @@ import * as React from 'react'
 // links
 import { products, stories, explore } from './Data/NavbarData'
 // styles
-import Logo from '../../public/assets/logo.png'
+import Logo from '../../public/logo.png'
 import { useShoppingCart } from 'use-shopping-cart'
 import { cn } from '@/lib/utils'
 import {
@@ -20,9 +20,12 @@ import {
 import { User, LogOut, ShoppingBag } from 'lucide-react'
 import { logout } from '../(auth)/actions'
 
-export default function Navbar({ user }: { user: any }) {
+export default function Navbar({ 
+  user, 
+}: { 
+  user: any,
+}) {
   const { handleCartClick } = useShoppingCart();
-
   return (
     <header className="px-20 py-2 flex justify-start items-center sticky top-0 z-50 w-full shadow bg-gray-50">
       <Link href="/" className="mr-8">

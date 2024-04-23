@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import lab1 from '../../public/assets/lab-1.jpg'
 
 export default function TestIncludes() {
   return (
@@ -36,7 +35,7 @@ export default function TestIncludes() {
         </div>
         <div className="col-span-1">
           <Image
-            src={lab1}
+            src="https://images.unsplash.com/photo-1639772823849-6efbd173043c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFifGVufDB8MXwwfHx8Mg%3D%3D"
             alt="1st Image"
             className="w-full h-full object-cover rounded"
             width={500}

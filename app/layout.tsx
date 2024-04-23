@@ -19,18 +19,14 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  // params: {app}
 }: Readonly<{
   children: React.ReactNode;
-  params: {app: string};
 }>) {
   const supabase = createClient();
-
   const { data: { user } } = await supabase.auth.getUser();
 
   return (
     <html lang="en">
-    {/* <html lang={app}> */}
       <body className={inter.className}>
         <Provider>
           <Navbar user={user} />

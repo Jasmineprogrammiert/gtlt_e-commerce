@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
-import Logo from '../../../public/assets/logo.png'
+import Logo from '../../../public/logo.png'
 
 export default async function ResetPassword({
   searchParams,
