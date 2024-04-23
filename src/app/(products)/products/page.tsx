@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { simplifiedProduct } from '@/app/interface'
-import { client } from '@/app/lib/sanity'
+import { simplifiedProduct } from '@/src/app/(products)/interface'
+import { client } from '@/src/app/lib/sanity'
 
 async function getData() {
   const query = `*[_type == 'product'] {

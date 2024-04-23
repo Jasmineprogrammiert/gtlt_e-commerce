@@ -1,17 +1,41 @@
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
-import { passwordrecovery } from '../actions'
-import Logo from '../../../public/logo.png'
+import Logo from '../../../../public/assets/logo.png'
 
-export default async function PasswordRecovery({
+export default async function ResetPassword({
   searchParams,
 }: {
-  searchParams: { message: string };
+  searchParams: { message: string; code: string };
 }) {
   const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (user) return redirect('/');
+
+  const resetPassword = async (formData: FormData) => {
+    'use server';
+
+    const password = formData.get('password') as string;
+    const supabase = createClient();
+
+    if (searchParams.code) {
+      const supabase = createClient();
+      const { error } = await supabase.auth.exchangeCodeForSession(
+        searchParams.code
+      );
+
+      if (error) return redirect('/reset-password?message=Unable to reset Password. Link expired!')
+    }
+
+    const { error } = await supabase.auth.updateUser({ password });
+
+    if (error) {
+      console.log(error);
+      return redirect('/reset-password?message=Unable to reset Password. Try again!');
+    }
+
+    redirect('/login?message=Your Password has been reset successfully. Sign in.');
+  }
 
   return (
     <>
@@ -25,7 +49,6 @@ export default async function PasswordRecovery({
           height={200}
         />
       </div>
-
       <div className="px-20 py-20 w-1/2 flex flex-col items-center justify-center" >
         <div className="flex space-x-2 mb-10">
           <div className="w-10">
@@ -39,22 +62,22 @@ export default async function PasswordRecovery({
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-        
+
         <form className="mt-8 w-4/5 relative">
-          <h2 className="text-xl mb-8">Send password reset request</h2>
+          <h2 className="text-xl mb-8">Reset your password</h2>
           <input 
-            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
-            name="email"
-            type="email" 
-            placeholder="Email Address" 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-8" 
+            type="password" 
+            name="password"
+            placeholder="New Password" 
             required 
-          />
+          /> 
           <button 
             className="w-1/3 bg-cyan-600 text-white rounded-md py-2 mt-10 mb-4"
-            formAction={passwordrecovery} 
+            formAction={resetPassword} 
             type="submit" 
           >
-            Send
+            Reset
           </button>
 
           {searchParams?.message && (

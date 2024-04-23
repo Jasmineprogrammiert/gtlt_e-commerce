@@ -44,12 +44,6 @@ const stories: { title: string; href: string; description: string }[] = [
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },
-  {
-    title: "Contact Us",
-    href: "/contact",
-    description:
-      "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
-  },
 ]
 
 const explore: { title: string; href: string; description: string }[] = [
@@ -68,6 +62,12 @@ const explore: { title: string; href: string; description: string }[] = [
   {
     title: "FAQ",
     href: "/questions",
+    description:
+      "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact",
     description:
       "Ipsum dolor sit amet, consectetur adipiscing elit. Integer nec",
   },

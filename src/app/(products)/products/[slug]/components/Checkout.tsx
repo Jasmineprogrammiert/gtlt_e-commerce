@@ -2,7 +2,7 @@
 
 import { Button } from '@mui/material'
 import { useShoppingCart } from 'use-shopping-cart'
-import { urlFor } from '../../../lib/sanity'
+import { urlFor } from '../../../../lib/sanity'
 import { ProductCart } from './AddToBag'
 
 export default function Checkout({

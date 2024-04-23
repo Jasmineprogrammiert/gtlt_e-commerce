@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { client } from '@/app/lib/sanity'
-import { fullProduct } from '@/app/interface'
+import { client } from '@/src/app/lib/sanity'
+import { fullProduct } from '@/src/app/(products)/interface'
 // components
 import ImgGallery from './components/ImgGallery'
 import CountdownTimer from './components/CountdownTimer'

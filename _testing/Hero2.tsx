@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { client, urlFor } from '@/app/lib/sanity'
+import { client, urlFor } from '@/src/app/lib/sanity'
 
 async function getData() {
   const query = "*[_type == 'heroImg'][0]";
