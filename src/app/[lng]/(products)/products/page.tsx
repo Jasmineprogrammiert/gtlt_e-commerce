@@ -13,21 +13,18 @@ async function getData() {
       "slug": slug.current,
   }`;
   const data = await client.fetch(query);
-
   return data;
 }
 
 export default async function Products() {
   const data: simplifiedProduct[] = await getData();
-  
   return (
     <div className="p-20 bg-gray-50">
-      <h2 className="text-5xl mb-10">All Products</h2>
-
+      <h2 className="text-5xl mb-10 xl:mb-12 tracking-wide">All Products</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
         {data.map(product => (
           <div key={product._id} className="group relative">
-            <div className="w-full aspect-square overflow-hidden rounded-md bg-gray-200 group-hover:opacity-80">
+            <div className="w-[98%] xl:w-[92%] mx-auto aspect-square overflow-hidden rounded-md group-hover:opacity-80">
               {product.imgUrl ? 
                 <Link href={`/products/${product.slug}`}>
                   <Image
@@ -40,18 +37,17 @@ export default async function Products() {
                 </Link>
                 : null}
             </div>
-            <div className="mx-0.5 my-3">
-              <h3 className="text-xl">
+            <div className="mx-0.5 my-3 text-center items-center">
+              <h3 className="text-xl xl:text-2xl font-medium">
                 <Link href={`/products/${product.slug}`}>
                   {product.name}
                 </Link>
               </h3>
-              <p className="text-lg font-medium text-gray-800">
-                ${product.price}
-              </p>
-
-              <p className="text-lg mt-1 text-gray-600">
+              <p className="text-base xl:text-lg text-gray-800 mt-1.5 xl:mt-2">
                 {product.category}
+              </p>
+              <p className="text-base xl:text-lg text-gray-800 mt-3 xl:mt-4">
+                ${product.price}
               </p>
             </div>
           </div>

@@ -309,4 +309,4 @@ export const cardData: CardItem[] = [
       },
     ]
   },
-];
+]

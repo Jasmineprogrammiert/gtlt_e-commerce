@@ -15,29 +15,23 @@ export default function HealthScores() {
   const [isCollapsed6, setIsCollapsed6] = useState(true);
 
   const toggleCollapse1 = () => {
-      setIsCollapsed1(!isCollapsed1);
-  };
-
+    setIsCollapsed1(!isCollapsed1);
+  }
   const toggleCollapse2 = () => {
-      setIsCollapsed2(!isCollapsed2);
-  };
-
+    setIsCollapsed2(!isCollapsed2);
+  }
   const toggleCollapse3 = () => {
-      setIsCollapsed3(!isCollapsed3);
-  };
-
+    setIsCollapsed3(!isCollapsed3);
+  }
   const toggleCollapse4 = () => {
-      setIsCollapsed4(!isCollapsed4);
-  };
-
+    setIsCollapsed4(!isCollapsed4);
+  }
   const toggleCollapse5 = () => {
-      setIsCollapsed5(!isCollapsed5);
-  };
-
+    setIsCollapsed5(!isCollapsed5);
+  }
   const toggleCollapse6 = () => {
-      setIsCollapsed6(!isCollapsed6);
-  };
-
+    setIsCollapsed6(!isCollapsed6);
+  }
   return (
     <>
     <div className="p-20 rounded-lg shadow-lg">
@@ -50,10 +44,10 @@ export default function HealthScores() {
             className="object-cover object-center w-full h-[30rem] rounded-t-lg"
         />
         <div className="absolute top-4 left-4 p-20 w-3/5">
-            <h2 className="text-3xl font-medium tracking-wide text-white mb-5">
+            <h2 className="text-4xl xl:text-5xl tracking-wide text-white mb-5 xl:mb-8">
               20+ Gut Health Scores
             </h2>
-            <p className="text-lg text-white">
+            <p className="text-lg xl:text-xl text-white">
               Your comprehensive Gut Health analysis evaluates over 20 key factors to give you a comprehensive overview of your gut health. It covers various functions, including digestion, gut lining strength, and microbial diversity, and forms the basis for your personalized recommendations to help you support your gut{`'`}s needs.
             </p>
         </div>
@@ -67,23 +61,25 @@ export default function HealthScores() {
           />
         </div>
       </div>
-
+      
       <div className="grid grid-cols-2 gap-x-10 gap-y-4 p-16 bg-gray-900 text-slate-50">
         <div className="hs-collapsible">
           <div>
             <button onClick={toggleCollapse1}>
-              <PublicIcon className="mb-0.5" /> Inflammatory Activity
+              <PublicIcon className="mb-0.5" />
+              <span> Inflammatory Activity</span>
             </button>
             <span onClick={toggleCollapse1} className="cursor-pointer">{isCollapsed1 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}</span>
           </div>
-          {isCollapsed1 ? null : <div>
+          {isCollapsed1 ? null : <div className="text-base">
             We assess the activities that can contribute to or reflect an immune response in your gut environment caused by harmful things your microbes produce or that your microbes perceive as threatening.
           </div>}
         </div>
         <div className="hs-collapsible">
           <div>
             <button onClick={toggleCollapse2}>
-              <PublicIcon className="mb-0.5" /> Gut Lining Health
+              <PublicIcon className="mb-0.5" />
+              <span> Gut Lining Health</span>
             </button>
             <span onClick={toggleCollapse2} className="cursor-pointer">{isCollapsed2 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}</span>
           </div>
@@ -94,7 +90,8 @@ export default function HealthScores() {
         <div className="hs-collapsible">
           <div>
             <button onClick={toggleCollapse3}>
-              <PublicIcon className="mb-0.5" /> Metabolic Fitness
+              <PublicIcon className="mb-0.5" /> 
+              <span> Metabolic Fitness</span>
             </button>
             <span onClick={toggleCollapse3} className="cursor-pointer">{isCollapsed3 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}</span>
           </div>
@@ -105,7 +102,8 @@ export default function HealthScores() {
         <div className="hs-collapsible">
           <div>
             <button onClick={toggleCollapse4}>
-              <PublicIcon className="mb-0.5" /> Protein Fermentation
+              <PublicIcon className="mb-0.5" />
+              <span> Protein Fermentation</span>
             </button>
             <span onClick={toggleCollapse4} className="cursor-pointer">{isCollapsed4 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}</span>
           </div>
@@ -116,7 +114,8 @@ export default function HealthScores() {
         <div className="hs-collapsible">
           <div>
             <button onClick={toggleCollapse5}>
-              <PublicIcon className="mb-0.5" /> Digestive Efficiency 
+              <PublicIcon className="mb-0.5" />
+              <span> Digestive Efficiency</span>
             </button>
             <span onClick={toggleCollapse5} className="cursor-pointer">{isCollapsed5 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}</span>
           </div>
@@ -127,7 +126,8 @@ export default function HealthScores() {
         <div className="hs-collapsible">
           <div>
             <button onClick={toggleCollapse6}>
-              <PublicIcon className="mb-0.5" /> Gas Production 
+              <PublicIcon className="mb-0.5" />
+              <span>  Gas Production </span>
             </button>
             <span onClick={toggleCollapse6} className="cursor-pointer">{isCollapsed6 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}</span>
           </div>

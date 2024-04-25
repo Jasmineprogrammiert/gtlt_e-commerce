@@ -301,7 +301,7 @@
 }
 .hs-collapsible button {
   @apply 
-    text-lg 
+    xl:text-lg 
     tracking-wide 
     w-full 
     text-left;
@@ -314,7 +314,7 @@
 }
 .hs-collapsible > div:nth-child(2) {
   @apply
-    text-lg 
+    xl:text-lg 
     leading-6 
     mt-5;
 }

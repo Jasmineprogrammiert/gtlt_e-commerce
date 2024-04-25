@@ -28,7 +28,6 @@ async function getData(slug: string) {
       "slug": slug.current,
   }`;
   const data = await client.fetch(query);
-  
   return data;
 }
 
@@ -45,7 +44,6 @@ export default async function ProductPage({
     <div className="p-20">
       <div className="grid grid-cols-2 gap-10 xl:gap-14">
         <ImgGallery images={data.images} />
-
         <div className="">
           <h2 className="text-2xl xl:text-3xl font-medium mb-2.5">
             {data.name}
@@ -62,7 +60,6 @@ export default async function ProductPage({
           </div>
 
           <hr className="bg-gray-950 my-5" />
-
           <h3 className="text-lg font-medium text-gray-950 mb-1.5">
             {data.subtitle_1}
           </h3>
@@ -102,7 +99,6 @@ export default async function ProductPage({
                 6-month regular plan ($1516/month)
               </label>
             </div>
-
             <div className="flex items-center gap-x-2">
               <span className="text-xl font-medium text-cyan-700">
                 {/* ${data.price_2}  */}
@@ -118,27 +114,21 @@ export default async function ProductPage({
 
           <hr className="border-dashed bg-gray-950 my-5" />
           {data.stock > 0 ? (
-            <>
             <div className="flex gap-3">
               <AddToBag
                 currency="HKD"
                 description_1={data.description_1}
                 image={data.images[0]}
                 name={data.name}
-                // price={data.price_2}
-                // price_id={data.price_2_id}
                 price={data.price}
                 price_id={data.price_id}
+                // price={data.price_2}
+                // price_id={data.price_2_id}
                 key={data._id}
               />
             </div>
-            </>
             ) : 
-            <>
-            <p className="text-cyan-800 font-medium tracking-wide ml-0.5">
-              Out of Stock
-            </p>
-            </>
+            <p className="text-cyan-800 font-medium tracking-wide ml-0.5">Out of Stock</p>
           }
         </div>
       </div>
