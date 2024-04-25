@@ -350,18 +350,6 @@
   @apply
     text-xs leading-[0.8rem];
 }
-/* --------------- Products - ProductDetail --------------- */
-.blog-h2 {
-  @apply
-    font-[400]
-    mb-6;
-}
-/* --------------- Mission --------------- */
-.mission-h2 {
-  @apply
-    font-[400]
-    mb-10;
-}
 /* ---------- TESTING ---------- */
 .testing {
 

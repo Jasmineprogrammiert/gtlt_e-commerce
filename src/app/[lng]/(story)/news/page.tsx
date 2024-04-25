@@ -5,7 +5,7 @@ import { NewsData } from './Data/NewsData'
 export default function BlogPage() {
   return (
     <div className="p-20 min-h-screen flex flex-col bg-gray-50">
-      <h2 className="home-h2 blog-h2">The GUTolution News</h2>
+      <h2 className="home-h2 home-h2-2">The GUTolution News</h2>
       <p className="text-xl text-gray-800 mb-14">
         The latest ideas, insights, and inspiration, expertly curated to empower you on your health journey. Learn more about systems biology and the many ways the microbiome plays a critical role in your health & wellness.
       </p>
@@ -19,7 +19,7 @@ export default function BlogPage() {
           className="w-1/2 flex items-center h-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-10" 
         />
         <div className="w-1/2 px-10 py-12 bg-black text-white relative">
-          <p className="uppercase text-gray-500 pb-3.5">Research</p>
+          <p className="uppercase text-gray-500 pb-3.5">Technology</p>
           <h3 className="text-2xl mb-8">
             To Eat, or Not to Eat Spinach: That is the Question with Oxalates
           </h3>
@@ -42,7 +42,7 @@ export default function BlogPage() {
                 className="w-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-[10]" 
               />
               <div className="p-5">
-                <p className="uppercase text-gray-500 mb-4">Lifestyle</p>
+                <p className="uppercase text-gray-500 mb-4">Media</p>
                 <h3 className="text-2xl mb-3">{blog.title}</h3>
                 <p className="text-gray-700 line-clamp-3 mb-10">{blog.description}</p>
               </div>
@@ -53,7 +53,7 @@ export default function BlogPage() {
 
       <div className="pt-20 pb-10">
         <div className="flex mb-10">
-          <h2 className="w-1/2 home-h2 blog-h2">Most Recent</h2>
+          <h2 className="w-1/2 home-h2 home-h2-2">Most Recent</h2>
         </div>
         <div className="grid grid-cols-3 gap-5">
           {NewsData.map((blog, index) => (
@@ -66,7 +66,7 @@ export default function BlogPage() {
                 className="w-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-[10]" 
               />
               <div className="p-5">
-                <p className="uppercase text-gray-500 mb-4">Lifestyle</p>
+                <p className="uppercase text-gray-500 mb-4">Media</p>
                 <h3 className="text-2xl mb-3">{blog.title}</h3>
                 <p className="text-gray-700 line-clamp-3 mb-10">{blog.description}</p>
               </div>

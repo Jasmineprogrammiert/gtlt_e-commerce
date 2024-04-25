@@ -7,7 +7,7 @@ export default function page() {
   return (
     <>
     <div className="p-20">
-      <h2 className="home-h2 blog-h2">Our Leadership</h2>
+      <h2 className="home-h2 home-h2-2">Our Leadership</h2>
       <div className="grid grid-cols-3 gap-5 mt-14">
         {Team.map((team, index) => (
           <div className="bg-gray-100 p-10 mb-4" key={index}>
