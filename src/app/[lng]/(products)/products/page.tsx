@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { simplifiedProduct } from '@/src/app/(products)/interface'
+import { simplifiedProduct } from '../interface'
 import { client } from '@/src/app/lib/sanity'
 
 async function getData() {
