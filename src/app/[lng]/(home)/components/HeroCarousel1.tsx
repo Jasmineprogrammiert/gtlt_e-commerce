@@ -9,7 +9,7 @@ export default function HeroCarousel1 ({ lng }: PageProps) {
     <>
     <div className="flex flex-wrap justify-between">
       <div className="flex flex-col lg:w-2/5">
-        <h1 className="text-6xl font-bold mb-12">
+        <h1 className="text-6xl font-bold mb-12 xl:leading-[4.5rem]">
           {t("Herocarousel1.title_1.title_1_1")}
           <span className="theme-color">{t("Herocarousel1.title_1.title_1_2")}</span> 
           {t("Herocarousel1.title_1.title_1_3")}

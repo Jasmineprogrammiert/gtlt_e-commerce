@@ -12,7 +12,7 @@ export default function ProductsCard({ p }: { p: any }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-full h-[78vh] p-10 group rounded mb-20"
+    <div className="relative w-full h-[78vh] xl:h-[80vh] p-10 group rounded mb-20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -32,17 +32,16 @@ export default function ProductsCard({ p }: { p: any }) {
         className="object-cover object-center rounded transition-opacity duration-300"
         style={{ opacity: isHovered ? 1 : 0 }}
       />
-
       <div className="absolute inset-16 flex items-center text-white group-hover:text-slate-950">
         <div className="flex flex-col justify-between">
           {/* ----- Upper Text Group ----- */}
           <div className="mb-44 xl:mb-60">
             {p.label && (
-              <span className="bg-theme-color group-hover:bg-theme-color-darker rounded-full py-1 px-2">
+              <span className="bg-theme-color group-hover:bg-theme-color-darker rounded-full py-1.5 px-2.5 bg-cyan-900 group-hover:bg-cyan-400">
                 {p.label}
               </span>
             )}
-            <h3 className="text-5xl font-medium tracking-wide mt-2 mb-9">
+            <h3 className="text-5xl font-medium tracking-wide mt-4 mb-9">
               {p.title}
             </h3>
             <Link href={p.link} className="inline-block transition-transform transform hover:translate-x-2">

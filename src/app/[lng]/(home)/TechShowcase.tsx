@@ -5,7 +5,7 @@ export default function TechShowcase() {
     <>
     <section className="p-20 flex flex-wrap bg-gray-50">
       <div className="w-full p-4 text-center">
-        <h3 className="text-4xl font-semibold my-8 text-cyan-600">
+        <h3 className="text-4xl xl:text-5xl font-semibold xl:font-medium tracking-wide my-8 text-cyan-600">
           Methods of Microbiome Analysis
         </h3>
       </div>

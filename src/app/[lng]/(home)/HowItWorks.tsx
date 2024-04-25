@@ -15,12 +15,12 @@ export default function HowItWorks() {
             <Image
               src={item.imgLink}
               alt="1st Image"
-              className="w-36 h-36 object-cover rounded-full"
+              className="w-40 h-40 object-cover rounded-full"
               priority
               width={800}
               height={800}
             />
-            <p className="mt-8 text-2xl leading-relaxed">{item.statement}</p>
+            <p className="mt-8 text-xl xl:text-2xl leading-relaxed">{item.statement}</p>
           </div>
         ))}
       </div>

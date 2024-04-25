@@ -6,7 +6,6 @@ import { testimonials } from './Data/Testimonial2Data'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
-
 export default function Testimonial2() {
   const [currIndex, setCurrIndex] = useState(0);
 
@@ -15,7 +14,7 @@ export default function Testimonial2() {
       setCurrIndex((prevIndex) => (prevIndex + 3) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [])
 
   const nextSlide = () => {
     const totalSlides = testimonials.length;
@@ -24,8 +23,7 @@ export default function Testimonial2() {
     } else {
       setCurrIndex(0); 
     }
-  };
-  
+  }
   const prevSlide = () => {
     const totalSlides = testimonials.length;
     if (currIndex - 3 >= 0) {
@@ -33,12 +31,12 @@ export default function Testimonial2() {
     } else {
       setCurrIndex(totalSlides - (totalSlides % 3)); // Loop to the last group of slides
     }
-  };
+  }
   
   return (
     <section className="p-20 relative">
-      <h2 className="home-h2">What our customers say</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <h2 className="home-h2 tracking-wide">What our customers say</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14 mb-10">
         {testimonials.slice(currIndex, currIndex + 3).map((t, i) => (
           <div key={i} className="bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
             <p className="mb-4">{t.rating}</p>
