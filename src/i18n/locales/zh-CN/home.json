@@ -1,0 +1,20 @@
+{
+  "common": {
+    "button": "Shop Now"
+  },
+  "Herocarousel1": {
+    "title_1": {
+      "title_1_1": "肠道是您的",
+      "title_1_2": "健康",
+      "title_1_3": "的",
+      "title_1_4": "解决方案"
+    },
+    "title_2": {
+      "title_2_1": "Unlock your body's potential:",
+      "title_2_2": " explore ",
+      "title_2_3": "your unique gut microbiota and",
+      "title_2_4": " personalize ",
+      "title_2_5": "your probiotics."
+    }
+  }
+}

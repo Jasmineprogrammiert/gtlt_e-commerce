@@ -1,0 +1,75 @@
+{
+  "common": {
+    "button": "Shop Now"
+  },
+  "Herocarousel1": {
+    "title_1": {
+      "title_1_1": "Gut is ",
+      "title_1_2": "The Solution",
+      "title_1_3": " to your ",
+      "title_1_4": "Health"
+    },
+    "title_2": {
+      "title_2_1": "Unlock your body's potential:",
+      "title_2_2": " explore ",
+      "title_2_3": "your unique gut microbiota and",
+      "title_2_4": " personalize ",
+      "title_2_5": "your probiotics."
+    },
+
+
+
+
+
+    "address": {
+      "city": "Hong Kong",
+      "postalCode": "12345",
+      "contacts": [
+        {
+          "type": "mobile",
+          "number": "123-456-7890"
+        },
+        {
+          "type": "email",
+          "address": "jasmine@example.com"
+        }
+      ]
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": {
+        "email": true,
+        "sms": false
+      }
+    }
+  },
+
+
+
+  "user2": {
+    "name": "Jasmine",
+    "age": 22,
+    "email": "jasmine@example.com",
+    "address": {
+      "city": "Hong Kong",
+      "postalCode": "12345",
+      "contacts": [
+        {
+          "type": "mobile",
+          "number": "123-456-7890"
+        },
+        {
+          "type": "email",
+          "address": "jasmine@example.com"
+        }
+      ]
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": {
+        "email": true,
+        "sms": false
+      }
+    }
+  }
+}

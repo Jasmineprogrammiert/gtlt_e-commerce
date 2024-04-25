@@ -1,0 +1,367 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
+/* ---------- CHADCN/UI ---------- */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+/* ---------- Customization ---------- */
+:root {
+  --theme-color: hsl(192, 100%, 35%);
+}
+/* ---------- NAV ---------- */
+.theme-color {
+  color: var(--theme-color);
+}
+.logo-p {
+  font-size: .59em;
+}
+.nav-item {
+  @apply
+    text-base
+    font-medium
+    text-gray-600
+    bg-transparent;
+}
+.nav-item:hover {
+  color: var(--theme-color) !important;
+}
+.nav-ul {
+  @apply
+    grid gap-3 p-6
+    md:w-[400px]
+    lg:w-[500px]
+    lg:grid-cols-[.75fr_1fr];
+}
+/* ---------- Footor ---------- */
+.footer-btn {
+  @apply
+    w-24
+    font-medium ;
+  padding: 0px;
+  margin: 0;
+}
+/* --------------- FrequentlyAsked --------------- */
+.fA-icon {
+  @apply
+    w-6 h-6 mb-2;
+}
+/* --------------- Home - General --------------- */
+.home-h2 {
+  @apply 
+    text-5xl font-medium mb-10;
+}
+.home-btn {
+  @apply
+    w-32
+    text-white font-semibold 
+    rounded-full transform hover:scale-105 
+    xl:absolute;
+  padding: 8px 4px;
+  background-color: var(--theme-color);
+}
+.home-btn:hover {
+  background-color: hsl(192, 100%, 40%);
+}
+/* ---------- Home - Hero ---------- */
+.hero-slide {
+  @apply
+    flex items-center justify-center
+    grow-0 shrink-0 basis-0 
+    px-20;
+  flex: 0 0 100%;
+}
+.hero-btn {
+  top: 70%;
+}
+.carousel-btn button svg {
+  @apply
+    text-2xl; 
+}
+.carousel-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.carousel-dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 6rem;
+  height: .2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  background-color: hsl(0, 0%, 93%);
+}
+.carousel-dot:after {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+.carousel-dot-selected:after {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+.carousel-dot-selected {
+  background-color: var(--theme-color);
+}
+/* ---------- Home - TestIncludes ---------- */
+.testIncludes {
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+.testIncludes p, ol {
+  @apply 
+    text-lg leading-relaxed;
+}
+.testIncludes li {
+  @apply 
+    mb-3;
+}
+/* --------------- Products - ProductDetail --------------- */
+.productDetail-tab {
+  @apply 
+    inline-block 
+    p-4 
+    border-b-2 
+    rounded-t-lg 
+    uppercase
+    mr-10;
+}
+.tab1-container-1 {
+  @apply
+    w-1/4 
+    p-4 
+    rounded-xl 
+    relative 
+    bg-cyan-100;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 50px;
+  min-height: 27.5rem;
+}
+.tab1-container-1 h3 {
+  @apply
+  text-2xl 
+  font-bold 
+  tracking-wide 
+  mb-8;
+}
+.tab1-container-2 {
+  @apply
+    w-1/4 
+    p-4 
+    rounded-xl 
+    relative 
+    bg-cyan-100;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 50px;
+}
+.tab2-container {
+  @apply
+  bg-white 
+    rounded-lg 
+    text-center
+    h-full;
+}
+.tab2-container-hl {
+  @apply
+  bg-cyan-100;
+}
+.tab2-container p {
+  @apply
+    p-4 
+    border-b-4 
+    text-cyan-800
+    border-cyan-50;
+}
+.tab2-container > p:last-child {
+  @apply
+    border-b-0 
+    border-transparent
+    items-center;
+}
+.tab2-subheading {
+  @apply
+    text-xl
+    font-semibold
+    tracking-wide;
+}
+.tab3-container {
+  @apply
+    grid 
+    grid-cols-3
+    bg-white 
+    rounded-lg 
+    shadow-md 
+    mb-14;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 50px;
+}
+.tab3-container:last-child {
+  @apply
+    mb-0;
+}
+.tab3-image {
+  border-bottom-left-radius: 200px;
+}
+.tab3-container h2 {
+  @apply
+    text-lg 
+    font-medium 
+    tracking-wide 
+    mb-1;
+}
+.tab3-container h2:first-child {
+  @apply
+    text-2xl 
+    font-semibold 
+    tracking-wider 
+    mb-5;
+}
+.tab3-container p {
+  @apply
+    mb-5;
+}
+.tab3-container p:last-child {
+  @apply
+    mb-0;
+}
+/* --------------- Products - HealthScores --------------- */
+.hs-collapsible {
+  @apply
+    p-2;
+}
+.hs-collapsible button {
+  @apply 
+    text-lg 
+    tracking-wide 
+    w-full 
+    text-left;
+}
+.hs-collapsible > div:nth-child(1) {
+  @apply
+    flex 
+    justify-between 
+    items-center;
+}
+.hs-collapsible > div:nth-child(2) {
+  @apply
+    text-lg 
+    leading-6 
+    mt-5;
+}
+/* --------------- Products - ShoppingCartModal --------------- */
+.sc-btn {
+  @apply
+    w-3/4
+    text-white 
+    font-medium
+    rounded-full;
+  padding: 8px 4px;
+  background-color: var(--theme-color);
+}
+.sc-btn:hover {
+  background-color: hsl(192, 100%, 40%);
+}
+/* --------------- Products - CountdownTimer --------------- */
+.dhms-dot{
+  @apply
+    mx-1.5 text-2xl text-cyan-600;
+}
+.dhms-container {
+  @apply
+    flex items-center justify-center 
+    w-9 h-9 
+    bg-cyan-600 text-white rounded-md;
+}
+.dhms > div:first-child {
+  @apply
+    text-lg leading-[1.25rem] font-medium;
+}
+.dhms > div:last-child {
+  @apply
+    text-xs leading-[0.8rem];
+}
+/* --------------- Products - ProductDetail --------------- */
+.blog-h2 {
+  @apply
+    font-[400]
+    mb-6;
+}
+/* --------------- Mission --------------- */
+.mission-h2 {
+  @apply
+    font-[400]
+    mb-10;
+}
+/* ---------- TESTING ---------- */
+.testing {
+
+}
+.problems-icon { /* Home - Problems */
+  @apply
+    inline-block
+    mb-2;
+}
