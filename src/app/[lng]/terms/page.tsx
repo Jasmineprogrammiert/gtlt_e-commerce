@@ -100,7 +100,7 @@ export default function TermsPage() {
 
 
 
-          {/* <li className="mb-4">
+          <li className="mb-4">
             3.5. If we cancel your order, we will notify you by email and will proceed refund as soon as possible but in any event within thirty {`(`}30{`)`} days of your order. You accept that we will not be obliged to offer any compensation for disappointment suffered.
           </li>
           <li className="mb-4">
@@ -339,7 +339,7 @@ export default function TermsPage() {
           </li>
           <li className="mb-4">
             14.1. All intellectual property rights in the Content, User Content, design, text, graphics and other material on our site and the selection or arrangement thereof are owned, controlled or licensed by or to us. Any authorized used without our prior written permission is strictly prohibited.
-          </li> */}
+          </li>
 
 
 
