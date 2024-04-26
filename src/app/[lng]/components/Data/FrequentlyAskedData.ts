@@ -11,7 +11,7 @@ interface Paragraph {
   p2: string;
 }
 
-export const cardData: CardItem[] = [
+export const CardData: CardItem[] = [
   {
     title: 'General Questions',
     subtitles: [

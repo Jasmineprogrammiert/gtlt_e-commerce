@@ -28,7 +28,6 @@
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
   }
-
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -55,7 +54,7 @@
 :root {
   --theme-color: hsl(192, 100%, 35%);
 }
-/* ---------- NAV ---------- */
+/* ---------- NavBar ---------- */
 .theme-color {
   color: var(--theme-color);
 }
@@ -87,12 +86,7 @@
   padding: 0px;
   margin: 0;
 }
-/* --------------- FrequentlyAsked --------------- */
-.fA-icon {
-  @apply
-    w-6 h-6 mb-2;
-}
-/* --------------- Home - General --------------- */
+/* --------------- h1 & h2 --------------- */
 .home-h2 {
   @apply 
     text-5xl font-medium mb-10;
@@ -101,6 +95,24 @@
   @apply 
     text-5xl font-normal tracking-wide
     xl:text-[3.5rem] xl:tracking-normal;
+}
+.news-h1 {
+  @apply 
+    text-4xl font-normal tracking-normal
+    mb-5 leading-tight;
+}
+.news-h2 {
+  @apply 
+    text-3xl mb-5;
+}
+.news-h2-2 {
+  @apply 
+    mb-0;
+}
+/* --------------- FrequentlyAsked --------------- */
+.fA-icon {
+  @apply
+    w-6 h-6 mb-2;
 }
 .home-btn {
   @apply

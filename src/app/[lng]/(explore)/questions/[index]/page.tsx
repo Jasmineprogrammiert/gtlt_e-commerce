@@ -1,13 +1,13 @@
-import { cardData } from '../../../components/Data/FrequentlyAskedData'
+import { CardData } from '../../../components/Data/FrequentlyAskedData'
 
 export default function FrequentlyAskedTemplate({ 
-  params 
+  params,
 }: {
   params: {index: string};
 }) {
   return (
     <>
-    {[cardData[Number(params.index)]].map((card, i) => (
+    {[CardData[Number(params.index)]].map((card, i) => (
       <section key={i} className="p-20 flex flex-wrap bg-gray-50">
         <div className="w-full p-4 text-center">
           <h3 className="text-5xl tracking-wide mb-16 text-cyan-600">
