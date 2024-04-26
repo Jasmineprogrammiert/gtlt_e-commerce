@@ -19,20 +19,20 @@ interface Paragraph {
   imgTag?: string;
 }
 
-export const BlogData: NewsItem[] = [
+export const BlogData2: NewsItem[] = [
   {
-    title: "Debunking The Myth of Universally Healthy Food: How to Eat for Your Biological Individuality",
+    title: "Guilt-Free Snack Indulgences: How to Make Your Favorite Chips and Dip Healthier",
     author: "Viome Team",
     readingTime: 4,
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At.",
-    img: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8MHwwfHx8Mg%3D%3D",
+    img: "https://images.unsplash.com/photo-1463107971871-fbac9ddb920f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fG5hdHVyZXxlbnwwfDB8MHx8fDI%3D",
     content: [
       {
         subtitle: 'From a childhood idol to reality',
         paragraphs: {
           p1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam. orem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam.',
           p2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis, at eos obcaecati quae beatae vitae quod? Rerum distinctio odit placeat perferendis? Deleniti qui neque asperiores libero blanditiis id veniam.',
-          img: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8MHwwfHx8Mg%3D%3D',
+          img: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG5hdHVyZXxlbnwwfDB8MHx8fDI%3D',
           imgTag: "This is image 1",
         }
       },
@@ -58,11 +58,11 @@ export const BlogData: NewsItem[] = [
     ]
   },
   {
-    title: "Support a Healthy Gut with DIY Kombucha at Home Probiotic Elixir",
+    title: "Celebrate Love (and Health) with a Nourishing Breakfast in Bed",
     author: "Hilary Keiser - Viome Translational Science Nutritionist, Supplements",
     readingTime: 5,
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, qui porro? Minima in praesentium magnam tempora veniam perferendis molestias facere cupiditate culpa amet. Provident illum laudantium officiis quos ipsam. At.",
-    img: "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfDB8MHx8fDI%3D",
+    img: "https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fG5hdHVyZXxlbnwwfDB8MHx8fDI%3D",
     content: [
       {
         subtitle: 'Pick a spot',
