@@ -342,12 +342,7 @@ export default function TermsPage() {
           <li className="mb-4">
             14.1. All intellectual property rights in the Content, User Content, design, text, graphics and other material on our site and the selection or arrangement thereof are owned, controlled or licensed by or to us. Any authorized used without our prior written permission is strictly prohibited.
           </li>
-
-
-
-
-
-          {/* <li className="mb-4">
+          <li className="mb-4">
             14.2. All trademarks, product names and company names or logos used in our site are our property or that of their respective owners. No permission is given by us in respect of the use of any such trademarks, get-up, product names, company names, logos or titles and such use may constitute an infringement of the holder{`'`}s rights.
           </li>
           <li className="mb-4">
@@ -387,7 +382,7 @@ export default function TermsPage() {
             1. Member Points {`(`}Rewards{`)`}
           </li>
           <li className="mb-4">
-            16.1. Through our site shopping, you might be eligible for an equal amount of Member Points of net payment of each order {`(`}"Member Points {`(`}Rewards{`)`}{`"`}{`)`}. Net payment shall mean the amount after deduction of, where applicable, cash deduction or discount by the Store Credits, Member Points redemption, Promotion Codes, Coupon Codes, Coupons and membership rank, and any other promotional offer or rebate given by us.
+            16.1. Through our site shopping, you might be eligible for an equal amount of Member Points of net payment of each order {`"`}Member Points Rewards{`"`}. Net payment shall mean the amount after deduction of, where applicable, cash deduction or discount by the Store Credits, Member Points redemption, Promotion Codes, Coupon Codes, Coupons and membership rank, and any other promotional offer or rebate given by us.
           </li>
           <li className="mb-4">
             16.2. Unless otherwise specified, Member Points {`(`}Rewards{`)`} is valid until every year-end.
@@ -405,7 +400,7 @@ export default function TermsPage() {
             1. Credits {`(`}Rewards{`)`}
           </li>
           <li className="mb-4">
-            17.1. Through the participation of our site campaigns, you might be rewarded for a particular number of Credits {`(`}"Credits {`(`}Rewards{`)`}{`)`}{`"`}{`)`}.
+            17.1. Through the participation of our site campaigns, you might be rewarded for a particular number of Credits {`"`}Credit Rewards{`"`}.
           </li>
           <li className="mb-4">
             17.2. Credits {`(`}Rewards{`)`} is only applicable for purchase at our site.
@@ -430,7 +425,7 @@ export default function TermsPage() {
           </li>
           <li className="mb-4">
             18.3. If your order is cancelled for whatever reason or is eligible for a refund, any promotion codes, coupon codes or coupons used in that order shall be forfeited without any refund or compensation.
-          </li>           */}
+          </li>          
         </ol>
         <p className="mb-4">
           We reserve the right to terminate or vary the above offers from time to time without providing any prior notification. In the event of any dispute, our decision shall be final and conclusive.
