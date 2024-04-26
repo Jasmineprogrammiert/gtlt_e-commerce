@@ -12,7 +12,7 @@ export default function TermsPage() {
             1. Services
           </li>
           <li className="mb-4"> 
-            1.1. We are Gutolution Limited {`(`}collectively {`"`}we{`"`}, the {`"`}Company{`"`}{`)`} and we own and operate the site. Our site facilitates a convenient way to shop online over the Internet {`(`}“services”{`)`}.
+            1.1. We are Gutolution Limited {`(`}collectively {`"`}we{`"`}, the {`"`}Company{`"`}{`)`} and we own and operate the site. Our site facilitates a convenient way to shop online over the Internet {`(`}{`"`}services{`"`}{`)`}.
           </li>
           <li className="mb-4">
             1.2. By using our site, you agree to be bound by the following terms and conditions. Please read them carefully.
@@ -24,28 +24,28 @@ export default function TermsPage() {
             1.4. The meaning of some words used in these terms and conditions:
           </li>
           <li className="mb-4">
-            1.4.1. “we”, “us” or “our” is a reference to {`(`}name of person or company providing the services{`)`}.
+            1.4.1. {`"`}we{`"`}, {`"`}us{`"`} or {`"`}our{`"`} is a reference to {`(`}name of person or company providing the services{`)`}.
           </li>
           <li className="mb-4">
-            1.4.2. “you” or “your” is a reference to the person to whom we are providing the services and who is required to pay for the services we provide.
+            1.4.2. {`"`}you{`"`} or {`"`}your{`"`} is a reference to the person to whom we are providing the services and who is required to pay for the services we provide.
           </li>
           <li className="mb-4">
-            1.4.3. “Content” means all text, graphics, logos, icons, photographs, images, moving visual representational images or a combination of sounds and such images, audio, computer programs, and other material featured, displayed or used in or in relation to our site.
+            1.4.3. {`"`}Content{`"`} means all text, graphics, logos, icons, photographs, images, moving visual representational images or a combination of sounds and such images, audio, computer programs, and other material featured, displayed or used in or in relation to our site.
           </li>
           <li className="mb-4">
-            1.4.4. “merchandise” means the goods {`(`}including without limitation food and beverages{`)`} or services you ordered through our site, which you will pay for.
+            1.4.4. {`"`}merchandise{`"`} means the goods {`(`}including without limitation food and beverages{`)`} or services you ordered through our site, which you will pay for.
           </li>
           <li className="mb-4">
-            1.4.5. “intellectual property rights” means any and all patents, trademarks, rights in domain names, rights in designs, copyright and database rights {`(`}whether registered or not and any applications to register or rights to apply for registration of any of the foregoing{`)`}, rights in confidential information and all other intellectual property rights of a similar or corresponding character which may subsist now or in the future in any part of the world.
+            1.4.5. {`"`}intellectual property rights{`"`} means any and all patents, trademarks, rights in domain names, rights in designs, copyright and database rights {`(`}whether registered or not and any applications to register or rights to apply for registration of any of the foregoing{`)`}, rights in confidential information and all other intellectual property rights of a similar or corresponding character which may subsist now or in the future in any part of the world.
           </li>
           <li className="mb-4">
-            1.4.6. “services” has the meaning given in clause 1.1.
+            1.4.6. {`"`}services{`"`} has the meaning given in clause 1.1.
           </li>
           <li className="mb-4">
-            1.4.7. “site” means our Gutolution website located at www.gutolution.com and any associated sites linked to it.
+            1.4.7. {`"`}site{`"`} means our Gutolution website located at www.gutolution.com and any associated sites linked to it.
           </li>
           <li className="mb-4">
-            1.4.8. “User Content” has the meaning given in clause 10.1.
+            1.4.8. {`"`}User Content{`"`} has the meaning given in clause 10.1.
           </li>
           <li className="mb-4">
             2. Registration
@@ -225,7 +225,7 @@ export default function TermsPage() {
             8.1.1. use our site for any fraudulent or unlawful purpose;
           </li>
           <li className="mb-4">
-            8.1.2. use our site to defame, abuse, harass, stalk, threaten or otherwise violate the rights of others, including without limitation others' privacy rights or rights of publicity;
+            8.1.2. use our site to defame, abuse, harass, stalk, threaten or otherwise violate the rights of others, including without limitation others{`'`} privacy rights or rights of publicity;
           </li>
           <li className="mb-4">
             8.1.3. interfere with or disrupt the operation of our site or the servers or networks used to make our site available; or violate any requirements, procedures, policies or regulations of such networks;
@@ -336,7 +336,7 @@ export default function TermsPage() {
             14.1. All intellectual property rights in the Content, User Content, design, text, graphics and other material on our site and the selection or arrangement thereof are owned, controlled or licensed by or to us. Any authorized used without our prior written permission is strictly prohibited.
           </li>
           <li className="mb-4">
-            14.2. All trademarks, product names and company names or logos used in our site are our property or that of their respective owners. No permission is given by us in respect of the use of any such trademarks, get-up, product names, company names, logos or titles and such use may constitute an infringement of the holder's rights.
+            14.2. All trademarks, product names and company names or logos used in our site are our property or that of their respective owners. No permission is given by us in respect of the use of any such trademarks, get-up, product names, company names, logos or titles and such use may constitute an infringement of the holder{`'`}s rights.
           </li>
           <li className="mb-4">
             1. General
@@ -375,7 +375,7 @@ export default function TermsPage() {
             1. Member Points {`(`}Rewards{`)`}
           </li>
           <li className="mb-4">
-            16.1. Through our site shopping, you might be eligible for an equal amount of Member Points of net payment of each order {`(`}"Member Points {`(`}Rewards{`)`}”{`)`}. Net payment shall mean the amount after deduction of, where applicable, cash deduction or discount by the Store Credits, Member Points redemption, Promotion Codes, Coupon Codes, Coupons and membership rank, and any other promotional offer or rebate given by us.
+            16.1. Through our site shopping, you might be eligible for an equal amount of Member Points of net payment of each order {`(`}"Member Points {`(`}Rewards{`)`}{`"`}{`)`}. Net payment shall mean the amount after deduction of, where applicable, cash deduction or discount by the Store Credits, Member Points redemption, Promotion Codes, Coupon Codes, Coupons and membership rank, and any other promotional offer or rebate given by us.
           </li>
           <li className="mb-4">
             16.2. Unless otherwise specified, Member Points {`(`}Rewards{`)`} is valid until every year-end.
@@ -393,7 +393,7 @@ export default function TermsPage() {
             1. Credits {`(`}Rewards{`)`}
           </li>
           <li className="mb-4">
-            17.1. Through the participation of our site campaigns, you might be rewarded for a particular number of Credits {`(`}"Credits {`(`}Rewards{`)`}{`)`}”{`)`}.
+            17.1. Through the participation of our site campaigns, you might be rewarded for a particular number of Credits {`(`}"Credits {`(`}Rewards{`)`}{`)`}{`"`}{`)`}.
           </li>
           <li className="mb-4">
             17.2. Credits {`(`}Rewards{`)`} is only applicable for purchase at our site.
