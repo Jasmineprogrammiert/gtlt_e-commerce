@@ -70,10 +70,19 @@ export default async function Footer({ lng }: FooterProps) {
 
       <hr className="my-4" />
       <div className="flex justify-between">
-        <p className="text-gray-600 text-xs text-center">
-          Copyright &copy; {new Date().getFullYear()} Gutolution. All rights reserved.
-        </p>
-        <div className="text-gray-600 text-xs text-center">
+        <div className="text-start flex">
+          <p className="text-gray-600 text-xs mr-10">
+            Copyright &copy; {new Date().getFullYear()} Gutolution. All rights reserved. 
+          </p>
+          <Link href='/refund' className="text-gray-600 text-xs mr-1">
+            Refund Policy
+          </Link>
+          <span className="text-gray-600 text-xs mr-1"> | </span>
+          <Link href='/terms' className="text-gray-600 text-xs">
+             Terms of Service
+          </Link>
+        </div>
+        <div className="text-gray-600 text-xs text-end">
           {languages
             .filter(l => lng !== l)
             .map((l, index) => {
