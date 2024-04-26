@@ -95,7 +95,12 @@ export default function TermsPage() {
           <li className="mb-4">
             3.4.3. one or more of the merchandise you ordered was listed at an incorrect price due to a human or computer error or an error in the pricing information.
           </li>
-          <li className="mb-4">
+
+
+
+
+
+          {/* <li className="mb-4">
             3.5. If we cancel your order, we will notify you by email and will proceed refund as soon as possible but in any event within thirty {`(`}30{`)`} days of your order. You accept that we will not be obliged to offer any compensation for disappointment suffered.
           </li>
           <li className="mb-4">
@@ -334,8 +339,13 @@ export default function TermsPage() {
           </li>
           <li className="mb-4">
             14.1. All intellectual property rights in the Content, User Content, design, text, graphics and other material on our site and the selection or arrangement thereof are owned, controlled or licensed by or to us. Any authorized used without our prior written permission is strictly prohibited.
-          </li>
-          <li className="mb-4">
+          </li> */}
+
+
+
+
+
+          {/* <li className="mb-4">
             14.2. All trademarks, product names and company names or logos used in our site are our property or that of their respective owners. No permission is given by us in respect of the use of any such trademarks, get-up, product names, company names, logos or titles and such use may constitute an infringement of the holder{`'`}s rights.
           </li>
           <li className="mb-4">
@@ -418,7 +428,7 @@ export default function TermsPage() {
           </li>
           <li className="mb-4">
             18.3. If your order is cancelled for whatever reason or is eligible for a refund, any promotion codes, coupon codes or coupons used in that order shall be forfeited without any refund or compensation.
-          </li>          
+          </li>           */}
         </ol>
         <p className="mb-4">
           We reserve the right to terminate or vary the above offers from time to time without providing any prior notification. In the event of any dispute, our decision shall be final and conclusive.
