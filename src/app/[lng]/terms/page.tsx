@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function TermsPage() {
   return (
     <>
@@ -119,7 +121,7 @@ export default function TermsPage() {
             5.2. We will deliver the merchandise you ordered through the third-party contractors to the delivery address provided by you. When you confirm receipt of the products, you agree to present a photo ID and/or order delivery message sending to your mobile phone upon request when you acknowledge receipt of the merchandise. The merchandise shall be, and shall be deemed to be, delivered and accepted by you when the merchandise is delivered to the address you give us for delivery. You agree and accept that we are entitled, at our option, to charge you additional costs or cancel your order without any refund or compensation to you in the event of your failure to accept delivery for whatever reasons.
           </li>
           <li className="mb-4">
-            5.3. You agree and accept all the terms, arrangements and policies of the third-party contractors for delivery, including, but not limited to, SF Express at www.sf-express.com and Kerry Logistics at www.kerrylogistics.com.
+            5.3. You agree and accept all the terms, arrangements and policies of the third-party contractors for delivery, including, but not limited to, SF Express at <Link href="www.sf-express.com" target="_blank">www.sf-express.com</Link> and Kerry Logistics at <Link href="www.sf-express.com" target="_blank">www.kerrylogistics.com</Link>.
           </li>
           <li className="mb-4">
             5.4. We may deliver the merchandise in one or more instalments. Any times and dates given for dispatch of merchandise, or the length of time that merchandise will take to be delivered, are only estimates. If we are unable to meet any stated dispatch or delivery dates or times, we will inform you as to the progress of your order. You agree and accept that under no circumstances will we accept cancellation of order or refund.
@@ -284,7 +286,7 @@ export default function TermsPage() {
             1. User Generated Content
           </li>
           <li className="mb-4">
-            10.1. When you submit any user-generated content including all text, files, images, photos, sounds, videos or other materials to our site {`(`}"User Content"{`)`}, you grant to us, a perpetual, irrevocable, non-exclusive, worldwide, transferable, sub-licensable fully paid-up and royalty-free license to reproduce, distribute, communicate to the public, publicly perform, modify, prepare derivative works of, display and otherwise use the User Content in connection with the site, including without limitation for the purposes of promoting and redistributing part or all of the site in any media formats and through any media channel. Without limitation, the rights that you grant to us under this clause include a right to grant each user of the site a sub-license to use the User Content to the extent permitted by the functionality of the site from time to time. You hereby waive, and procure that all other authors of the User Content waive, all moral rights in the User Content {`(`}including rights to be identified as the author of the User Content or to object to any derogatory treatment of the User Content{`)`}, whether such rights subsist now or at any time in the future in any place in the world.
+            10.1. When you submit any user-generated content including all text, files, images, photos, sounds, videos or other materials to our site {`"`}User Content{`"`}, you grant to us, a perpetual, irrevocable, non-exclusive, worldwide, transferable, sub-licensable fully paid-up and royalty-free license to reproduce, distribute, communicate to the public, publicly perform, modify, prepare derivative works of, display and otherwise use the User Content in connection with the site, including without limitation for the purposes of promoting and redistributing part or all of the site in any media formats and through any media channel. Without limitation, the rights that you grant to us under this clause include a right to grant each user of the site a sub-license to use the User Content to the extent permitted by the functionality of the site from time to time. You hereby waive, and procure that all other authors of the User Content waive, all moral rights in the User Content {`(`}including rights to be identified as the author of the User Content or to object to any derogatory treatment of the User Content{`)`}, whether such rights subsist now or at any time in the future in any place in the world.
           </li>
           <li className="mb-4">
             10.2. You represent, warrant and covenant that:
