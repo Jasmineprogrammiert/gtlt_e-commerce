@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function TestIncludes() {
   return (
     <>
-    <section className="px-10 py-20 lg:p-20 text-white testIncludes">
+    <section className="px-10 py-16 lg:p-20 text-white testIncludes">
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="col-span-1">
           <h2 className="text-3xl lg:text-5xl mb-10 tracking-wider xl:tracking-widest">Gut Microbiome<br /> Testing Package</h2>

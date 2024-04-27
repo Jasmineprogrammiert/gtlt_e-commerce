@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function TechShowcase() {
   return (
     <>
-    <section className="px-10 py-20 lg:p-20 flex flex-wrap bg-gray-50">
+    <section className="px-10 py-16 lg:p-20 flex flex-wrap bg-gray-50">
       <div className="w-full p-4 text-center">
         <h3 className="text-2xl lg:text-4xl xl:text-5xl font-semibold xl:font-medium tracking-wide lg:my-8 text-cyan-600">
           Methods of Microbiome Analysis
