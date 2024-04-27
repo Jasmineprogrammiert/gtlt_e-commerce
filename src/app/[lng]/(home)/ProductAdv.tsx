@@ -6,7 +6,7 @@ import { data } from './Data/ProductAdvData'
 export default function ProductAdv() {
   return (
     <>
-    <section className="px-10 lg:px-20 pb-20 xl:pb-32 bg-gray-50">
+    <section className="px-10 py-20 lg:px-20 pb-20 xl:pb-32 bg-gray-50">
       <h2 className="home-h2 home-h2-2">Product Advantages</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 lg:gap-8">
         {data.map(adv => (
