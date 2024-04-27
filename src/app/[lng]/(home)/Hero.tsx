@@ -24,13 +24,13 @@ export default function Hero({ lng }: PageProps) {
           <HeroCarousel1 lng={lng} />
         </div>
         <div className="hero-slide">
-          <HeroCarousel2 />
+          <HeroCarousel2 lng={lng} />
         </div>
         <div className="hero-slide">
-          <HeroCarousel3 />
+          <HeroCarousel3 lng={lng} />
         </div>
         <div className="hero-slide">
-          <HeroCarousel4 />
+          <HeroCarousel4 lng={lng} />
         </div>
       </div>
     </section>
