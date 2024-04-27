@@ -6,6 +6,6 @@
 }
 @media (orientation: portrait) and (max-width: 1024px) {
   .carousel-dot {
-    width: 3rem;
+    width: 1rem;
   }
 }

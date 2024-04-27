@@ -19,7 +19,7 @@ export default function Hero({ lng }: PageProps) {
   return (
     <>
     <section 
-      className="overflow-hidden h-screen w-full bg-gray-50 lg:h-[90vh" 
+      className="overflow-hidden h-[105vh] w-full bg-gray-50 lg:h-[90vh]" 
       ref={emblaRef}
     >
       <div className="flex h-full">
