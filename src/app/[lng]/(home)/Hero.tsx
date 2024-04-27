@@ -18,7 +18,10 @@ export default function Hero({ lng }: PageProps) {
 
   return (
     <>
-    <section className="overflow-hidden h-screen lg:h-[90vh] w-full bg-gray-50" ref={emblaRef}>
+    <section 
+      className="overflow-hidden h-screen w-full bg-gray-50 lg:h-[90vh" 
+      ref={emblaRef}
+    >
       <div className="flex h-full">
         <div className="hero-slide">
           <HeroCarousel1 lng={lng} />
