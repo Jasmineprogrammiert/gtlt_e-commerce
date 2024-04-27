@@ -96,13 +96,27 @@ html, body {
 /* --------------- h1 & h2 --------------- */
 .home-h2 {
   @apply 
+    text-3xl lg:text-5xl 
+    font-medium 
+    mb-10;
+}
+.home-h2-2 {
+  @apply 
+    text-3xl lg:text-5xl
+    font-normal 
+    tracking-wide
+    xl:text-[3.5rem] 
+    xl:tracking-normal;
+}
+/* .home-h2 {
+  @apply 
     text-5xl font-medium mb-10;
 }
 .home-h2-2 {
   @apply 
     text-5xl font-normal tracking-wide
     xl:text-[3.5rem] xl:tracking-normal;
-}
+} */
 .news-h1 {
   @apply 
     text-4xl font-normal tracking-normal
