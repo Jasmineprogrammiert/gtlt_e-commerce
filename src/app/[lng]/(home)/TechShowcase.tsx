@@ -9,7 +9,7 @@ export default function TechShowcase() {
           Methods of Microbiome Analysis
         </h3>
       </div>
-      <div className="lg:w-1/2 p-4 pr-8">
+      <div className="lg:w-1/2 lg:p-4 lg:pr-8">
         <Image
           src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFifGVufDB8MHwwfHx8Mg%3D%3D"
           alt="Tech Showcase Image"
@@ -21,8 +21,8 @@ export default function TechShowcase() {
           In amplicon sequencing, regions within the 16S or 18S ribosomal RNA (rRNA) gene are amplified and sequenced. Bacteria have the 16S rRNA gene while eukaryotes and fungi have the 18S rRNA gene. These regions are highly conserved and allow taxonomic identification at the phylum or genera level, but is less precise at the species level.
         </p>
       </div>
-      <div className="lg:w-1/2 p-4 pl-8">
-        <p className="text-lg leading-relaxed">
+      <div className="lg:w-1/2 lg:p-4 lg:pl-8">
+        <p className="mt-5 lg:mt-0 text-lg leading-relaxed">
           Whole genome sequencing allows the detection of all genomic components within a biological sample, adding an additional level of clarity to taxonomic classification down to the species and strain levels and annotation of potential metabolic processes. This method effectively identifies and profiles bacteria, fungi, viruses and parasites simultaneously and enables microbial gene profiling that facilitates microbiome functional studies.level of clarity to sequencing -- down to the individual species level.
         </p>
         <Image
