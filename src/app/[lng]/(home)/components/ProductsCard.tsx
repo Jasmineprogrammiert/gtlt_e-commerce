@@ -13,7 +13,6 @@ export default function ProductsCard({ p }: { p: any }) {
 
   return (
     <div className="relative w-full h-[73vh] lg:h-[78vh] xl:h-[80vh] p-10 group rounded mb-10 lg:mb-20"
-    // <div className="relative w-full h-[78vh] xl:h-[80vh] p-10 group rounded mb-20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -36,7 +35,7 @@ export default function ProductsCard({ p }: { p: any }) {
       <div className="absolute inset-8 lg:inset-16 flex items-center text-white group-hover:text-slate-950">
         <div className="flex flex-col justify-between">
           {/* ----- Upper Text Group ----- */}
-          <div className="mb-44 xl:mb-60">
+          <div className="mb-40 lg:mb-44 xl:mb-60">
             {p.label && (
               <span className="bg-theme-color group-hover:bg-theme-color-darker rounded-full py-1.5 px-2.5 bg-cyan-900 group-hover:bg-cyan-400">
                 {p.label}

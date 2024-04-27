@@ -5,6 +5,7 @@
   }
 }
 @media (orientation: portrait) and (max-width: 1024px) {
+  /* ---------- Home - Hero ---------- */
   .carousel-dot {
     width: 3rem;
   }
