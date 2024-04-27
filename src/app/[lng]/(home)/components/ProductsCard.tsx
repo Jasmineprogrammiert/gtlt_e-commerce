@@ -12,7 +12,8 @@ export default function ProductsCard({ p }: { p: any }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-full h-[78vh] xl:h-[80vh] p-10 group rounded mb-20"
+    <div className="relative w-full h-[73vh] lg:h-[78vh] xl:h-[80vh] p-10 group rounded mb-10 lg:mb-20"
+    // <div className="relative w-full h-[78vh] xl:h-[80vh] p-10 group rounded mb-20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -32,7 +33,7 @@ export default function ProductsCard({ p }: { p: any }) {
         className="object-cover object-center rounded transition-opacity duration-300"
         style={{ opacity: isHovered ? 1 : 0 }}
       />
-      <div className="absolute inset-16 flex items-center text-white group-hover:text-slate-950">
+      <div className="absolute inset-8 lg:inset-16 flex items-center text-white group-hover:text-slate-950">
         <div className="flex flex-col justify-between">
           {/* ----- Upper Text Group ----- */}
           <div className="mb-44 xl:mb-60">
@@ -41,7 +42,7 @@ export default function ProductsCard({ p }: { p: any }) {
                 {p.label}
               </span>
             )}
-            <h3 className="text-5xl font-medium tracking-wide mt-4 mb-9">
+            <h3 className="text-3xl lg:text-5xl font-medium tracking-wide mt-4 mb-9">
               {p.title}
             </h3>
             <Link href={p.link} className="inline-block transition-transform transform hover:translate-x-2">
