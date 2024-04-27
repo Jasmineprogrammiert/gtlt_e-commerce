@@ -13,13 +13,13 @@ import HeroCarousel4 from './components/HeroCarousel4'
 type PageProps = { lng: string };
 export default function Hero({ lng }: PageProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 8000 })]);
-  const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
+  const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
 
   return (
     <>
     <section 
-      className="overflow-hidden h-[105vh] w-full bg-gray-50 lg:h-[90vh]" 
+      className="overflow-hidden h-[110vh] w-full bg-gray-50 lg:h-[90vh]" 
       ref={emblaRef}
     >
       <div className="flex h-full">
