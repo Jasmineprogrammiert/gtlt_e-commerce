@@ -12,7 +12,7 @@ export default async function Footer({ lng }: FooterProps) {
     <footer className="px-10 lg:px-20 bg-gray-50 py-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="col-span-1 md:col-span-2">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 mb-5 md:mb-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 mb-3 md:mb-0">
             <div className="text-sm mb-4 lg:mb-0">
               <h3 className="mb-2 font-medium">About Us</h3>
               <ul className="space-y-2 text-gray-600">
@@ -38,7 +38,7 @@ export default async function Footer({ lng }: FooterProps) {
             </div>
           </div>
         </div>
-        <div className="col-span-1 mb-5 md:mb-0">
+        <div className="col-span-1 mb-3 md:mb-0">
           <div className="flex flex-col justify-between h-full">
             <Link 
               href="https://www.instagram.com/gutolution/" 
@@ -47,12 +47,12 @@ export default async function Footer({ lng }: FooterProps) {
             >
               <InstagramIcon className="w-10 h-10" />
             </Link>
-            <p className="text-gray-700 text-sm pt-4 lg:pt-0">Sign up to get our special offers and news</p>
+            <p className="text-gray-700 text-sm pt-3 lg:pt-0">Sign up to get our special offers and news</p>
             <div className="flex max-lg:flex-col text-sm">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="rounded-full lg:pl-1 lg:pr-4 py-4 lg:py-2 bg-transparent border-none focus:outline-none"
+                className="rounded-full py-3 lg:pl-1 lg:pr-4 lg:py-2 bg-transparent border-none focus:outline-none"
               />
               <button className="home-btn footer-btn xl:static">Subscribe</button>
             </div>

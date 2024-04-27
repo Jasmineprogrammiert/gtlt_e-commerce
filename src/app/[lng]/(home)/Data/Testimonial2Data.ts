@@ -62,4 +62,20 @@ export const testimonials: {
     name: 'Ricky 7',
     position: 'Engineer',
   },
+  {
+    rating: '5/5',
+    testimonial: "I took the full body intelligence and I am blown away by my test scores. I have stuck to the foods I am supposed to eat and have completely removed those that I must avoid. I FEEL AMAZING!! Stomach is flatter, no bloating. It’s so cool!",
+    keywords: 'More Energy Overall Health',
+    profilePic: 'https://images.unsplash.com/photo-1708144824610-f078a8cc926f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfDB8MHx8fDI%3D',
+    name: 'Jimmy 8',
+    position: 'Engineer',
+  },
+  {
+    rating: '5/5',
+    testimonial: "I took the full body intelligence and I am blown away by my test scores. I have stuck to the foods I am supposed to eat and have completely removed those that I must avoid. I FEEL AMAZING!! Stomach is flatter, no bloating. It’s so cool!",
+    keywords: 'More Energy Overall Health',
+    profilePic: 'https://images.unsplash.com/photo-1708144824610-f078a8cc926f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfDB8MHx8fDI%3D',
+    name: 'Coutard 9',
+    position: 'Engineer',
+  },
 ]
