@@ -10,7 +10,7 @@ export default function Products() {
           <h2 className="home-h2 home-h2-2">Health Solutions</h2>
         </div>
         <div className="w-full lg:w-1/2">
-          <p className="text-xl lg:text-2xl xl:leading-9">
+          <p className="text-lg lg:text-2xl xl:leading-9">
             In order to personalize your nutrition recommendations and health products, you{`'`}ll start with one of our Intelligence tests. Based on millions of data points analyzed from your gene expressions, your action plan will focus on the root causes of microbial imbalance and inflammation.
           </p>
         </div>

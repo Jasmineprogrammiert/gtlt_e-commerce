@@ -98,7 +98,7 @@ html, body {
   @apply 
     text-3xl lg:text-5xl 
     font-medium 
-    mb-10;
+    mb-5 lg:mb-10;
 }
 .home-h2-2 {
   @apply 
