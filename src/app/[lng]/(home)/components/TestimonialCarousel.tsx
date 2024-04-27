@@ -33,13 +33,17 @@ export default function TestimonialCarousel() {
       >
         <KeyboardArrowLeftIcon />
       </IconButton>
+
+
+
       <div className="flex flex-col justify-between items-center">
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .5 }}
-          className={`text-2xl mb-8 text-center tracking-wide leading-relaxed ${neuton.className}`}
+          // className={`text-lg lg:text-2xl mb-8 mb-0 text-center tracking-wide leading-relaxed ${neuton.className}`}
+          className={`text-xl mb-4 lg:text-2xl lg:mb-8 text-center tracking-wide leading-relaxed ${neuton.className}`}
         >
           {`"${testimonials[currIndex].testimonial}"`}
         </motion.p>
@@ -48,11 +52,14 @@ export default function TestimonialCarousel() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .5 }}
-          className={`text-2xl text-center tracking-widest ${laBelleAurore.className}`}
+          className={`text-xl lg:text-2xl text-center tracking-widest ${laBelleAurore.className}`}
         >
           {testimonials[currIndex].name}
         </motion.p>
       </div>
+
+
+
       <IconButton
         onClick={() =>
           setcurrIndex(prevIndex => (prevIndex + 1) % testimonials.length)
