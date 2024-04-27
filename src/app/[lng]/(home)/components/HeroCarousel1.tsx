@@ -45,7 +45,7 @@ export default function HeroCarousel1 ({ lng }: PageProps) {
           />
         </div>
       </div>
-      <button className="home-btn z-10 lg:top-[75%] lg:z-0">
+      <button className="home-btn absolute right-[10%] bottom-[8%] z-10 lg:static lg:right-0 lg:bottom-0">
         <Link href="/products">
           <h1>{t("common.button")}</h1>
         </Link>
