@@ -6,8 +6,7 @@ import { languages } from '@/src/i18n/settings'
 type FooterProps = {
   t: ((key: string) => string) & TFunction<"translation", undefined>;
   lng: string;
-};
-
+}
 export default async function Footer({ lng }: FooterProps) {
   return (
     <footer className="px-20 bg-gray-50 py-8">
