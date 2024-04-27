@@ -14,7 +14,6 @@ export default function Home({
 }: {
   params: { lng: string };
 }) {
-
   return (
     <>
     <div className="bg-white">
