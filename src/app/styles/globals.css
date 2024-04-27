@@ -54,6 +54,13 @@
 :root {
   --theme-color: hsl(192, 100%, 35%);
 }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
 /* ---------- NavBar ---------- */
 .theme-color {
   color: var(--theme-color);
