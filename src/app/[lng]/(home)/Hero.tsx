@@ -11,7 +11,6 @@ import HeroCarousel3 from './components/HeroCarousel3'
 import HeroCarousel4 from './components/HeroCarousel4'
 
 type PageProps = { lng: string };
-
 export default function Hero({ lng }: PageProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 8000 })]);
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
@@ -35,8 +34,7 @@ export default function Hero({ lng }: PageProps) {
         </div>
       </div>
     </section>
-
-    <div className="px-20 flex justify-start -translate-y-28 lg:-translate-y-14">
+    <div className="px-10 flex justify-start -translate-y-12 lg:px-20 lg:-translate-y-14">
       <SelectedSnapDisplay
         selectedSnap={selectedSnap}
         snapCount={snapCount}

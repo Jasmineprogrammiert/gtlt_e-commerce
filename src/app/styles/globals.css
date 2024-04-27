@@ -131,12 +131,8 @@
   @apply
     flex items-center justify-center
     grow-0 shrink-0 basis-0 
-    px-20;
+    px-10 lg:px-20;
   flex: 0 0 100%;
-}
-.hero-btn {
-  top: 75%;
-  /* top: 70%; */
 }
 .carousel-btn button svg {
   @apply

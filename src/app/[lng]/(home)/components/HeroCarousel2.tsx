@@ -36,8 +36,7 @@ export default function HeroCarousel2() {
           />
         </div>
       </div>
-      
-      <button className="home-btn hero-btn">
+      <button className="home-btn top-[75%]">
         <Link href="/products">
           Shop Now
         </Link>

@@ -97,11 +97,6 @@ export default function TermsPage() {
           <li className="mb-4">
             3.4.3. one or more of the merchandise you ordered was listed at an incorrect price due to a human or computer error or an error in the pricing information.
           </li>
-
-
-
-
-
           <li className="mb-4">
             3.5. If we cancel your order, we will notify you by email and will proceed refund as soon as possible but in any event within thirty {`(`}30{`)`} days of your order. You accept that we will not be obliged to offer any compensation for disappointment suffered.
           </li>
