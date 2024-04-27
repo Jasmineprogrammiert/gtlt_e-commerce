@@ -33,7 +33,7 @@ export default function TestIncludes() {
             <Link href="/tech">More Details</Link>
           </button> 
         </div>
-        <div className="invisible lg:visible lg:col-span-1">
+        <div className="hidden lg:visible lg:col-span-1">
           <Image
             src="https://images.unsplash.com/photo-1639772823849-6efbd173043c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFifGVufDB8MXwwfHx8Mg%3D%3D"
             alt="1st Image"
