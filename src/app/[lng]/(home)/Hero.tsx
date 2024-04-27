@@ -26,7 +26,7 @@ export default function Hero({ lng }: PageProps) {
         <div className="hero-slide">
           <HeroCarousel1 lng={lng} />
         </div>
-        {/* <div className="hero-slide">
+        <div className="hero-slide">
           <HeroCarousel2 lng={lng} />
         </div>
         <div className="hero-slide">
@@ -34,7 +34,7 @@ export default function Hero({ lng }: PageProps) {
         </div>
         <div className="hero-slide">
           <HeroCarousel4 lng={lng} />
-        </div> */}
+        </div>
       </div>
     </section>
     <div className="px-10 flex justify-start -translate-y-12 lg:px-20 lg:-translate-y-14">
