@@ -19,7 +19,7 @@ export default function FrequentlyAskedTemplate({
         </div>
         {card.subtitles.map((s, subIndex) => (
           <div 
-            className="md:w-1/2 p-4 max-h-60 overflow-y-auto mb-8 md:mb-16"
+            className="md:w-1/2 p-4 max-h-80 md:max-h-60 overflow-y-auto mb-8 md:mb-16"
             key={subIndex}
           >
             <h4 className="mb-4 md:mb-7 text-2xl md:text-lg xl:text-xl md:font-medium">
