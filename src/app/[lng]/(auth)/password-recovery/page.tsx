@@ -12,11 +12,10 @@ export default async function PasswordRecovery({
   const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (user) return redirect('/');
-
   return (
     <>
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
-      <div className="w-1/2">
+      <div className="md:w-1/2 max-md:hidden">
         <Image 
           src="https://images.unsplash.com/photo-1600009723611-7473882201fd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGUlMjBjb21tZXJjZXxlbnwwfDF8MHx8fDI%3D" 
           alt="Login Image" 
@@ -25,9 +24,8 @@ export default async function PasswordRecovery({
           height={200}
         />
       </div>
-
-      <div className="px-20 py-20 w-1/2 flex flex-col items-center justify-center" >
-        <div className="flex space-x-2 mb-10">
+      <div className="px-5 py-8 md:p-20 md:w-1/2 flex flex-col items-center justify-center" >
+        <div className="flex space-x-2 mb-3 md:mb-10">
           <div className="w-10">
             <Image 
               src={Logo} 
@@ -38,9 +36,8 @@ export default async function PasswordRecovery({
             />
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
-        </div>
-        
-        <form className="mt-8 w-4/5 relative">
+        </div>   
+        <form className="mt-8 max-md:ml-[20%] max-md:w-full w-4/5 relative">
           <h2 className="text-xl mb-8">Send password reset request</h2>
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
@@ -56,13 +53,12 @@ export default async function PasswordRecovery({
           >
             Send
           </button>
-
           {searchParams?.message && (
             <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
               {searchParams.message}
             </p>
           )}
-        </form>      
+        </form>   
       </div>
     </div>
     </>

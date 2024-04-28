@@ -23,24 +23,21 @@ export default async function ResetPassword({
       const { error } = await supabase.auth.exchangeCodeForSession(
         searchParams.code
       );
-
       if (error) return redirect('/reset-password?message=Unable to reset Password. Link expired!')
     }
 
     const { error } = await supabase.auth.updateUser({ password });
-
     if (error) {
       console.log(error);
       return redirect('/reset-password?message=Unable to reset Password. Try again!');
     }
-
     redirect('/login?message=Your Password has been reset successfully. Sign in.');
   }
 
   return (
     <>
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
-      <div className="w-1/2">
+      <div className="md:w-1/2 max-md:hidden">
         <Image 
           src="https://images.unsplash.com/photo-1600009723611-7473882201fd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGUlMjBjb21tZXJjZXxlbnwwfDF8MHx8fDI%3D" 
           alt="Login Image" 
@@ -49,8 +46,8 @@ export default async function ResetPassword({
           height={200}
         />
       </div>
-      <div className="px-20 py-20 w-1/2 flex flex-col items-center justify-center" >
-        <div className="flex space-x-2 mb-10">
+      <div className="px-5 py-8 md:p-20 md:w-1/2 flex flex-col items-center justify-center" >
+        <div className="flex space-x-2 mb-3 md:mb-10">
           <div className="w-10">
             <Image 
               src={Logo} 
@@ -62,7 +59,6 @@ export default async function ResetPassword({
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-
         <form className="mt-8 w-4/5 relative">
           <h2 className="text-xl mb-8">Reset your password</h2>
           <input 
@@ -79,7 +75,6 @@ export default async function ResetPassword({
           >
             Reset
           </button>
-
           {searchParams?.message && (
             <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
               {searchParams.message}

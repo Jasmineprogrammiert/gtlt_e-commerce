@@ -5,7 +5,7 @@ import Logo from '../../../../../public/assets/logo.png'
 export default function SignUp() {
   return (
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
-      <div className="w-1/2">
+      <div className="md:w-1/2 max-md:hidden">
         <Image 
           src="https://images.unsplash.com/photo-1600009723611-7473882201fd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGUlMjBjb21tZXJjZXxlbnwwfDF8MHx8fDI%3D" 
           alt="Signup Image" 
@@ -14,9 +14,8 @@ export default function SignUp() {
           height={200}
         />
       </div>
-
-      <div className="px-20 py-20 w-1/2 flex flex-col items-center justify-center" >
-        <div className="flex space-x-2 mb-10">
+      <div className="px-5 py-8 md:p-20 md:w-1/2 flex flex-col items-center justify-center" >
+        <div className="flex space-x-2 mb-3 md:mb-10">
           <div className="w-10">
             <Image 
               src={Logo} 
@@ -28,7 +27,6 @@ export default function SignUp() {
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-
         <form className="mt-8 w-4/5">
           <h2 className="text-xl mb-8">Sign up for an account</h2>
           <input 
