@@ -3,9 +3,9 @@ import Link from 'next/link'
 export default function RefundPage() {
   return (
     <>
-    <div className="px-5 md:px-44 xl:px-52 py-20 bg-gray-50">
-      <h1 className="home-h2 home-h2-2 text-center">Refund Policy</h1>
-      <h2 className=" text-2xl font-medium tracking-wide mb-5">
+    <div className="px-5 md:px-44 xl:px-52 py-10 md:py-20 bg-gray-50">
+      <h1 className="home-h2 home-h2-2 text-center max-md:py-10">Refund Policy</h1>
+      <h2 className="text-2xl font-medium tracking-wide pb-10 md:mb-5">
         Returns or Exchanges Policy
       </h2>
       <div className="text-lg mb-14">

@@ -35,7 +35,6 @@ export default function Navbar({
     setIsOpen(!isOpen);
   };
   return (
-    // <header className="sticky top-0 z-50 w-full shadow px-10 py-1.5 lg:px-20 lg:py-2 flex justify-start items-center bg-gray-50">
     <header className="fixed top-0 z-50 w-full shadow px-10 py-1.5 lg:px-20 lg:py-2 flex justify-start items-center bg-gray-50 h-[4.5rem]">
       <Link href="/" className="mr-8">
         <Image
