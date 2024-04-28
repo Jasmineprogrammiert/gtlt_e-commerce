@@ -46,7 +46,7 @@ export default async function ResetPassword({
           height={200}
         />
       </div>
-      <div className="px-5 py-8 md:p-20 md:w-1/2 flex flex-col items-center justify-center" >
+      <div className="px-5 py-8 md:p-20 md:w-1/2 flex flex-col items-center justify-center">
         <div className="flex space-x-2 mb-3 md:mb-10">
           <div className="w-10">
             <Image 
@@ -59,10 +59,10 @@ export default async function ResetPassword({
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-        <form className="mt-8 w-4/5 relative">
+        <form className="mt-8 max-md:ml-[20%] max-md:w-full w-4/5 relative">
           <h2 className="text-xl mb-8">Reset your password</h2>
           <input 
-            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-8" 
+            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
             type="password" 
             name="password"
             placeholder="New Password" 
