@@ -106,12 +106,14 @@ html, body {
 }
 .news-h1 {
   @apply 
-    text-4xl font-normal tracking-normal
+    text-3xl md:text-4xl 
+    font-normal tracking-normal
     mb-5 leading-tight;
 }
 .news-h2 {
   @apply 
-    text-3xl mb-5;
+    text-2xl md:text-3xl 
+    mb-5;
 }
 .news-h2-2 {
   @apply 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function TermsPage() {
   return (
     <>
-    <div className="px-44 xl:px-52 py-20 bg-gray-50">
+    <div className="px-5 md:px-44 xl:px-52 py-20 bg-gray-50">
       <h1 className="home-h2 home-h2-2 text-center">Terms of service</h1>
       <h2 className=" text-2xl font-medium tracking-wide mb-5">
         General Terms and Conditions

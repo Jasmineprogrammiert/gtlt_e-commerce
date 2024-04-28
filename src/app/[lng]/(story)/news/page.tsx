@@ -14,16 +14,16 @@ export default function News() {
       {NewsData.map((news, i) => (
         <Link 
           href={`/news/${i}/headline`} key={i}
-          className="flex mb-8 relative group"
+          className="md:flex mb-8 relative group"
         >
           <Image 
             src={news.img}
             alt="Blog Image" 
             height={200}
             width={200}
-            className="w-1/2 flex items-center h-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-10" 
+            className="w-full md:w-1/2 flex items-center h-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-10" 
           />
-          <div className="w-1/2 px-10 py-12 bg-black text-white relative">
+          <div className="md:w-1/2 px-10 py-12 bg-black text-white relative">
             <p className="uppercase text-gray-500 pb-3.5">Headline</p>
             <h3 className="text-2xl mb-8">
               {news.title}
@@ -58,11 +58,11 @@ export default function News() {
           </Link>
         ))}
       </div>
-      <div className="pt-20 pb-10">
-        <div className="flex mb-10">
-          <h2 className="w-1/2 home-h2 home-h2-2 news-h2-2">Most Recent</h2>
+      <div className="pt-20 pb-5 md:pb-10">
+        <div className="md:flex mb-10">
+          <h2 className="md:w-1/2 home-h2 home-h2-2 news-h2-2">Most Recent</h2>
         </div>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5">
           {NewsData2.map((news, i) => (
             <Link 
               href={`/news/${i}`} key={i}

@@ -15,16 +15,16 @@ export default function BlogPage() {
       {BlogData.map((blog, i) => (
         <Link 
           href={`/blog/${i}/headline`} key={i}
-          className="flex mb-8 relative group"
+          className="md:flex mb-8 relative group"
         >
           <Image 
             src={blog.img}
             alt="Blog Image" 
             height={200}
             width={200}
-            className="w-1/2 flex items-center h-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-10" 
+            className="w-full md:w-1/2 flex items-center h-full object-cover object-center transition-transform duration-300 transform group-hover:scale-110 z-10" 
           />
-          <div className="w-1/2 px-10 py-12 bg-black text-white relative">
+          <div className="md:w-1/2 px-10 py-12 bg-black text-white relative">
             <p className="uppercase text-gray-500 pb-3.5">Headline</p>
             <h3 className="text-2xl mb-8">
               {blog.title}
@@ -59,15 +59,14 @@ export default function BlogPage() {
           </Link>
         ))}
       </div>
-
-      <div className="pt-20 pb-10">
-        <div className="flex mb-10">
-          <h2 className="w-1/2 home-h2 home-h2-2 blog-h2-2">Most Recent</h2>
+      <div className="pt-20 pb-5 md:pb-10">
+        <div className="md:flex mb-10">
+          <h2 className="md:w-1/2 home-h2 home-h2-2 blog-h2-2">Most Recent</h2>
           {/* <div className="w-1/2 flex justify-end">
             <Dropdown />
           </div> */}
         </div>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5">
           {BlogData2.map((blog, i) => (
             <Link 
               href={`/blog/${i}`} key={i}

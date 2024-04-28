@@ -13,12 +13,12 @@ export default function NewsPage({
     {[NewsData[Number(params.index)]].map((news, i) => (
       <div 
         key={i}
-        className="px-44 xl:px-52 py-20 bg-gray-50"
+        className="px-5 md:px-44 xl:px-52 py-14 md:py-20 bg-gray-50"
       >
         <h1 className="news-h1">{news.title}</h1>
-        <div className="flex mb-10">
-          <span className="text-base text-gray-600 mr-10"><EditOutlinedIcon /> {news.author}</span>
-          <span className="text-base text-gray-600"><AccessTimeIcon /> {news.readingTime} min</span>
+        <div className="md:flex mb-8 md:mb-10">
+          <span className="text-base text-gray-600 mr-10 max-md:mb-2"><EditOutlinedIcon /> {news.author}</span>
+          <span className="max-md:block text-base text-gray-600"><AccessTimeIcon /> {news.readingTime} min</span>
         </div>
         <div>
           <h2 className="news-h2">{news.content[0].subtitle}</h2>
