@@ -1,14 +1,17 @@
 'use client'
 
+import * as React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import * as React from 'react'
 // links
 import { products, stories, explore } from './Data/NavbarData'
 // styles
 import Logo from '../../../../public/assets/logo.png'
 import { useShoppingCart } from 'use-shopping-cart'
 import { cn } from '@/lib/utils'
+import { Menu, User, LogOut, ShoppingBag } from 'lucide-react'
+// components
 import { 
   NavigationMenu,
   NavigationMenuContent,
@@ -18,11 +21,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from './NavMenu'
-import { Menu, User, LogOut, ShoppingBag } from 'lucide-react'
-import { logout } from '../(auth)/actions'
-// TESTING
-import { useState } from 'react'
 import Sidebar from './Sidebar'
+import { logout } from '../(auth)/actions'
 
 export default function Navbar({ 
   user, 
@@ -83,17 +83,17 @@ export default function Navbar({
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ul className="grid gap-1.5">
-                  {products.map(product => (
+                <li className="grid gap-1.5">
+                  {products.map(p => (
                     <ListItem
-                      key={product.title}
-                      title={product.title}
-                      href={product.href}
+                      key={p.title}
+                      title={p.title}
+                      href={p.href}
                     >
-                      {product.description}
+                      {p.description}
                     </ListItem>
                   ))}
-                </ul>
+                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -102,13 +102,13 @@ export default function Navbar({
             <NavigationMenuTrigger className="nav-item bg-transparent">Our Story</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="nav-ul">
-                {stories.map(story => (
+                {stories.map(s => (
                   <ListItem
-                    key={story.title}
-                    title={story.title}
-                    href={story.href}
+                    key={s.title}
+                    title={s.title}
+                    href={s.href}
                   >
-                    {story.description}
+                    {s.description}
                   </ListItem>
                 ))}
               </ul>
@@ -137,19 +137,9 @@ export default function Navbar({
       <div className="flex flex-grow items-center justify-end space-x-8">
         {user ? (
           <>
-          <button
-            type="button"
-            className="inline-flex items-center md:hidden"
-            onClick={toggle}
-          >
-            <Menu />
-          </button>
           <span className="text-gray-800">Hello, {user.email}</span>
           <button onClick={() => handleCartClick()}><ShoppingBag /></button>
           <form action={logout}><button className="mt-1.5"><LogOut /></button></form>
-          </>
-        ) : (
-          <>
           <button
             type="button"
             className="inline-flex items-center lg:hidden"
@@ -157,8 +147,18 @@ export default function Navbar({
           >
             <Menu />
           </button>
+          </>
+        ) : (
+          <>
           <Link href="/login"><User /></Link>
           <button onClick={() => handleCartClick()}><ShoppingBag /></button>
+          <button
+            type="button"
+            className="inline-flex items-center lg:hidden"
+            onClick={toggle}
+          >
+            <Menu />
+          </button>
           </>
          )}        
       </div>

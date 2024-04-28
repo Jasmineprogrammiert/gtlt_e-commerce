@@ -1,4 +1,12 @@
 import Link from 'next/link'
+import { X } from 'lucide-react'
+import { 
+  Accordion, 
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './Accordion'
+import { products, stories, explore } from './Data/NavbarData';
 
 export default function Sidebar({
   isOpen,
@@ -9,46 +17,86 @@ export default function Sidebar({
 }) {
   return (
     <>
-      <div
-        className="sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid pt-[120px] left-0 z-10"
-        style={{
-          opacity: `${isOpen ? "1" : "0"}`,
-          top: ` ${isOpen ? "0" : "-100%"}`,
-        }}
-      >
-        <button className="absolute right-0 p-5" onClick={toggle}>
-          {/* Close icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
+    <div
+      className="px-10 lg:px-20 mr-8 sidebar-container fixed w-full h-full overflow-hidden justify-center bg-gray-50 grid pt-[120px] left-0 z-10"
+      style={{
+        opacity: `${isOpen ? "1" : "0"}`,
+        top: ` ${isOpen ? "0" : "-100%"}`,
+      }}
+    >
+      <button className="absolute right-0 p-5" onClick={toggle}><X /></button>
+      <Accordion type="single" collapsible className="w-full">
+        <AccordionItem value="item-1">
+          <AccordionTrigger
+            className="w-full font-normal tracking-wider text-xl"
           >
-            <path
-              fill="currentColor"
-              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-            />
-          </svg>
-        </button>
-
-        <ul className="sidebar-nav text-center leading-relaxed text-xl">
-          <li>
-            <Link href="/about" onClick={toggle}>
-              <p>About Us</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" onClick={toggle}>
-              <p>Services</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contacts" onClick={toggle}>
-              <p>Contacts</p>
-            </Link>
-          </li>
-        </ul>
-      </div>
+            Products
+          </AccordionTrigger>
+          <AccordionContent>
+            <ul className="nav-ul">
+              {products.map(p => (
+                <li key={p.title}>
+                  <Link 
+                    href={p.href} 
+                    onClick={toggle}
+                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-600"
+                  >
+                    {p.title}
+                  </Link>
+                  <p className="text-gray-600 text-base">{p.description}</p>
+                </li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger
+            className="w-full font-normal tracking-wider text-xl"
+          >
+            Our Story
+          </AccordionTrigger>
+          <AccordionContent>
+            <ul className="nav-ul">
+              {stories.map(s => (
+                <li key={s.title}>
+                  <Link 
+                    href={s.href} 
+                    onClick={toggle}
+                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-600"
+                  >
+                    {s.title}
+                  </Link>
+                  <p className="text-gray-600 text-base">{s.description}</p>
+                </li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-3">
+          <AccordionTrigger
+            className="w-full font-normal tracking-wider text-xl"
+          >
+            Explore
+          </AccordionTrigger>
+          <AccordionContent>
+            <ul className="nav-ul">
+             {explore.map(ex => (
+                <li key={ex.title}>
+                  <Link 
+                    href={ex.href} 
+                    onClick={toggle}
+                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-600"
+                  >
+                    {ex.title}
+                  </Link>
+                  <p className="text-gray-600 text-base">{ex.description}</p>
+                </li>
+              ))} 
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
     </>
   )
 }
