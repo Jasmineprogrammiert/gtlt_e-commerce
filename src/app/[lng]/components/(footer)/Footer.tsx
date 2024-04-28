@@ -47,15 +47,15 @@ export default async function Footer({ lng }: FooterProps) {
             >
               <InstagramIcon className="w-10 h-10" />
             </Link>
-            <p className="text-gray-700 text-sm pt-3 md:pt-0">Sign up to get our special offers and news</p>
-            <div className="flex max-md:flex-col text-sm">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="rounded-full py-3 md:pl-1 md:pr-4 md:py-2 bg-transparent border-none focus:outline-none"
-              />
-              <button className="home-btn footer-btn xl:static">Subscribe</button>
-            </div>
+            <p className="text-gray-700 text-sm pt-3 md:pt-0">
+              <Link 
+                href="https://a797888c.sibforms.com/serve/MUIFABOhdera8rM-WECqlPezP99YuAhoOkJMlYCXKjtiDnoE0f0wz4pzjqovy484cfhS_U98AQQinEGnAR1pM883P5v85OYz0HWRR1cBc4cgI6E-XQUI9G3fDkqeJ8PSHlgB9rwgOHNCo92QdLKHM173mKOPfdrWvoDiQSyNWGrB-AkVzaTWkr7V9NrMiZ5CXX2gY47OnHGEzb_m" 
+                target="_blank" 
+                className="theme-color underline underline-offset-4 font-medium"
+              >
+                Sign Up
+              </Link> to get our special offers and news
+            </p>
           </div>
         </div>
       </div>
@@ -65,7 +65,6 @@ export default async function Footer({ lng }: FooterProps) {
           Please refer to the instructions on the packaging for product details. The images are for reference only, and the actual product should prevail. The effectiveness of this product may vary depending on differentphysical conditions, age, and lifestyle factors. This information is for reference only and is not intended for diagnosis or treatment. This product is not registered under thePharmacy and Poisons Ordinanceor the Chinese Medicine Ordinance. Any claims made for this product have not been evaluated for registration purposes. This product is not intended for the diagnosis, treatment, or prevention of any disease.
         </p>
       </div>
-
       <hr className="my-4" />
       <div className="max-sm:grid max-sm:grid-cols-1 md:flex justify-between">
         <div className="text-start md:flex">
