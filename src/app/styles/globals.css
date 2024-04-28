@@ -57,6 +57,10 @@
 html, body {
   overflow-x: hidden; 
 }
+body {
+  @apply 
+    pt-[4.5rem];
+}
 /* ---------- NavBar ---------- */
 .theme-color {
   color: var(--theme-color);
