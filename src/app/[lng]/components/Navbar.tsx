@@ -17,9 +17,12 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
-} from './navigation-menu'
-import { User, LogOut, ShoppingBag } from 'lucide-react'
+} from './NavMenu'
+import { Menu, User, LogOut, ShoppingBag } from 'lucide-react'
 import { logout } from '../(auth)/actions'
+// TESTING
+import { useState } from 'react'
+import Sidebar from './Sidebar'
 
 export default function Navbar({ 
   user, 
@@ -27,8 +30,12 @@ export default function Navbar({
   user: any,
 }) {
   const { handleCartClick } = useShoppingCart();
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <header className="px-20 py-2 flex justify-start items-center sticky top-0 z-50 w-full shadow bg-gray-50">
+    <header className="px-10 py-1.5 lg:px-20 lg:py-2 flex justify-start items-center sticky top-0 z-50 w-full shadow bg-gray-50">
       <Link href="/" className="mr-8">
         <Image
           src={Logo}
@@ -41,6 +48,7 @@ export default function Navbar({
           Gut<span className="theme-color">olution</span>
         </h1>
       </Link>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       <NavigationMenu>
         <NavigationMenuList className="gap-1 hidden lg:flex">
           {/* ----- HOME ----- */}
@@ -125,15 +133,30 @@ export default function Navbar({
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      {/* <Menu /> */}
       <div className="flex flex-grow items-center justify-end space-x-8">
         {user ? (
           <>
+          <button
+            type="button"
+            className="inline-flex items-center md:hidden"
+            onClick={toggle}
+          >
+            <Menu />
+          </button>
           <span className="text-gray-800">Hello, {user.email}</span>
           <button onClick={() => handleCartClick()}><ShoppingBag /></button>
           <form action={logout}><button className="mt-1.5"><LogOut /></button></form>
           </>
         ) : (
           <>
+          <button
+            type="button"
+            className="inline-flex items-center lg:hidden"
+            onClick={toggle}
+          >
+            <Menu />
+          </button>
           <Link href="/login"><User /></Link>
           <button onClick={() => handleCartClick()}><ShoppingBag /></button>
           </>

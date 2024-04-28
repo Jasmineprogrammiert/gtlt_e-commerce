@@ -7,7 +7,7 @@ import {
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from './sheet'
+} from './SCMSheet'
 import { useShoppingCart } from 'use-shopping-cart'
 
 export default function ShoppingCartModal() {

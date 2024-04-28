@@ -19,7 +19,7 @@ export default function Hero({ lng }: PageProps) {
   return (
     <>
     <section 
-      className="overflow-hidden h-[110vh] w-full bg-gray-50 lg:h-[90vh]" 
+      className="overflow-hidden h-[110vh] w-full bg-gray-50 md:h-[90vh]" 
       ref={emblaRef}
     >
       <div className="flex h-full">
@@ -37,7 +37,7 @@ export default function Hero({ lng }: PageProps) {
         </div>
       </div>
     </section>
-    <div className="px-10 flex justify-start -translate-y-12 lg:px-20 lg:-translate-y-14">
+    <div className="px-10 flex justify-start -translate-y-12 md:px-20 md:-translate-y-14">
       <SelectedSnapDisplay
         selectedSnap={selectedSnap}
         snapCount={snapCount}
