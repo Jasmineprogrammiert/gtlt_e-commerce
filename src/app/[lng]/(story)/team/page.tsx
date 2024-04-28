@@ -8,7 +8,7 @@ export default function page() {
     <>
     <div className="px-5 py-16 md:p-20">
       <h2 className="home-h2 home-h2-2">Our Leadership</h2>
-      <div className="grid grid-cols-3 gap-5 mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 mt-7 md:mt-14">
         {Team.map((team, index) => (
           <div className="bg-gray-100 p-10 mb-4" key={index}>
             <div className="flex items-center justify-start mb-5">
