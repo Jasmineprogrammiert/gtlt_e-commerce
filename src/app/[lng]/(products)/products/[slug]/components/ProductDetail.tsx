@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
   return (
     <>
-    <div className="p-20 bg-cyan-50">
+    <div className="px-5 py-16 md:p-20 bg-cyan-50">
       <div className="flex justify-center">
         <ul className="flex">
           <li role="presentation">
@@ -52,7 +52,7 @@ export default function ProductDetail() {
           </li>
         </ul>
       </div>
-      
+
       <div id="content1" className={activeTab === 'tab1' ? '' : 'hidden'}>
         <Tab1 />
       </div>

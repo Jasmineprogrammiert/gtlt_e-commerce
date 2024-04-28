@@ -30,10 +30,10 @@ export default function CountdownTimer() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targetDate]);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center md:ml-5 max-md:mt-4">
       <div className="dhms-container">
         <div className="text-center dhms">
           <div>{timeLeft.days}</div>

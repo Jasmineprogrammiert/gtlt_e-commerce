@@ -41,8 +41,8 @@ export default async function ProductPage({
   const data: fullProduct = await getData(params.slug);
   return (
     <>
-    <div className="p-20">
-      <div className="grid grid-cols-2 gap-10 xl:gap-14">
+    <div className="px-5 py-16 md:p-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-14">
         <ImgGallery images={data.images} />
         <div className="">
           <h2 className="text-2xl xl:text-3xl font-medium mb-2.5">
@@ -93,22 +93,22 @@ export default async function ProductPage({
 
           <hr className="border-dashed bg-gray-950 my-5" />
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-3">
+            <div className="flex gap-3 items-center">
               {/* <input type="radio" name="plan" id="planB" className="rounded-full h-5 w-5 border-gray-800" /> */}
               <label htmlFor="planB" className="text-lg font-medium text-gray-800">
                 6-month regular plan ($1516/month)
               </label>
             </div>
-            <div className="flex items-center gap-x-2">
+            <div className="md:flex md:gap-x-2 items-center">
               <span className="text-xl font-medium text-cyan-700">
                 {/* ${data.price_2}  */}
                 ${data.price} 
               </span>
-              <span className="text-base line-through text-red-500">
+              <span className="text-base line-through text-red-500 max-md:ml-4">
                 {/* ${data.price_2 + 30} */}
                 ${data.price + 30}
               </span>
-              <span className="ml-5"><CountdownTimer /></span>
+              <CountdownTimer />
             </div>
           </div>
 

@@ -21,7 +21,7 @@ export default async function Products() {
   return (
     <div className="px-10 py-16 md:p-20 bg-gray-50">
       <h2 className="text-3xl mb-5 md:text-5xl md:mb-10 xl:mb-12 tracking-wide">All Products</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 md:gap-y-10">
         {data.map(product => (
           <div key={product._id} className="group relative">
             <div className="w-[98%] xl:w-[92%] mx-auto aspect-square overflow-hidden rounded-md group-hover:opacity-80">

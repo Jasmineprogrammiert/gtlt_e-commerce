@@ -3,15 +3,15 @@ import Image from 'next/image'
 export default function Tab3() {
   return (
     <>
-    <div className="mt-16">
-      <h2 className="text-[2.5rem] xl:text-5xl tracking-wider text-center mb-14">Subscription Plan Details</h2>
+    <div className="mt-8 md:mt-16">
+      <h2 className="text-3xl md:text-[2.5rem] xl:text-5xl tracking-wider text-center mb-7 md:mb-14">Subscription Plan Details</h2>
       <div className="tab3-container">
         <Image 
           src="https://images.unsplash.com/photo-1525498128493-380d1990a112?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3JlZW4lMjBwcm9kdWN0fGVufDB8MXwwfHx8Mg%3D%3D" 
           alt="Product Image" 
           width={150} 
           height={150} 
-          className="object-cover object-center h-full w-full tab3-image"
+          className="max-md:hidden object-cover object-center h-full w-full tab3-image"
         />
         <div className="col-span-2 p-12">
           <h2>Month 1<br />Gut Health Test</h2>
@@ -35,7 +35,7 @@ export default function Tab3() {
           alt="Product Image" 
           width={150} 
           height={150} 
-          className="object-cover object-center h-full w-full tab3-image"
+          className="max-md:hidden object-cover object-center h-full w-full tab3-image"
         />
         <div className="col-span-2 p-12">
           <h2>Month 2<br />Gut Health Test</h2>
@@ -59,7 +59,7 @@ export default function Tab3() {
           alt="Product Image" 
           width={150} 
           height={150} 
-          className="object-cover object-center h-full w-full tab3-image"
+          className="max-md:hidden object-cover object-center h-full w-full tab3-image"
         />
         <div className="col-span-2 p-12">
           <h2>Month 3<br />Gut Health Test</h2>
