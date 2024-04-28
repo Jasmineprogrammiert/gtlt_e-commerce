@@ -7,11 +7,11 @@ export default function LogIn() {
   return (
     <>
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
-      <div className="w-1/2">
+      <div className="md:w-1/2">
         <Image 
           src="https://images.unsplash.com/photo-1600009723611-7473882201fd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGUlMjBjb21tZXJjZXxlbnwwfDF8MHx8fDI%3D" 
           alt="Login Image" 
-          className="h-full w-full object-cover object-center"
+          className="max-md:hidden h-full w-full object-cover object-center"
           width={200}
           height={200}
         />
