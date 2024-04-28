@@ -36,6 +36,7 @@ export default function Sidebar({
             <ul className="nav-ul">
               <Link 
                 href="/products" 
+                onClick={toggle}
                 className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-400 decoration-[1px]"
               >
                 All Products

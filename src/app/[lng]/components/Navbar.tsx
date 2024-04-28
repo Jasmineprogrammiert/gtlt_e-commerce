@@ -137,7 +137,7 @@ export default function Navbar({
       <div className="flex flex-grow items-center justify-end space-x-8">
         {user ? (
           <>
-          <span className="text-gray-800">Hello, {user.email}</span>
+          <span className="text-gray-800 max-md:hidden">Hello, {user.email}</span>
           <button onClick={() => handleCartClick()}><ShoppingBag /></button>
           <form action={logout}><button className="mt-1.5"><LogOut /></button></form>
           <button

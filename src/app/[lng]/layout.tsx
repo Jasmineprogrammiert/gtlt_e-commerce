@@ -6,6 +6,7 @@ import '../styles/medias.css'
 import { dir } from 'i18next'
 import { useTranslation } from '@/src/i18n'
 import { createClient } from '@/utils/supabase/server'
+import { Analytics } from '@vercel/analytics/react';
 // components
 import Provider from './components/Provider'
 import Navbar from './components/Navbar'
@@ -37,6 +38,7 @@ export default async function RootLayout({
           <Navbar user={user} />
           <ShoppingCartModal />
           {children}
+          <Analytics />
           <Footer t={t} lng={lng} />
         </Provider>
       </body>
