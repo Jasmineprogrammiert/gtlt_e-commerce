@@ -34,12 +34,18 @@ export default function Sidebar({
           </AccordionTrigger>
           <AccordionContent>
             <ul className="nav-ul">
+              <Link 
+                href="/products" 
+                className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-400 decoration-[1px]"
+              >
+                All Products
+              </Link>
               {products.map(p => (
                 <li key={p.title}>
                   <Link 
                     href={p.href} 
                     onClick={toggle}
-                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-600"
+                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-400 decoration-[1px]"
                   >
                     {p.title}
                   </Link>
@@ -62,7 +68,7 @@ export default function Sidebar({
                   <Link 
                     href={s.href} 
                     onClick={toggle}
-                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-600"
+                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-400 decoration-[1px]"
                   >
                     {s.title}
                   </Link>
@@ -85,7 +91,7 @@ export default function Sidebar({
                   <Link 
                     href={ex.href} 
                     onClick={toggle}
-                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-600"
+                    className="text-lg text-gray-800 underline underline-offset-4 decoration-gray-400 decoration-[1px]"
                   >
                     {ex.title}
                   </Link>
