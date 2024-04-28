@@ -5,7 +5,7 @@ export default function Contact() {
 
   return (
     <>
-    <div className="p-20 min-h-screen flex items-center justify-center">
+    <div className="px-5 py-16 md:p-20 min-h-screen flex items-center justify-center">
       <div className="max-w-lg w-full space-y-8">
         {/* <h1>{t('title')}</h1>; */}
         <div>

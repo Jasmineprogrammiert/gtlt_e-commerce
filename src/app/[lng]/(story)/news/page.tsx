@@ -6,7 +6,7 @@ import { NewsData2 } from './Data/NewsData2'
 
 export default function News() {
   return (
-    <div className="p-20 min-h-screen flex flex-col bg-gray-50">
+    <div className="px-5 py-16 md:p-20 min-h-screen flex flex-col bg-gray-50">
       <h2 className="home-h2 home-h2-2">The GUTolution News</h2>
       <p className="text-xl text-gray-800 mb-14">
         The latest ideas, insights, and inspiration, expertly curated to empower you on your health journey. Learn more about systems biology and the many ways the microbiome plays a critical role in your health & wellness.

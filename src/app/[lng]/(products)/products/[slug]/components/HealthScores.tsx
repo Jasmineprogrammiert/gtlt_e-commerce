@@ -34,8 +34,8 @@ export default function HealthScores() {
   }
   return (
     <>
-    <div className="px-5 py-16 md:p-20 rounded-lg shadow-lg">
-      <div className="md:relative md:flex max-md:bg-gray-50">
+    <div className="px-5 py-16 md:p-20 rounded-lg shadow-lg max-md:bg-gray-50">
+      <div className="md:relative md:flex">
         <Image
             src="https://images.unsplash.com/photo-1597839219216-a773cb2473e4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJhY2tncm91bmR8ZW58MHwwfDB8fHwy"
             alt="Background Image"

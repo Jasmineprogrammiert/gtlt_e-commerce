@@ -6,7 +6,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 export default function page() {
   return (
     <>
-    <div className="p-20">
+    <div className="px-5 py-16 md:p-20">
       <h2 className="home-h2 home-h2-2">Our Leadership</h2>
       <div className="grid grid-cols-3 gap-5 mt-14">
         {Team.map((team, index) => (
