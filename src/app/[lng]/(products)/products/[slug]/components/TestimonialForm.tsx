@@ -8,7 +8,7 @@ export default function TestimonialForm() {
   const [testimonial, setTestimonial] = useState('');
   const { pending } = useFormStatus()
 
-  const handleSubmit = e => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
 
