@@ -1,8 +1,37 @@
+'use client'
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Image from 'next/image'
-import { signup } from '../actions'
+// import { signup } from '../actions'
 import Logo from '../../../../../public/assets/logo.png'
 
 export default function SignUp() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent, email: string, password: string) => {
+    e.preventDefault();
+
+    const supabase = createClientComponentClient();
+    const { error } = await supabase.auth.signUp({ 
+      email, 
+      password ,
+      // options: {
+      //   emailRedirectTo: `${location.origin}/api/auth/callback`
+      // }
+    })
+
+    if(error) {
+      setError(error.message);
+    } else {
+      router.push('/verify');
+    }
+  }
+
   return (
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
       <div className="md:w-1/2 max-md:hidden">
@@ -27,7 +56,7 @@ export default function SignUp() {
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-        <form className="mt-8 w-4/5">
+        <form className="mt-8 w-4/5" onSubmit={e => handleSubmit(e, email, password)}>
           <h2 className="text-xl mb-8">Sign up for an account</h2>
           {/* <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
@@ -37,26 +66,33 @@ export default function SignUp() {
           /> */}
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
-            name="email"
+            // name="email"
             type="email"   
             placeholder="Email Address" 
             required
+            onChange={e => setEmail(e.target.value)}
+            value={email}
           />
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-16" 
+            // name="password"
             type="password"
-            name="password"
             placeholder="Password" 
             required
+            onChange={e => setPassword(e.target.value)}
+            value={password}
           />
           <button 
             className="w-1/3 bg-cyan-600 text-white rounded-md py-2"
-            formAction={signup} 
+            // formAction={signup} 
             type="submit" 
           >
             Sign Up
           </button>
         </form>
+        {error && (
+          <div className="error">{error}</div>
+        )}
       </div>
     </div>
   )

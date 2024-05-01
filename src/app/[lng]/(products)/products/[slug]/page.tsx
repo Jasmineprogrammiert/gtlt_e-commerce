@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Link from 'next/link'
 import { client } from '@/src/app/lib/sanity'
 import { fullProduct } from '../../interface'
@@ -6,6 +7,8 @@ import ImgGallery from './components/ImgGallery'
 import CountdownTimer from './components/CountdownTimer'
 import ProductDetail from './components/ProductDetail'
 import HealthScores from './components/HealthScores'
+import TestimonialList from './components/TestimonialList'
+import TestimonialForm from './components/TestimonialForm'
 // styles
 import { Star } from '@mui/icons-material'
 import AddToBag from './components/AddToBag'
@@ -135,6 +138,12 @@ export default async function ProductPage({
     </div>
     <ProductDetail />
     <HealthScores />
+    <Suspense 
+      // fallback={<Loading />}
+    >
+      <TestimonialList />
+      <TestimonialForm />
+    </Suspense>
     </>
   )
 }

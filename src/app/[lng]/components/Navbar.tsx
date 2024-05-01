@@ -133,7 +133,6 @@ export default function Navbar({
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      {/* <Menu /> */}
       <div className="flex flex-grow items-center justify-end space-x-8">
         {user ? (
           <>

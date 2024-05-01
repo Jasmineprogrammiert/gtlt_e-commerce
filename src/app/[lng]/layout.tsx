@@ -6,7 +6,8 @@ import '../styles/medias.css'
 import { dir } from 'i18next'
 import { useTranslation } from '@/src/i18n'
 import { createClient } from '@/utils/supabase/server'
-import { Analytics } from '@vercel/analytics/react';
+// import createClient from '@/utils/supabase/server'
+import { Analytics } from '@vercel/analytics/react'
 // components
 import Provider from './components/Provider'
 import Navbar from './components/Navbar'
