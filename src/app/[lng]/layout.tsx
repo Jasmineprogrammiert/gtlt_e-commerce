@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
 import { Inter } from 'next/font/google'
 import '../styles/globals.css'
 import '../styles/medias.css'
@@ -6,7 +7,7 @@ import '../styles/medias.css'
 import { dir } from 'i18next'
 import { useTranslation } from '@/src/i18n'
 import { createClient } from '@/utils/supabase/server'
-// import createClient from '@/utils/supabase/server'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { Analytics } from '@vercel/analytics/react'
 // components
 import Provider from './components/Provider'
@@ -28,8 +29,10 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }>) {
-  const supabase = createClient();
+  const supabase = createServerComponentClient({ cookies });
   const { data: { user } } = await supabase.auth.getUser();
+  // const supabase = createClient();
+  // const { data: { user } } = await supabase.auth.getUser();
   const { t } = await useTranslation(lng, "footer");
 
   return (
