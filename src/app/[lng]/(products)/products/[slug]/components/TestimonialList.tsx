@@ -1,12 +1,20 @@
 import Link from 'next/link'
-import { createClient } from '@/utils/supabase/server'
-// import { cookies } from 'next/headers'
-// import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+// import { createClient } from '@/utils/supabase/server'
+import { cookies } from 'next/headers'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+
+// async function getTestimonial() {
+//   // const supabase = createClient();
+//   // const { data, error } = await supabase.from('testimonial').select();
+//   const supabase = createServerComponentClient({ cookies });
+
+//   if(error) console.log(error.message);
+//   return data;
+// }
 
 async function getTestimonial() {
-  const supabase = createClient();
+  const supabase = createServerComponentClient({ cookies });
   const { data, error } = await supabase.from('testimonial').select();
-  // const supabase = createServerComponentClient({ cookies });
 
   if(error) console.log(error.message);
   return data;
@@ -17,6 +25,16 @@ export default async function TestimonialList() {
 
   return (
     <>
+    <nav>
+      <div>
+        <h2>Testimonials</h2>
+        {/* <p><small>Currently open tickets.</small></p> */}
+      </div>
+      <Link href="/products/create" className="ml-auto">
+        <button className="btn-primary">New Testimonial</button>
+      </Link>
+    </nav>
+
     {testimonial && testimonial.map(t => (
       <div key={t.slug} className="card my-5">
         <Link href={`/testimonial/${t.slug}`}>

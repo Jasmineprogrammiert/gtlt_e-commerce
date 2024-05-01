@@ -138,12 +138,13 @@ export default async function ProductPage({
     </div>
     <ProductDetail />
     <HealthScores />
-    <Suspense 
+
+    {/* <Suspense 
       // fallback={<Loading />}
     >
       <TestimonialList />
       <TestimonialForm />
-    </Suspense>
+    </Suspense> */}
     </>
   )
 }
