@@ -1,37 +1,23 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { redirect } from 'next/navigation'
-import { createClient } from '@/utils/supabase/server'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Logo from '../../../../../public/assets/logo.png'
 
-export default async function ResetPassword({
-  searchParams,
-}: {
-  searchParams: { message: string; code: string };
-}) {
-  const supabase = createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (user) return redirect('/');
+export default function ResetPassword() {
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
 
-  const resetPassword = async (formData: FormData) => {
-    'use server';
+  const handleSubmit = async (e: React.FormEvent, password: string) => {
+    e.preventDefault();
+    setError('');
 
-    const password = formData.get('password') as string;
-    const supabase = createClient();
-
-    if (searchParams.code) {
-      const supabase = createClient();
-      const { error } = await supabase.auth.exchangeCodeForSession(
-        searchParams.code
-      );
-      if (error) return redirect('/reset-password?message=Unable to reset Password. Link expired!')
-    }
-
-    const { error } = await supabase.auth.updateUser({ password });
-    if (error) {
-      console.log(error);
-      return redirect('/reset-password?message=Unable to reset Password. Try again!');
-    }
-    redirect('/login?message=Your Password has been reset successfully. Sign in.');
+    const supabase = createClientComponentClient();
+    const { data, error } = await supabase.auth.updateUser({ password });
+    error ? setError(error.message) : router.push('/login');
   }
 
   return (
@@ -59,27 +45,25 @@ export default async function ResetPassword({
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>
-        <form className="mt-8 max-md:ml-[20%] max-md:w-full w-4/5 relative">
+        <form className="mt-8 max-md:ml-[20%] max-md:w-full w-4/5 relative" onSubmit={e => handleSubmit(e, password)}>
           <h2 className="text-xl mb-8">Reset your password</h2>
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
             type="password" 
-            name="password"
             placeholder="New Password" 
             required 
+            onChange={e => setPassword(e.target.value)}
+            value={password}
           /> 
           <button 
             className="w-1/3 bg-cyan-600 text-white rounded-md py-2 mt-10 mb-4"
-            formAction={resetPassword} 
             type="submit" 
           >
             Reset
           </button>
-          {searchParams?.message && (
-            <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
-              {searchParams.message}
-            </p>
-          )}
+          {error && (
+            <div>{error}</div>
+          )} 
         </form>      
       </div>
     </div>

@@ -24,6 +24,8 @@ import {
 import Sidebar from './Sidebar'
 import { logout } from '../(auth)/actions'
 
+export const dynamic = 'force-dynamic';
+
 export default function Navbar({ 
   user, 
 }: { 

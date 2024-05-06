@@ -2,9 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Image from 'next/image'
-// import { signup } from '../actions'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Logo from '../../../../../public/assets/logo.png'
 
 export default function SignUp() {
@@ -19,17 +18,12 @@ export default function SignUp() {
     const supabase = createClientComponentClient();
     const { error } = await supabase.auth.signUp({ 
       email, 
-      password ,
-      // options: {
-      //   emailRedirectTo: `${location.origin}/api/auth/callback`
-      // }
-    })
-
-    if(error) {
-      setError(error.message);
-    } else {
-      router.push('/verify');
-    }
+      password,
+      options: {
+        emailRedirectTo: `${origin}/login`,
+    } 
+  })
+    error ? setError(error.message) : router.push('/verify');
   }
 
   return (
@@ -58,15 +52,8 @@ export default function SignUp() {
         </div>
         <form className="mt-8 w-4/5" onSubmit={e => handleSubmit(e, email, password)}>
           <h2 className="text-xl mb-8">Sign up for an account</h2>
-          {/* <input 
-            className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
-            type="text"  
-            placeholder="Username" 
-            required
-          /> */}
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
-            // name="email"
             type="email"   
             placeholder="Email Address" 
             required
@@ -75,7 +62,6 @@ export default function SignUp() {
           />
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-16" 
-            // name="password"
             type="password"
             placeholder="Password" 
             required
@@ -84,14 +70,13 @@ export default function SignUp() {
           />
           <button 
             className="w-1/3 bg-cyan-600 text-white rounded-md py-2"
-            // formAction={signup} 
             type="submit" 
           >
             Sign Up
           </button>
         </form>
         {error && (
-          <div className="error">{error}</div>
+          <div className="text-sm mt-8 px-10 text-gray-600">Oops. Invalid user credentials! Either the username or password is incorrect.</div>
         )}
       </div>
     </div>

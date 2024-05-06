@@ -6,7 +6,6 @@ import '../styles/medias.css'
 // other packages
 import { dir } from 'i18next'
 import { useTranslation } from '@/src/i18n'
-import { createClient } from '@/utils/supabase/server'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { Analytics } from '@vercel/analytics/react'
 // components
@@ -31,8 +30,6 @@ export default async function RootLayout({
 }>) {
   const supabase = createServerComponentClient({ cookies });
   const { data: { user } } = await supabase.auth.getUser();
-  // const supabase = createClient();
-  // const { data: { user } } = await supabase.auth.getUser();
   const { t } = await useTranslation(lng, "footer");
 
   return (

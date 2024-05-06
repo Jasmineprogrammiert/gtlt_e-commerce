@@ -1,17 +1,24 @@
+'use client'
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { redirect } from 'next/navigation'
-import { createClient } from '@/utils/supabase/server'
-import { passwordrecovery } from '../actions'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Logo from '../../../../../public/assets/logo.png'
 
-export default async function PasswordRecovery({
-  searchParams,
-}: {
-  searchParams: { message: string };
-}) {
-  const supabase = createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (user) return redirect('/');
+export default function PasswordRecovery() {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent, email: string) => {
+    e.preventDefault();
+
+    const supabase = createClientComponentClient();
+    const { error } = await supabase.auth.resetPasswordForEmail(email);
+    if(error) setError(error.message);
+  }
+
   return (
     <>
     <div className="overflow-hidden h-[90vh] w-full bg-gray-50 flex">
@@ -37,28 +44,29 @@ export default async function PasswordRecovery({
           </div>
           <h1 className="text-3xl tracking-wide">GUTolution</h1>
         </div>   
-        <form className="mt-8 max-md:ml-[20%] max-md:w-full w-4/5 relative">
-          <h2 className="text-xl mb-8">Send password reset request</h2>
+        <form className="mt-8 max-md:ml-[20%] max-md:w-full w-4/5 relative" onSubmit={e => handleSubmit(e, email)}>
+          <h2 className="text-xl mb-2">Send one-time login request</h2>
+          <p className="text-sm mb-6 text-gray-600">Please check your inbox to login. If you haven{`'`}t received the email withint a few minutes, please check your spam folder.</p>
+          {/* <h2 className="text-xl mb-2">Send password reset request</h2> */}
+          {/* <p className="text-sm mb-6 text-gray-600">Please check your inbox to reset your password. If you haven{`'`}t received the email withint a few minutes, please check your spam folder.</p> */}
           <input 
             className="w-full border border-gray-300 rounded-md py-2 px-3 mb-4" 
-            name="email"
             type="email" 
             placeholder="Email Address" 
             required 
+            onChange={e => setEmail(e.target.value)}
+            value={email}
           />
           <button 
             className="w-1/3 bg-cyan-600 text-white rounded-md py-2 mt-10 mb-4"
-            formAction={passwordrecovery} 
             type="submit" 
           >
             Send
           </button>
-          {searchParams?.message && (
-            <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
-              {searchParams.message}
-            </p>
-          )}
         </form>   
+        {error && (
+          <div>{error}</div>
+        )} 
       </div>
     </div>
     </>
